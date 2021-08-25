@@ -1,0 +1,457 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on hacdan.org</title>
+        <link>https://hacdan.org/posts/</link>
+        <description>Recent content in Posts on hacdan.org</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://hacdan.org/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Just Do It</title>
+            <link>https://hacdan.org/posts/just_do_it/</link>
+            <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/just_do_it/</guid>
+            <description>Just Do It So, I failed. There’s no other way to put it, I haven’t posted in a few months now, so, that’s a fail. No way around it, so I’ll just lay it out there. I could go on and on about why I haven’t posted, but that doesn’t matter. This was a no excuse, just do it kind of situation, and I didn’t.
+Now before you go thinking this is a woe is me, I failed, feel sorry for me, that’s not the vibe I’m going for.</description>
+            <content type="html"><![CDATA[<h1 id="just-do-it">Just Do It</h1>
+<p>So, I failed. There’s no other way to put it, I haven’t posted in a few months now, so, that’s a fail. No way around it, so I’ll just lay it out there. I could go on and on about why I haven’t posted, but that doesn’t matter. This was a no excuse, just do it kind of situation, and I didn’t.</p>
+<p>Now before you go thinking this is a woe is me, I failed, feel sorry for me, that’s not the vibe I’m going for. In fact, this is more of the opposite that anything else. Keep reading, I don’t think you’ll be disappointed.</p>
+<p>For a while now, I’ve had many projects running. This could be programming projects, hardware hacking projects, home improvement projects, you name it, I had something along those lines going. I know, I know, everyone does, and that’s normal, but for me, I never liked finishing them. The excitement of starting a new project was all I was ever looking for, and once that excitement faded, I would stop and move onto something new. We probably all do this at some point in our life, and as I said, I don’t see anyhing wrong with it.</p>
+<p>BUT. You have to go back and finish things at some point. For me, I’ve tried to do that so many times, that I end up just starting the project over, at least if that’s an option, and of course, I get that new excitement back, which quickly fades, and well, you know the drill. These past two weeks though, I’ve been trying to not just start projects, or work on ones in progress, but to actually finish some. Here’s what I’ve learned.</p>
+<h1 id="theres-joy-in-completion">There’s Joy In Completion</h1>
+<p>The first thing I noticed when I started crossing items off my TODO list was the feeling I felt. It wasn’t a bland feeling of accomplishment, it was joy. I was happy to have finished something that I had started. While, I can say, it is not the same amount of joy as starting a new project, there was a bit of happiness puslating through me.</p>
+<h1 id="perserverance-is-key">Perserverance Is Key</h1>
+<p>This one was a big one to learn, and honestly I’m still learning it. The main take away is that while some may tell you not to power through on a project if you’re not motivated, I think at least getting to a workable point in a project is more beneficial then taking a break and coming back. While I don’t think this is the answer for every project, I feel it can be very useful if you’ve already, say, written a program in your head and need to get it down in code. I do this all the time. I work out the basic skeleton in my head, but then after I get the technically challenging aspect written, I stop. I have so many projects like this in ~/code that I won’t count, as it would be too depressing.</p>
+<p>The key here, though, is get to a working prototype, even if it means leaving out some details that you’ll add later. This way you have something working to achieve that point of accomplishment.</p>
+<h1 id="just-do-it-1">Just Do It</h1>
+<p>Finally, just do it. I know this term has become quite cliche at this point, but it is sound advice. Just write that blog post, or code that not so technical portion of the project. You’ll be glad you did. Even if you need to go back and change something later (HINT: You Will), at least you’ll have your idea worked out to the point where it’s now refining instead of creating, and that, of course, is easier on the mind.</p>
+<p>I’m hoping to become a bit more regular with these posts now that I’m knocking out projects. I’m in the middle of writing a pretty basic CRUD REST API that has a web and mobile front end that I should have a few things to say about. This will be my first dive into reactjs and all of it’s fun components that go along with it, so expect that soonish.</p>
+<p>Until next time…</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Joys of (Soy)lent</title>
+            <link>https://hacdan.org/posts/joys_of_soy_lent/</link>
+            <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/joys_of_soy_lent/</guid>
+            <description>Joys of (Soy)lent This week I went through a life change, one most will probably call me a bit nuts for. I decided to go full time with Soylent. Just to be clear, by full time I mean I’m eating it daily, but it’s not all I’m eating during the day. I eat Soylent for breakfast and lunch, but I still sit down and have dinner with my family. I do this for a number of reasons that I won’t go into, but lets just say full time Soylent isn’t an option for me at this time.</description>
+            <content type="html"><![CDATA[<h1 id="joys-of-soylent">Joys of (Soy)lent</h1>
+<p>This week I went through a life change, one most will probably call me a bit nuts for. I decided to go full time with Soylent. Just to be clear, by full time I mean I’m eating it daily, but it’s not all I’m eating during the day. I eat Soylent for breakfast and lunch, but I still sit down and have dinner with my family. I do this for a number of reasons that I won’t go into, but lets just say full time Soylent isn’t an option for me at this time.</p>
+<p>My first day was on Wednesday, and it was quite the shift from my normal day. I’m not one to normally eat during the day, especially at work, so having <em>food</em> during the day was different. Different in a good way though. I felt like I had more energy to complete tasks. I’m not sure it was a measurable difference in my productivity, but this is something I should have done a long time ago. I didn’t receive any strange looks like I expected to, and things were fine, surprisingly.</p>
+<p>I finished up about 32 ounces of the pitcher, which I had mixed the night before, which I highly recommend. This works out to be about 1000 kcal or so. I’m a pretty big guy and going with about a 500 kcal deficit and planning on about 1000 calories from dinner alone, which probably isn’t that far from accurate considering what I usually have for dinner.</p>
+<p>I should note, though, that I didn’t <em>switch</em> to Soylent because I wanted to lose weight, I just figured I might as well cut the calories during the day and quit snacking at night, might be a nice side effect. Soylent was to get me eating during the day again, and not snacking all night to “make up” for the missed calories, which I would do and then some.</p>
+<p>For my life, this seems like a good fit so far, and I’m going to order more, for sure. I started with a small batch just to make sure it was what I wanted. the tl;dr for this is it exactly what I was looking for. Now the review!</p>
+<h1 id="taste">Taste</h1>
+<p>When it comes to taste, it is honestly pretty bland. The description of sweet oatmeal or pancake batter are pretty close. So far I haven’t noticed any grittyness which was one of the things I was worried about. It goes down pretty similar to a milk shake, just don’t expect it to taste like one! As I said the taste is pretty bland, but my taste buds have become accustom already to this, and while I can’t say I’m looking forward to it, it’s satisfying to the point where I’m going to keep going.</p>
+<h1 id="texturea">Texturea</h1>
+<p>As I said above, the texture isn’t anywhere near as gritty as expected, but there is a bit. It is very much like a milkshake, which is good. The one thing I can recommend is letting it sit over night in the fridge before consuming. this has worked out really well so far, and I’m honestly not willing to try it any other way at this time. If it ain’t broke don’t fix it amirite?</p>
+<h1 id="portability">Portability</h1>
+<p>For moving the Soylent around, I’m using a Nalgene wide mouth bottle. This holds exactly what I need for during the day. I was bringing the pitcher back and forth to work, but I found that it doesn’t quite seal all the way, so that wasn’t the greatest idea. It worked, but I wouldn’t recommend it if you can avoid it.</p>
+<h1 id="thought-so-far">Thought So Far</h1>
+<p>For now, this will be my fuel for the day. I’m going to write up another post for next Tuesday to give my thoughts on having been on Soylent for a week, and to see if I feel anything is missing. I’ve thought about at least adding a protein powder, but we’ll see. For now though, things will stay just pure Soylent.</p>
+<h1 id="full-disclosure">Full Disclosure</h1>
+<p>I did not receive any money or discount or anything else for that matter for writing this.</p>
+<p>Also, I am taking a fish oil suppliment, but I may stop, as I don’t think I need it anymore, but only time will tell.</p>
+<p>Stay Tuned!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Pixel (C)onclusion (4 of 4)</title>
+            <link>https://hacdan.org/posts/pixel_conclusion/</link>
+            <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/pixel_conclusion/</guid>
+            <description>Pixel (C)onclusion (4 of 4) Worth It? Was it? Worth the ridiculous amout of cash to drop on a machine that really has less power than a 4 year old laptop? I’m not sure. There may have been a different tablet I could have purchased, along with a different keyboard accessory that would have accomplished the same thing. I could have used the money elsewhere that I could have saved to purchase other gadgets.</description>
+            <content type="html"><![CDATA[<h1 id="pixel-conclusion-4-of-4">Pixel (C)onclusion (4 of 4)</h1>
+<h1 id="worth-it">Worth It?</h1>
+<p>Was it? Worth the ridiculous amout of cash to drop on a machine that really has less power than a 4 year old laptop? I’m not sure. There may have been a different tablet I could have purchased, along with a different keyboard accessory that would have accomplished the same thing. I could have used the money elsewhere that I could have saved to purchase other gadgets. What it really boils down to though is I wanted something that would last. This is a quality piece of hardware that I hope to get 3-4 years out of at least, and I believe this was the piece of hardware to do that.</p>
+<p>For someone else just looking to jump into this without spending too much cash, I would not recommend this tablet. I’d go with something cheaper and a different keyboard accessory just to try out the workflow, because if you can’t adapt, then you’re stuck with something you probably won’t be able to sell and won’t be able to live with.</p>
+<p>All that being said, if I had a chance to do this again, I would. Hands down, no questions asked. The hardware is top notch, the software will be there with the release of Nougat(The Beta for now is awesome, though.), so ya, worth it for me.</p>
+<h1 id="where-to-from-here">Where To From Here</h1>
+<p>Now what though? New hardware to play with, new software to write; where do I go from here? Hopefully on to a more productive self. I just finished up a vacation in Florida and work is a bit busy at the moment so I haven’t been working a whole lot on side projects, so I hope that once things calm down at work, I’ll be back at it writing more and more in this new workflow. I can say it has been more than capable to get me through my day to day tasks of my personal data management and emails, which is awesome. Now just to optimize the software development side of my workflow for use on this thing, and I’ll be golden.</p>
+<h1 id="final-thougths">Final Thougths</h1>
+<p>Wrapping things up is this: I’d buy it again, it was totally worth it, and yes, Android can be a full-time operating system as long as what you’re looking for is basic computing. Antyhing else you’ll need to either augment your current workflow, or write tools to accomplish your current workflow in the manner in which you do now. For me, I’ve already adapted to the workflow, and I really only have a few things to work out that I can’t accomplish between the tablet and the DigitalOcean instance I have set up, and I already know how I want to tackle these challenges, it’s just a matter of doing so.</p>
+<p>Stay Tuned!</p>
+<h3 id="read-more-in-this-series">Read more in this series</h3>
+<ul>
+<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Sweet Sweet Nougats (3 of 4)</title>
+            <link>https://hacdan.org/posts/sweet_sweet_nougats/</link>
+            <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/sweet_sweet_nougats/</guid>
+            <description>Sweet Sweet Nougats (3 of 4) Stable? As much as my 8 month old So, the big question on everyones mind when it comes to the beta preview of Android Nougat is stability. I see it everywhere posted on forums, articles, and blog posts. For the most part, on Developer Preview 5, it is very stable. I’ve had pretty good luck with it so far, with no crashes as of writing.</description>
+            <content type="html"><![CDATA[<h1 id="sweet-sweet-nougats-3-of-4">Sweet Sweet Nougats (3 of 4)</h1>
+<h1 id="stable-as-much-as-my-8-month-old">Stable? As much as my 8 month old</h1>
+<p>So, the big question on everyones mind when it comes to the beta preview of Android Nougat is stability. I see it everywhere posted on forums, articles, and blog posts. For the most part, on Developer Preview 5, it is very stable. I’ve had pretty good luck with it so far, with no crashes as of writing. Now that doesn’t mean I wwon’t have crashes, but for now, it’s all good in the hood.</p>
+<p>Now that is only speaking for the operating system. In regards to apps running on the system, the story isn’t so rosey. Mainly I’ve had issues with social networking sites that use the camera, such as Google Plus or Fenix for Twitter. These have crashed a few times in use, but not to the point I was worried. In regards to other apps I’m using, it’s not a long list.</p>
+<p>I have Microsoft Word installed, but I honestly haven’t used it for more than a few minutes to test out the cool factor of using a well made tablet app. Mainly what I am using is as follows.</p>
+<ul>
+<li>JuiceSSH - SSH’ing into my server in the cloud.</li>
+<li>Termux - Local terminal, which will probably replace JuiceSSh once I’m happy with the styling piece that’s currently broken on Android Nougat.</li>
+<li>GReader - RSS aggrigator. I don’t use this as much on the tablet, I use this more on my phone, but it’s there incase I want to digest an article or two.</li>
+<li>GMail - My prefered email application. I’ve tried to switch to Inbox, but it’s just not for me.</li>
+<li>Google Drive Suite - I’m a heavy Google “Docs” user, so this was a must have. So far so good, although the document editing software seems a bit lacking for tablet support. It works, but far from optimal.</li>
+<li>Evernote - Perfect for creating new notes and searching for old notes. Well optimized for the tablet.</li>
+<li>Trello - I’m still experimenting with the platform, it’s installed, looks great on a tablet, but I’m still getting used to it.</li>
+</ul>
+<p>That’s about it for apps that I’m using for productivity. Of course I have a lot of media consumption apps installed on the tablet, but those are pretty standard fair.</p>
+<h1 id="multitasking">Multitasking</h1>
+<p>Multitasking on a tablet with Android Nougat. In a word, it’s ‘cool’. I haven’t made much use of it yet, though, as it’s rare that I’m working between two apps locally on the tablet. For the most part I’m using a tmux session in the cloud that splits the window up for me, negating the need for multiwindow on the tablet it self.</p>
+<p>Alt-tab is quick, though, and seems much improved over the early reviews, of course this tablet has seen many improvements over the past few months, so I suppose that’s no surprise. This also goes along with..</p>
+<h1 id="context-switching">Context Switching</h1>
+<p>This, was an area that I wanted to imporove on when moving my entire workflow to a tablet and a remote server, and, it’s awesome. I’m so happy with things so far. It has been an adventure to say the least, but a fun one. While some areas have been challenging in regards to moving my workflow, they are good challenges as I’m forced to learn the intracies of the build process as opposed to hiding them behind a few buttons in an IDE. I feel my wrists are now in much better shape due to eleviating the mouse and moving to a more keyboard focused workflow.</p>
+<h1 id="weefee">Weefee</h1>
+<p>Another major drawback of the initial reviews was the wifi performance. I’m leaving this under software only because after updating the device, it seems to perform much better, even side by side with my Nexus 6. While things drop out a bit in one corner of my house, all of my devices tend to have trouble there, so I’m not chalking it up to the tablet itself and more of the wifi coverage in my home.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>All in all, I’d say software wise, this has met my expecations, but I don’t think that’s a bad thing. I did <em>a lot</em> of research before purchasing this device, and Androud Nougat has been just icing on the cake. I’d say if you’re on the fence, and you find purchasing a premium device to be worth it, go for it, you won’t be let down by the software. And even though this workflow isn’t for everyone, I’d say it’s worth giving a shot, I don’t think you’ll be dissapointed, just as long as you don’t set your expecations through the roof.</p>
+<p>Until next time, stay tuned!</p>
+<h3 id="read-more-in-this-series">Read more in this series</h3>
+<ul>
+<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Pixels Everywhere! Hardware Review(2 of 4)</title>
+            <link>https://hacdan.org/posts/pixels_everywhere_review/</link>
+            <pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/pixels_everywhere_review/</guid>
+            <description>Pixels Everywhere! Hardware Review(2 of 4) Perfect! (Well, almost) So, as stated, everything arrived on time on Tuesday. I unboxed this beast and went to work installing the set of apps that I figured I would need. We’ll get to the software side of things in the next post, for now, let’s talk about hardware.
+Let’s start with the actual tablet. The device is solid, screen resolution and aspect ratio is perfect for what I wanted to use it for, which is mainly editing text files and doing research.</description>
+            <content type="html"><![CDATA[<h1 id="pixels-everywhere-hardware-review2-of-4">Pixels Everywhere! Hardware Review(2 of 4)</h1>
+<h1 id="perfect-well-almost">Perfect! (Well, almost)</h1>
+<p>So, as stated, everything arrived on time on Tuesday. I unboxed this beast and went to work installing the set of apps that I figured I would need. We’ll get to the software side of things in the next post, for now, let’s talk about hardware.</p>
+<p>Let’s start with the actual tablet. The device is solid, screen resolution and aspect ratio is perfect for what I wanted to use it for, which is mainly editing text files and doing research. For that, it’s perfect. The screen is a bit of a fingerprint magnet, but a wipe down once a day seems to eliminate that.</p>
+<p>One of the flaws I’ve found so far with the hardware is a pretty common one. Just below and to the left of the center of the screen, there’s a noticable give in the screen. I would have never found this if I hadn’t had known it was something to look for. I’m not planning on sending the device back for this flaw, though, as it’s something that I don’t notice during normal use. The power and volume buttons are positioned perfect for my taste, and they are very tactile, which I was hoping for. Sometimes buttons are an easy place to cut corners on, but on this device, no expese seemed to be spared.</p>
+<p>The lightbar, while it may seem gimmicky, has proved to be quite useful. I’ve used it to check the battery while I have the tablet sitting on it’s face and charging. Maybe I’m only using it because I know it exists, I’m honestly not sure, but for now, it’s quite useful.</p>
+<p>Another downfall that relates to hardware, but was obviously easy to fix was the device showed up at my door, with a flat battery. I had watched a few unboxings on YouTube and noticed the tablet normally booted right up when removed from the plastic wrapping, mine did not and honestly my heart sank. I’ve received my fair share of duds over the years,and normally having them replaced by the manufacturer isn’t an issue, and I doubt it would have been an issue with Google, but I’m leaving for vacation on Monday and I don’t think it would have made it here on time. Thankfully after plugging the tablet it, it started to boot right up. The day was saved!</p>
+<h1 id="keyboard-woes">Keyboard Woes</h1>
+<p>Now, the keyboard was the only part of the hardware I was honestly really worried about. I had always planned on using the device with an external keyboard, but that doeesn’t mean that I don’t want to use the ridiculously expensive accessory that I purchased with this thing. So, what do I think? Well… it’s okay. I’m more impressed than I expected to be, but I have had to remap some bindings to make full use of it. No escape key isn’t an issue, but lacking in brackets has really forced me back into using snippets for most things, which while it’s not bad thing, it has proven to slow me down a bit. I’m sure I’ll improve over time of using them, but for now, this is proving to be an issue while mobile.</p>
+<p>Now, the keys that do exist on the keyboard feel awesome, lots of travel, yet they don’t need to be pushed that far to register a click. It’s honestly noiser than expected, but far from as noisey as my DAS. All in all, the keyboard is awesome and while I do have my issues with it, I’m not dissapointed, and it’s not going back.</p>
+<h1 id="worth-it">Worth it?</h1>
+<p>Well, is it worth the high price tag that Google is charging for it? I think so, without any doubt. The hardware alone is quite close to perfect, feels great in the hand, and is well engineered. The software, while it is Android, I think is well suited for this tablet, but I’ll get into that more next week. Hardware wise though, I’m keeping it, despite my few issues with it.</p>
+<h3 id="read-more-in-this-series">Read more in this series</h3>
+<ul>
+<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Christmas in July (1 of 4)</title>
+            <link>https://hacdan.org/posts/christmas_in_july/</link>
+            <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/christmas_in_july/</guid>
+            <description>Christmas in July (1 of 4) Patience Is Virtual July 15th. That’s the day my coupon code for a Google Pixel C expired. Counting down the days to when the dream of moving to said tablet would be shattered. Shattered on principal anyway. There was no way I could justify paying full price for the Pixel C. It’s great hardware, sure, but it’s not $500 worth of hardware.
+Driving home from work on Tuesday my phone went off.</description>
+            <content type="html"><![CDATA[<h1 id="christmas-in-july-1-of-4">Christmas in July (1 of 4)</h1>
+<h1 id="patience-is-virtual">Patience Is Virtual</h1>
+<p>July 15th. That’s the day my coupon code for a Google Pixel C expired. Counting down the days to when the dream of moving to said tablet would be shattered. Shattered on principal anyway. There was no way I could justify paying full price for the Pixel C. It’s great hardware, sure, but it’s not $500 worth of hardware.</p>
+<p>Driving home from work on Tuesday my phone went off. A text message, probably another scammer. I checked the area code and noticed it was local. It was someone inquiring about my computer post on Craigslist. I was shocked to say the least. There hadn’t been any bites on my machine for a few months now and I had honestly given up hope. I answered the few questions that the buyer had and we worked out a price. Sure, it was less than what I was hoping for, but it would be enough. Enough to fulfill the dream of decoupling from distraction.</p>
+<p>The buyer really wanted to meet that night, but I wasn’t home! We finally agreed to meet the next night at my house so he could check out the machine. The next night came and I honestly paced for a good hour in the office, wondering if this guy was going to come to pick it up. Time was running out and if this buyer didn’t work out, well I was going to pull the machine and work on my self-control.</p>
+<p>So anyway, the buyer texted me letting me know he would be in there in about 30 minutes. Does this mean things were finally going to work out? I had a glimmer of hope that things would work out..</p>
+<h1 id="it-happened-it-finally-happened">It happened, it finally happened!</h1>
+<p>So, he showed, we talked, I made a new friend, and we even have a mutual friend! Things could not have worked out better, well I guess sooner would have been nice, but, patience really is a virtue! We were both satisfied with the deal and things worked out. I’m light one Haswell powered beast of a machine and that is a feeling I’m perfectly fine with.</p>
+<h1 id="where-to-from-here">Where to from here?</h1>
+<p>So where do we go from here? Well, as mentioned in a previous post, I had planned on moving to a tablet and keyboard setup, and that is exactly what I did. The night the machine sold I promptly hopped on the Google Store page and ordered up a Pixel C and Keyboard. Those should be arriving today(19th). I can’t wait to get home and unbox them and start using them. Over the next couple of posts I’ll have a hardware and software review of the device, so look for that starting this Friday!</p>
+<p>Stay tuned!</p>
+<h3 id="read-more-in-this-series">Read more in this series</h3>
+<ul>
+<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>New Post...pwned</title>
+            <link>https://hacdan.org/posts/new_post_pwned/</link>
+            <pubDate>Fri, 15 Jul 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/new_post_pwned/</guid>
+            <description>New Post&amp;hellip;pwned Soon…! Today’s post will be postponed until Tuesday 7/19/16. I haven’t forgotten about my weekly commitment, I just have a pretty big post series coming up that I want to spend the weekend on. More to come on Tuesday.
+Stay tuned!</description>
+            <content type="html"><![CDATA[<h1 id="new-postpwned">New Post&hellip;pwned</h1>
+<h1 id="soon">Soon…!</h1>
+<p>Today’s post will be postponed until Tuesday 7/19/16. I haven’t forgotten about my weekly commitment, I just have a pretty big post series coming up that I want to spend the weekend on. More to come on Tuesday.</p>
+<p>Stay tuned!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>MC Madness</title>
+            <link>https://hacdan.org/posts/mc_madness/</link>
+            <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/mc_madness/</guid>
+            <description>MC Madness Heading On Down To Crazy Town So, this week I’ve been struggling on what I should write about. I honestly took it easy this week, and was having trouble even picking a topic I could write a few words on. I have a couple of projects I wanted to complete this week that I honestly didn’t even start. With the holiday just a few days ago, I’ve been a bit lazy.</description>
+            <content type="html"><![CDATA[<h1 id="mc-madness">MC Madness</h1>
+<h2 id="heading-on-down-to-crazy-town">Heading On Down To Crazy Town</h2>
+<p>So, this week I’ve been struggling on what I should write about. I honestly took it easy this week, and was having trouble even picking a topic I could write a few words on. I have a couple of projects I wanted to complete this week that I honestly didn’t even start. With the holiday just a few days ago, I’ve been a bit lazy.</p>
+<p>Yesterday I had a day to myself that I was going to sit down and knock out a project and then sit down tonight and was going to write a nice detailed post on my thoughts. Well, yesterday came and went and no projects were finished. (Watched a few good movies though!) I did get a few things off the tech todo list though that I wanted to write about; here we go!</p>
+<h2 id="just-one-more-space">Just One More Space</h2>
+<p>I manage a <a href="http://hacdan.org/post/odroid_plus_minecraft/">Minecraft server</a> for a few friends and myself. It mainly runs itself, but I’m always looking into ways to make things better. Recently I’d stumbled across a way to change up the icon displayed for the server, along with the message displayed beneath the server name. While these seem like very trivial changes, I believe it will make a bigger difference if we ever take the server public. And hey, I learned something!</p>
+<p>To the how to!</p>
+<h2 id="how-did-i-do-that">How did I do that?</h2>
+<p>I’ll start with the easy one, the server icon. This just needs to be a 64 pixel by 64 pixel PNG sitting in the root of your server folder. The root is considered where your server JAR file lives. The name of this file should be <em>server-icon.png</em>. Just as long as it is a valid image that is of said dimensions, the server will pick this image up and serve it over the network to the Multiplayer List within the game. I have not tried using larger images, but even if they do work, I’m sure they would be scaled down to 64x64, so might as well stick with that.</p>
+<p>The not so easy part really wasn’t that hard, but can turn into quite the mess if you’re not using something to generate, and that’s setting the (M)essage (O)f (T)he (D)ay. Before going about all of this, I did have this set, but to a much simpler version, that honestly no one had read. Now that I’ve gone ahead changed things up, I’ve noticed a lot more people have commented on it. Anyway, to set the MOTD, go ahead and open up your server.properties file in your favorite plain text editor. This file is located in the root of your server folder(Position explained above). Once you have this open, you’re looking for the line that says <em>motd=</em>. If you cannot find this line, go ahead and add it anywhere in the file.</p>
+<p>Anything that is placed after the equals sign will be shown as your server MOTD on the multiplayer screen. As with most things on a Minecraft server, this can be customized beyond just standard text with colos and font weights. To do this you can either use the <a href="http://minecraft.gamepedia.com/Formatting_codes">Minecraft Wiki</a> or use a text generator that understands these codes. I decided to use a generator that gave me near instant feedback on what I was doing to the text. I find this to be the better option, but you can choose either, as they both will end in the same way. The generator I used was on <a href="http://minecraft.tools/en/motd.php">minecraft.tools</a>. This gives you a decent preview along with a render to aid in creation. I didn’t have any issues with this one, but I’m sure others exist that do the same thing.</p>
+<p>Once you’ve generated your MOTD, go ahead and paste it after the equals sign in your <em>server.properties</em> and reboot your Minecraft server, and that’s all there is to it!</p>
+<h2 id="one-more-thing">One More Thing!</h2>
+<p>I know, I know, this isn’t an Apple KeyNote, but I needed some… <del>clickbait</del> …thing to catch your eye, ya, that’s it. Anywho, this is about garbage. Well, more specifically about garbage collection. I was experimenting with the G1 Garbage Collector on the odroid to try to reduce some tick lag I was receiving when RedStone was active. Now I’m not talking a huge complex RedStone mechanism here, lets just say one comparator clock was dropping my tickrate right around 15. This is bad, really bad. So I had assumed it was either a limitation of the ODroid, or a problem with the game version I was running. It turns out that my specific combiniation of the G1 Garbage Collector and the ODroid caused MAJOR tick lag on the machine, along with HUGE spike in CPU usage, which of course is what actually reduced my tickrate. After switching back to the normal Garbage Collector, things smoothed out quite considerably, and while I’m still limited on the size of RedStone projects that can be created, It is far from what it was.</p>
+<p>I guess the lesson learned here is while some <em>optimizations</em> are worthwhile crossplatform, some are tuned for specific setups, that while most would consider generic, in the case of running a sever on a single board ARM computer, not all optimizations are created equal!</p>
+<h4 id="ze-end">Ze End</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Dot Dot Dot Files</title>
+            <link>https://hacdan.org/posts/dot_dot_dot_files/</link>
+            <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/dot_dot_dot_files/</guid>
+            <description>Dot Dot Dot Files 2016.07.01
+Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</description>
+            <content type="html"><![CDATA[<h1 id="dot-dot-dot-files">Dot Dot Dot Files</h1>
+<p>2016.07.01</p>
+<p>Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</p>
+<p>This set of configurations has grown a bit over the years, but not by much. While this is more a reflection of my lazyness to update my dotfiles as opposed to a growing need for more… ya I’m getting off track. The point is, you don’t need a lot in your dot files, but you should probably at least take a look into them. They can be a huge time saver. I know I’ve saved many keystrokes just by adding simple things to my dotfiles, and I suggest you do the same.</p>
+<p>Now for me, I work mainly from a terminal session over ssh, so having a completely configured system underneath my fingertips really improves my workflow. While I’m sure I could do what I do without these customizations, they just make things that much easier.</p>
+<p>Now, you don’t need to only work from the command line to benefit from these tweaks; it just happens to be how I work.</p>
+<h1 id="what-the-dotfiles">What The Dot?(files)</h1>
+<p>I’m not sure how many times I just typed out the word <em>dotfiles</em> but I’m sure it was way more than I needed to. Anyway… The word dotfiles while rooted in files that start with a period, to hide them from most file systems, has really expanded to cover any specific configuration file a user would use on their system that customizes their experience with daily used applications.</p>
+<p>The most common would be your terminal profile, something like a bashrc or profile, but any configuration file that you use to customize your experience within an appication could be considered a <em>dotfile</em>.</p>
+<h1 id="how-to-version-your-dotfiles">How to Version your Dotfiles</h1>
+<p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href="https://github.com/HacDan/DotFiles">here</a> they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p>
+<p>To setup a quick repo and version my dot files I followed this blog post <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/">here</a> This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797">post</a> on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p>
+<h1 id="quick-run-down-of-mine">Quick Run Down of Mine</h1>
+<p>To wrap things up, I just wanted to give a quick run down of my dotfiles. I have more I need to add into the repo, but for now I’m sticking to what I have in there.</p>
+<h2 id="bashrc">.bashrc</h2>
+<p>As mentioned previously, my bashrc is being rebuilt from the ground up and I’m adding things in as I notice them missing. I lost my old bashrc, hence the rebuild. For now it really just contains a mess of exports for working with GOLANG and a simple mkcd function which I use all the time that does what it says on the tin. Makes a directory then changes you into that directory. It’s simple things like this that save me just a few keystrokes per operation, but add up to a lot at the end of the day.</p>
+<h2 id="vimrc">.vimrc</h2>
+<p>This one is a bit more in depth, and I may have to come back and revist this in another post, but I’ll go over some hightlights that I think are noteworthy. Now I don’t have some 3000lc vimrc, there are, what I consider, a good amount of plugins in there, which would take a bit to go over, along with some remappings to keep my fingers from reaching all over the board. Here we go…</p>
+<h3 id="vundle">Vundle</h3>
+<p>My go to plugin manager of choice. I know there are many, and at times I’m not very happy with Vundle, but it gets the job done and that’s what counts. I’ve learned it’s qwirks and tamed it to my liking.</p>
+<p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href="https://github.com/garbas/vim-snipmate">snipmate</a>. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p>
+<h3 id="remappings">Remappings</h3>
+<p>Now, the one remaping that I recommend you do take away from this is the leader binding right at the top of the file. I’ve remapped the leader to the very common comma. While I tend to be a bit hipsterish when coming up with keybindings, I’ve found there’s a reason everyone remaps to the comman. It’s awesome. End of story. Give it a shot, and even if you don’t like there, there are other options that may be worth looking into over the default.</p>
+<h3 id="settings">Settings</h3>
+<p>Now for settings, I have wordwrap turned off, and my tabs inserted as spaces like any sane person would do, but one thing I do use that I’ve found isn’t as populat, but is gaining popularity, is relativenumber. This allows you to quickly spot how many lines down a file you want to operate on with a vim movement and off to the races you go. Besides, who wants to figure out in their head the difference between line 156 and line 194. Not I said the pig.</p>
+<h2 id="tmuxconf">.tmux.conf</h2>
+<p>Alright, final file for this post.</p>
+<p>The main thing to take away from my tmux config is that I even use tmux! I jest, while I do really enjoy using tmux, I’m not here to start a screen war or anything. In regards to the configuration file, I’ve mainly rebound the leader, or as tmux calls it, prefix key to CTRL-J. I find this to be much easier to reach/remember than the default which I’ve honestly already forgotten. I’ve also rebound the pane movement to represent VIM style movements, which helps when bouncing between the two, as it is one less thing for me to remember.</p>
+<p>I’ve also rebound the split window bindings because I couldn’t keep the defaults straight. I tried, I really did, but I didn’t have much luck. There are some other settings in there for the status bar, but I’m honestly still not quite happy with it, so that will be modified over the next couple of days(hopefully).</p>
+<h1 id="wrapper-it-up">Wrapper it up</h1>
+<p>To wrap things up, as I mentioned my dot files aren’t extensive, but they are my own. They get me through the day to day grind of my side projects and now a couple of things at work. While I’m sure there’s a thousand more tweaks I could do, I’m okay for now(if you don’t count my bashrc). If you’re into that sort of thing, keep an eye on the repo, I’m sure I’ll be updating it more often now that I have to rebuild my .bashrc from scratch.</p>
+<h2 id="inspriational-repos">Inspriational Repos</h2>
+<ul>
+<li><a href="https://bitbucket.org/sjl/dotfiles/src">Steve Losh’s DotFiles</a></li>
+<li><a href="http://pastebin.com/4ZCTcf7m">JLACROIX’s Tmux Configuration</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Weekly Blog Post Challenge</title>
+            <link>https://hacdan.org/posts/weekly_blog_post_challenge/</link>
+            <pubDate>Sat, 25 Jun 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/weekly_blog_post_challenge/</guid>
+            <description>Weekly Blog Post Challenge Getting Started - Weekly Blogging The Challenge You probably should know that I almost didn’t write this post. Besides, who really wants to spend a few hours of their precious time every week writing a blog post? I mean, really, don’t you have better things to do with your time than write a blog post? I certainly do, but here we are anyway. Because reasons. I’ll get into those later.</description>
+            <content type="html"><![CDATA[<h1 id="weekly-blog-post-challenge">Weekly Blog Post Challenge</h1>
+<h1 id="getting-started---weekly-blogging">Getting Started - Weekly Blogging</h1>
+<h2 id="the-challenge">The Challenge</h2>
+<p>You probably should know that I almost didn’t write this post. Besides, who <em>really</em> wants to spend a few hours of their precious time every week writing a blog post? I mean, really, don’t you have better things to do with your time than write a blog post? I certainly do, but here we are anyway. Because reasons. I’ll get into those later.</p>
+<p>As you’ve probably guessed from the title, I’m starting a weekly blog post challenge. The goal of this challenge is to develop a habit. A long lasting habit. One that will stick with me for more than just a few weeks and go to the wayside. Some of the side effects of this habit will produce a bunch of content for my blog and hopefully progress my writing ability.</p>
+<p>The challenge will start July 1st, 2016, and end June 30th, 2017. I plan to
+write a wrap up post on July 7th, 2017 about my experience blogging every week.</p>
+<p>Now I don’t expect to be perfect at this, but that is what I’m striving for.</p>
+<p>Here’s how I’m going to do it all.</p>
+<p><img src="/img/challenge-accepted.png" alt="alt-text"></p>
+<h2 id="the-setup">The Setup</h2>
+<p>To accomplish this habit I’ve decied to setup a few <em>gentle</em> reminders
+throughout the week to keep me on track. The first of these is a weekly
+recurring calendar event that will remind me when I need to have the content
+posted. This should hopefully keep that ever looming deadline in the back of
+mind. And as we all know, deadlines tend to rule our lives.</p>
+<p>The second of these reminders is a daily reminder on my todo list to work on my
+blog. Now, my todo list system has only been in place for a few months now, but
+it has proven to be a great motivator for me. I’ve developed numerous other
+habit with it, so hopefully it will push me to work on my blog just as much as
+it has pushed me to brush my teeth!(Sad, I know.)</p>
+<p>The last reminder I have in place is a trusted friend. He will bug me the day
+before my blog post is <em>due</em> to proofread what I have written so far.</p>
+<p>This, I hope, will be a sturdy enough system to keep me blogging every week.</p>
+<h2 id="the-topics">The Topics</h2>
+<p>While the topics will vary a bit, the main focus will be around technology. I
+mainly work on software development in my spare time so that is what I plan to
+focus on, but I suspect there will be a few posts that tend to spill over from
+my day job doing sys admin stuffs.</p>
+<p>A few things to look forward to are my experience with Hugo and transferring
+everything from Blogger, my journey through learning GoLang, and many many more
+topics on various languages and frameworks. I might throw a book review or two
+in there from the <em>must read</em> lists. We’ll see.</p>
+<h2 id="the-how">The How</h2>
+<p>For those curious how I’ll be writing my posts, I’ll be doing as I have always
+done and sticking to VIM and Markdown. I’ll then convert the posts over to
+beautiful and luscious html with Hugo and push to a public GitHub Pages
+repository that will host thing whole shindig. I <em>may</em> move this over to a VPS
+at some point, but at the moment I see no need to.</p>
+<h2 id="the-why">The Why</h2>
+<p>Why? Why do you persists Mr. Ander… wait, no. Why I’m doing this is fairly
+simple and fairly complicated all at the same time. Mainly as stated above I
+want to generate a habit that is blogging. Something I’ve wanted to do for some
+time, but I never really felt the need to dedicate any amount of time to it.</p>
+<p>The other reason, though, and probably the better motivator for me personally,
+is to push me to do interesting things that are worthy of a blog post or three.
+These might include a wall mounted monitor powered by a Raspberry Pi, or
+exploring Containers and where I can use them in my journeys as a software
+developer. The world may never know what ends up here, hopefully a few of you
+stumble upon this mess and find something interesting.</p>
+<h2 id="the-when">The When</h2>
+<p>As mentioned, I’ll be starting my first official post into this on July 1st,
+2016 and ending on June 30th, 2017. I will hopefully by then have developed this
+bloggin habit to the point where it will keep going. Maybe not at the same
+pace, but hey, maybe!</p>
+<p>The plan is to post every 7 days, so, on Friday nights. I may end up scheduling
+the posts to go live on Saturday morning, but for now Friday nights it is.
+There’s an RSS link on here as well if you’re looking to subscribe, might want
+to check that out.</p>
+<h2 id="the-end">The End</h2>
+<p>Well I guess that’s it for now. You’ll see a post from me, assuming all goes
+well, in 6 days.</p>
+<p><em>See you all then, and happy scrolling!</em></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Odroid &#43; Minecraft = Possible</title>
+            <link>https://hacdan.org/posts/odroid_plus_minecraft/</link>
+            <pubDate>Sat, 23 Apr 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/odroid_plus_minecraft/</guid>
+            <description>Odroid + Minecraft = Possible Introduction ARM based CPU’s have always interested me. Long before they had gained the reputation that they have today, I was hacking away on them. Finding out everything that I could do with them. Over the past few years, there has been a huge interest in optimizations for the architexture along with many operating systems being specificially(at least originally) developed for them. While I’m still working my way to replacing all of the hardware in my house with an ARM CPU, I feel at least in the server department, it should be an easy venture.</description>
+            <content type="html"><![CDATA[<h1 id="odroid--minecraft--possible">Odroid + Minecraft = Possible</h1>
+<h2 id="introduction">Introduction</h2>
+<p>ARM based CPU’s have always interested me. Long before they had gained the reputation that they have today, I was hacking away on them. Finding out everything that I could do with them. Over the past few years, there has been a huge interest in optimizations for the architexture along with many operating systems being specificially(at least originally) developed for them. While I’m still working my way to replacing all of the hardware in my house with an ARM CPU, I feel at least in the server department, it should be an easy venture.</p>
+<p>This has proven, however to be a bit more work than a few apt-get installs and we’re off to the races. No, it’s been a bit more than that, but, not much! Which I think is awesome!</p>
+<p>The first major migration for me was to move a <a href="https://minecraft.net/">Minecraft</a> server over to an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825">ODROID - XU4</a>.</p>
+<p>This little beast of a machine has proven to be quite the workhorse, and I may even try to expand on it even more with a webserver running and possibly file storage down the road. It is hosted at a friends house, as it’s his, but I did the majority of the software work to migrate everything over.</p>
+<h3 id="a-few-specs-on-the-xu4">A few specs on the XU4:</h3>
+<ul>
+<li>Samsung Exynos 5422
+<ul>
+<li>4 A15 Cores @ 2Ghz
+<ul>
+<li>4 A7 Cores @ 1.5Ghz</li>
+<li>Mali-T628 MP6 GPU</li>
+<li>2 GB LPDDR3 RAM</li>
+<li>Gigabit Ethernet</li>
+<li>2 USB3 Ports</li>
+<li>1 USB2 Port</li>
+<li>1 HDMI Port</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Now, on paper, if you ignore the part that makes these cores ARM cores, this is a beastly machine. However, even though these are ARM cores, and not traditional x86(64) cores, they are still quite quick! From the get-go my only concern with the hardware was the 2GB of DDR3 RAM. This is where I had to work a bit of magic and modify the setup just a bit, to have a usable server for the amount of users that are normally present.</p>
+<p>Now, onto the how!</p>
+<h2 id="setup---how-do-i-do-that">Setup - How do I do that?</h2>
+<p>The XU4 has a few different options when it comes to storage, and I do not believe this is within the scope of this post, but for the most part, I would count on needing at least 8GB of storage for the software along with the actual map files needed. This is honestly on the small side though, so if you’re thinking you’re going to have a big world, I’d go for at least 16GB of storage.</p>
+<h3 id="storage">Storage</h3>
+<p>The type of storage doesn’t really matter. While an eMMC module would be optimal, using a MicroSD card or even a spinning disk drive with the cloud box for the XU4 wouldn’t change that much. Minecraft does have a decent amount of disk activity, but not to the point where that will be your bottleneck. This server has a 16GB eMMC module which has been more than enough so far.</p>
+<h3 id="software-setup">Software Setup</h3>
+<p>While the OpenJDK is available for the XU4, I would recommend the Oracle build of Java 8. I’m using the latest build as of writing this post. I did test the OpenJDK initially, and it worked just fine, but the Oracle Java package is more optimized, so out with the FOSS and in with Oracle. (<em>I hope to never have to write that again!</em>)</p>
+<p>Spigot’s optimizations have proven to be the saving grace of running a Minecraft Server on the XU4. If you haven’t heard of Spigot, it is a rewire to the popular Bukkit server, that focuses on optimizations for the server. Another main feature is the plugin API. While Spigot has (pretty much) full support for Bukkit plugins, it has, as far as I know, rewritten the API hooks to be even more optimal for, you guessed it, performance.</p>
+<h2 id="which-plugins-should-you-be-using">Which plugins should you be using?</h2>
+<p>While most plugins should be fine for using with the XU4, I’ve found there are a few quintessential ones that are really needed for optimal performance.</p>
+<h3 id="plugin-list">Plugin List:</h3>
+<ul>
+<li><a href="http://dev.bukkit.org/bukkit-plugins/nospawnchunks/">NoSpawnChunks</a></li>
+<li><a href="https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/">Essentials</a></li>
+<li><a href="https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/">Essentials Spawn</a></li>
+</ul>
+<p>These are the only plugins currently in use on the server, and I feel they are all really needed for a clean Spigot setup and also an optimal one. The key plugin in that list though is NoSpawnChunks. This plugin unloads the spawn chunks as if they were any other chunk in the gaame. This reduces the memory usage of the server by around 10% when people are online and in the spawn chunks because not all of them are loaded. Around 15% when they are online and not in the spawn chunks.</p>
+<p>The downsides to this plugin, however, is that no processing is done in the spawn chunks when no one is online. What this boils down to is that farms that need to be built in the spawn chunks will not work, including Iron farms. Now, some versions of these farms will work if they do not require the farm to be loaded all the time, but anything that depends on the farm being loaded all the time will not.</p>
+<p>I find this to be a minor setback as while a server iron farm is a nice thing to have, we are using it more as a restriction to force us to mine.</p>
+<p>Some testing was completed without this plugin, and things are definetely still playable, even smooth, the problem being it further limits the number of players that can log on to the server. The decision was made more players was a better trade off.</p>
+<p>Essentials and Essentials Spawn are Bukkit plugins that are great for admining the server and allowing players to set warps. While far from required for this setup, I would recommend using them, just for ease of use.</p>
+<h2 id="to-pre-generate-or-not-to-pre-generate">To pre-generate or not to pre-generate</h2>
+<p>In some initial testing, terrain generation was proven to be the bottleneck of the XU4. While it was more than capable of generating terrain, it could not keep up with more than one person generating chunks at the same time. To resolve this issue, the decision was made to pre-generate the world. The map files were moved to a more powerful machineto speed up the process, but this was far from necessary. The generation was completed in about an hour with a modified server that moves the spawn point around and uses normal generation.</p>
+<p>The downsides to being pre-generated means if there is an update that chagnes generation, players will need to move out quite a ways in the world to find this new generation, but again, this was a tradoff that was decided on deemed worth it by the player base.</p>
+<p>The program used to pregenerate was <a href="https://github.com/Morlok8k/MinecraftLandGenerator">MinecraftLandGenerator</a>. While it eneded a bit of modification to work with our chosen seed and teh current version of minecraft, generation was completed in about an hour for a 10,000 by 10,000 area. This only generated the overworld, and not the nether or the end.</p>
+<p>Research is being conducted on how to generate those regions, as they are now much more important in the current patch. The server hasn’t progressed to the point of being in need of those regions yet though, so I have some time.</p>
+<h2 id="optimization---what-you-need-to-know">Optimization - What you need to know</h2>
+<p>In regards to optimization, there wasn’t a whole lot that was done. The server OS in use is Ubuntu 14.04 LTS Minimal, which is available from the ODROID downloads page <a href="http://odroid.in/ubuntu_14.04lts/">here</a>. Basic scripts were put in place to start the server up in a tmux session. Currently there is 1.5GB of RAM dedicated to the Java VM and this is proving to be a bit overkill for the current playerbase, but being as there is no use for the rest of the resources on the server at the moment, the settings have stayed.</p>
+<p>One thing that is currently being worked on is underclocking the GPU to save a bit on power, as this is a headless server. In the process a custom kernel may be compiled to help with performance as well, but it is far from needed. If you have any questions, please feel free to comment below or at the <a href="http://forum.odroid.com/viewtopic.php?f=93&amp;t-20337">forum post</a> started by the hoster on the ODroid forums.</p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="http://forum.odroid.com/viewtopic.php?f=93&amp;t=20337">Odroid forum link</a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Moving To The Cloud</title>
+            <link>https://hacdan.org/posts/moving_to_the_cloud/</link>
+            <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://hacdan.org/posts/moving_to_the_cloud/</guid>
+            <description>Moving To The Cloud The Cloud My Story An adventure. That’s the best way that I can describe this process. My development work, at least in this part of my life, has always been a side project, but I’d taken it somewhat seriously. I found myself, though, wandering off to do other things instead of concentrating on my true passion. Writing software. I hadn’t really thought about solving the concentration problem because, who cares right?</description>
+            <content type="html"><![CDATA[<h1 id="moving-to-the-cloud">Moving To The Cloud</h1>
+<h1 id="the-cloud">The Cloud</h1>
+<h1 id="my-story">My Story</h1>
+<p>An adventure. That’s the best way that I can describe this process. My development work, at least in this part of my life, has always been a side project, but I’d taken it somewhat seriously. I found myself, though, wandering off to do other things instead of concentrating on my true passion. <em>Writing software</em>. I hadn’t really thought about solving the concentration problem because, who cares right? It’s just a hobby, no need to get serious about it. I do have a degree in software engineering, but I’m not using it in my current position, so why bother?</p>
+<p>The <em>why bother?</em> question is what really got me thinking though. That’s not the self that I knew. That is someone totally different. I have never been the one to just settle. Be happy with what I know and move on. I have to keep learning, it’s in fact always been one of my life goals. I don’t want to stop learning. So, I started thinking of ways to solve the concentration problem.</p>
+<h2 id="phase-one">Phase One</h2>
+<p>Phase one of solving the problem was a complete and utter failure, but that’s okay. An attempt was made. I decided to remove distractions with pure and utter will power. Now, for someone with an addictive personality, I find, at least for myself, that just will power is not enough to force a change in my life. It has to be something drastic, unsettling, but, I tried anyway. Eventually I slipped back into wandering off to different things, gaming, media consumption, Internet wars, etc.. This was when I realized that I needed to do things a bit differently.</p>
+<h2 id="phase-two">Phase Two</h2>
+<p>Phase two was when I started thinking of different ways to remove the temptation of distractions from my <strong>workflow</strong> if one could even call it that. I started looking into a laptop computer. Something if you’d asked me a couple years ago if I’d ever go back to, I would have called you crazy. I loved my desktop, and had built it with my own two hands to do exactly what I wanted it to do, but, alas, I needed to make a change. So, for a few months I researched into many different options. I eventually had made my mind up and decided to go back to a Mac. I started moving my workflow over to an OS X VM to see if I could quickly adapt to the OS again. I had no trouble and was quickly back into the groove. The problem was, the groove was still the distractions and unfocused groove that I was trying to avoid. I didn’t end up purchasing a Mac, although, let me tell you, I was close. Very close. And I’m so happy that I didn’t.</p>
+<h2 id="phase-three">Phase Three</h2>
+<p>Enter Google Compute Engine(aka <em>THE CLOUD</em>). This is where I am now. I write this post in Markdown inside of VIM, and quite frankly I’m loving it. The distraction has gone away as I sit here, SSH’d into a GCE instance with very limited resources, but it’s just enough to run all of my development tools. I did, however, have to make a change to my development style. A drastic one at that. Most of the tools I used on a daily basis already ran just fine on Linux as that is where I was doing my development before. What they didn’t do, though, is run without a graphical user interface. They were (mostly) capable of doing so, but it was not something that I was used to. So, onto learning I did, and I still am. I have written a few Python scripts that wrap up some of the build tools that I was used to just clicking a button for, but that’s okay. I’m learning, and that’s been my whole goal.</p>
+<h2 id="where-to-from-here">Where to from here?</h2>
+<p>Well, Phase Three does address part of the concern about reducing distractions, but I want to take it a few steps further. I’m in the process of selling my beloved desktop computer that I built, and moving onto something a bit less powerful, but free of many of the distractions that I had before.</p>
+<p><img src="/img/pixelc.png" alt="Pixel C">
+That will be a tablet with attached keyboard. Now, this is a huge jump from the three monitors I’m sitting in front of at the moment and multiple cores of x86 power backing them, but I think it’s the right move for me. A move I should have made a long time ago in my life. A move that I hope will bring about more learning and fewer distractions. I’m looking into a couple of tablets at the moment, but I’m mainly focusing on the <a href="https://pixel.google.com/pixel-c">Pixel C</a> by Google along with it’s available keyboard accessory. My only worry is that when I want to take it mobile, the keyboard is lacking some keys that I would normally use on I’d say a semi-regular basis.</p>
+<p>I don’t know if that will be the tablet that I end up going with, but I do know, that if I want to keep learning and remove distractions from my workflow I have to change something. This desktop will not do. I hope to, a few months from now, come back and revisit this topic. As it’s something I’ve become very passionate about. I do not think this is for every, or for every developers style. What I do believe, however, is that if you’re having trouble with distractions, this would be a great direction to at least experiment with.</p>
+<p>I have a few more posts in the works that have more detail about what tools I’m using, how I’m using them, and what I’m working on developing to help improve my workflow.</p>
+<h2 id="inspirations">Inspirations</h2>
+<p>I thought I should mention what inspired me to make the move to a cloud based development approach, along with ideas on what to change my hardware out for. Links below.</p>
+<ul>
+<li><a href="http://yieldthought.com/post.12239282034/swawpped-my-macbook-for-an-ipad">Yield Thought: I swapped my MacBook for an iPad + Linode</a></li>
+<li><a href="http://bergie.iki.fi/blog/working-on-android/">Henri Berigus: Working on an Android Tablet</a></li>
+</ul>
+<p>There are more, but I seem to have lost the links to them. Irregardless, these posts might be a few years old, but things have only gotten better, not worse. Tablets have improved, cloud computing instances have gotten cheaper, it’s just all around better. I will say that taking this route, you will most likely need to write a bit of custom toolery to get started, as not much exists for development based around the CLI anymore, at least not for the typical Joe Computer Programmer.</p>
+<p><em>More to come, stay tuned!</em></p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

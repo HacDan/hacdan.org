@@ -5,6 +5,16 @@
     <link>https://hacdan.org/tags/</link>
     <description>Recent content in Tags on hacdan.org</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://hacdan.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hacdan.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>untagged</title>
+      <link>https://hacdan.org/tags/untagged/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://hacdan.org/tags/untagged/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

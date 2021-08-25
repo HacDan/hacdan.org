@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hacdan.org</title>
-    <link>https://hacdan.org/</link>
-    <description>Recent content on hacdan.org</description>
+    <title>untagged on hacdan.org</title>
+    <link>https://hacdan.org/tags/untagged/</link>
+    <description>Recent content in untagged on hacdan.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hacdan.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://hacdan.org/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Just Do It</title>
       <link>https://hacdan.org/posts/just_do_it/</link>
@@ -118,17 +118,6 @@ Dot files. A power user’s bread and butter. We have our special tweaks and cus
       
       <guid>https://hacdan.org/posts/moving_to_the_cloud/</guid>
       <description>Moving To The Cloud The Cloud My Story An adventure. That’s the best way that I can describe this process. My development work, at least in this part of my life, has always been a side project, but I’d taken it somewhat seriously. I found myself, though, wandering off to do other things instead of concentrating on my true passion. Writing software. I hadn’t really thought about solving the concentration problem because, who cares right?</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hacdan.org/resume/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hacdan.org/resume/readme/</guid>
-      <description>David McClellan IT Professional, software developer (and I write sometimes&amp;hellip;) based in Bristol, Vermont Email / Website / LinkedIn / GitHub / Twitter
-👨‍💻 Technical Experience IT Manager @ Mountain Health Center (September 2019 - Present) A Federally Qualified Health Center - Serving the community across multiple avenues of health.
- Maintained multiple Windows and Linux Servers Active Directory Full UniFi Roll Out FortiGate firewall configuration/maintenance   HelpDesk Coordinator @ Mount Mansfield Unified Union School District (July 2015 - September 2019)K12 Education School Distric with a heavy focus on Technology.</description>
     </item>
     
   </channel>
