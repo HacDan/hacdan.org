@@ -46,7 +46,7 @@ Dot files. A power user’s bread and butter. We have our special tweaks and cus
 <meta itemprop="description" content="Dot Dot Dot Files 2016.07.01
 Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be."><meta itemprop="datePublished" content="2016-07-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2016-07-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1353">
+<meta itemprop="wordCount" content="1354">
 <meta itemprop="keywords" content="untagged," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dot Dot Dot Files"/>
@@ -165,8 +165,14 @@ if (!doNotTrack) {
 <p>I’m not sure how many times I just typed out the word <em>dotfiles</em> but I’m sure it was way more than I needed to. Anyway… The word dotfiles while rooted in files that start with a period, to hide them from most file systems, has really expanded to cover any specific configuration file a user would use on their system that customizes their experience with daily used applications.</p>
 <p>The most common would be your terminal profile, something like a bashrc or profile, but any configuration file that you use to customize your experience within an appication could be considered a <em>dotfile</em>.</p>
 <h1 id="how-to-version-your-dotfiles">How to Version your Dotfiles</h1>
-<p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href="https://github.com/HacDan/DotFiles">here</a> they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p>
-<p>To setup a quick repo and version my dot files I followed this blog post <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/">here</a> This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797">post</a> on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p>
+<p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href="https://github.com/HacDan/DotFiles" target="_blank" rel="noopener">here</a>
+
+ they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p>
+<p>To setup a quick repo and version my dot files I followed this blog post <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" target="_blank" rel="noopener">here</a>
+
+ This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797" target="_blank" rel="noopener">post</a>
+
+ on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p>
 <h1 id="quick-run-down-of-mine">Quick Run Down of Mine</h1>
 <p>To wrap things up, I just wanted to give a quick run down of my dotfiles. I have more I need to add into the repo, but for now I’m sticking to what I have in there.</p>
 <h2 id="bashrc">.bashrc</h2>
@@ -175,7 +181,9 @@ if (!doNotTrack) {
 <p>This one is a bit more in depth, and I may have to come back and revist this in another post, but I’ll go over some hightlights that I think are noteworthy. Now I don’t have some 3000lc vimrc, there are, what I consider, a good amount of plugins in there, which would take a bit to go over, along with some remappings to keep my fingers from reaching all over the board. Here we go…</p>
 <h3 id="vundle">Vundle</h3>
 <p>My go to plugin manager of choice. I know there are many, and at times I’m not very happy with Vundle, but it gets the job done and that’s what counts. I’ve learned it’s qwirks and tamed it to my liking.</p>
-<p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href="https://github.com/garbas/vim-snipmate">snipmate</a>. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p>
+<p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href="https://github.com/garbas/vim-snipmate" target="_blank" rel="noopener">snipmate</a>
+
+. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p>
 <h3 id="remappings">Remappings</h3>
 <p>Now, the one remaping that I recommend you do take away from this is the leader binding right at the top of the file. I’ve remapped the leader to the very common comma. While I tend to be a bit hipsterish when coming up with keybindings, I’ve found there’s a reason everyone remaps to the comman. It’s awesome. End of story. Give it a shot, and even if you don’t like there, there are other options that may be worth looking into over the default.</p>
 <h3 id="settings">Settings</h3>
@@ -188,8 +196,12 @@ if (!doNotTrack) {
 <p>To wrap things up, as I mentioned my dot files aren’t extensive, but they are my own. They get me through the day to day grind of my side projects and now a couple of things at work. While I’m sure there’s a thousand more tweaks I could do, I’m okay for now(if you don’t count my bashrc). If you’re into that sort of thing, keep an eye on the repo, I’m sure I’ll be updating it more often now that I have to rebuild my .bashrc from scratch.</p>
 <h2 id="inspriational-repos">Inspriational Repos</h2>
 <ul>
-<li><a href="https://bitbucket.org/sjl/dotfiles/src">Steve Losh’s DotFiles</a></li>
-<li><a href="http://pastebin.com/4ZCTcf7m">JLACROIX’s Tmux Configuration</a></li>
+<li><a href="https://bitbucket.org/sjl/dotfiles/src" target="_blank" rel="noopener">Steve Losh’s DotFiles</a>
+
+</li>
+<li><a href="http://pastebin.com/4ZCTcf7m" target="_blank" rel="noopener">JLACROIX’s Tmux Configuration</a>
+
+</li>
 </ul>
 
       </div>
@@ -216,7 +228,7 @@ if (!doNotTrack) {
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        1353 Words
+        1354 Words
       </p>
 
       <p>

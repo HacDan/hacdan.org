@@ -5,8 +5,44 @@
         <description>Recent content in Posts on hacdan.org</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 08 Jun 2022 19:06:42 -0400</lastBuildDate>
+        <lastBuildDate>Mon, 13 Jun 2022 20:27:53 -0400</lastBuildDate>
         <atom:link href="https://hacdan.org/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Front(end) Back(end) Side to Side</title>
+            <link>https://hacdan.org/posts/front-back-side-to-side/</link>
+            <pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate>
+            
+            <guid>https://hacdan.org/posts/front-back-side-to-side/</guid>
+            <description>Hear me out. I know, cheesy title to say the least, but it&amp;rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.
+Front(end) Back(end), or Side to Side? That quandry is this (if you haven&amp;rsquo;t figured it out from the title by now): What stack to work with? Honestly? I don&amp;rsquo;t know. I really enjoy backend development where I&amp;rsquo;m working on API&amp;rsquo;s, database integrations, and the like.</description>
+            <content type="html"><![CDATA[<p><a href="https://youtu.be/Be-hXxc5yN0" target="_blank" rel="noopener"><img src="/uksupertight.jpg" alt="Underground Kingz - Super Tight Album Cover"></a>
+
+
+Hear me out. I know, cheesy title to say the least, but it&rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.</p>
+<h2 id="frontend-backend-or-side-to-side">Front(end) Back(end), or Side to Side?</h2>
+<p>That quandry is this (if you haven&rsquo;t figured it out from the title by now):  What stack to work with? Honestly? I don&rsquo;t know. I really enjoy backend development where I&rsquo;m working on API&rsquo;s, database integrations, and the like. I really do. I find it to be an interesting set of problems to solve, but I often wonder if I pidgeonholed myself into thinking that I had to be a backend developer because I&rsquo;m not an artist or designer. Of course all the devs I know are back end developers, but does that mean I have to be one? Of course it doesn&rsquo;t, but I&rsquo;m sure it does mean something. I mean, I really like solving logic puzzles as opposed to converting designs into usable code, but at the same time, I sure do like seeing a project through from start to finish.</p>
+<h2 id="whats-a-boy-to-do">What&rsquo;s a boy to do?</h2>
+<p>I wonder if there&rsquo;s a middle ground? Maybe working as a full stack developer? I dunno. I don&rsquo;t really like writing HTML/CSS and I have a preconceived notion that Javascript was written by the devil himself. I mean seriously, have you watched <a href="https://www.destroyallsoftware.com/talks/wat" target="_blank" rel="noopener">Wat?</a>
+
+ If you haven&rsquo;t, I&rsquo;ll wait. Well worth the 4m 17s of your life. Promise. Yes, even if you don&rsquo;t write code, it&rsquo;s quite hilarious. <a href="https://twitter.com/garybernhardt?lang=en" target="_blank" rel="noopener">Gary Bernhardt</a>
+
+ has just a great presentation sense about him.</p>
+<p>Back to the point. Full stack is mainly considered someone who works on the front and back end of a web app. From what I&rsquo;ve seen, this has become mainly a Javascript world. One language to rule them all, right? What could go wrong? I&rsquo;m sure a 1000 different things, but that&rsquo;s not the point here. I have a horrible preconceived notion of hating on Javascript and would rather not write any more of it than I have to. So, what&rsquo;s a boy to do&hellip;?</p>
+<h2 id="side-to-side-mobile-development">Side-to-Side Mobile Development</h2>
+<p>I don&rsquo;t know if I&rsquo;ve decided, but I&rsquo;m toying around the idea of getting back into mobile dev. Specifically on Android. &ldquo;Back into you say? You&rsquo;ve done mobile development before? Why Android?&rdquo;
+Yes, I&rsquo;ve done some mobile dev work in the past. I created an Android app for the Blackberry Playbook back when Blackberry was trying to rework it&rsquo;s mobile offering. They had a runtime added to it&rsquo;s BB OS that could run Android apps. While this was an interesting forray into the 21st century, it didn&rsquo;t play out well for RIM.</p>
+<p><img src="/blackberry_playbook.jpg" alt="Blackberry Playbook tablet"></p>
+<p>Anyway, I wrote an app to get a free tablet because free tablet, duh? I learned a lot doing so, even though it ended up being pretty simple. Basically I digested an RSS feed for a WebComic I was binging at the time and then pulled the image from the webcomic, placed it into an ImageView. It also pulled the subtitle, similar to <a href="https://xkcd.com" target="_blank" rel="noopener">XKCD</a>
+
+ and placed it on the bottom of the image. You could flip through all available strips that were published. It wasn&rsquo;t perfect, but it was a lot of fun and was my first experience going from scratch to published with a piece of software.</p>
+<p>With all that said, that leaves one question unanswered: Why Android? Sure, I could easily say I have some experience in it, therefore it&rsquo;s the logical choice. Or I could say that I&rsquo;ve been an Android enthusiast for quite some time. I even developed off an Android tablet for a few years for goodness sake. But in reaility, it&rsquo;s because I just like their development workflow better. I&rsquo;ve played around with Apple&rsquo;s setup. Swift is a great language, much better than working in Java, but Kotlin seems to be pretty good, too. While I don&rsquo;t have more than a couple of hours of experience writing it, I&rsquo;d say it&rsquo;s a suitable replacement for Java. Here&rsquo;s hoping I can avoid getters and setters. We&rsquo;ll see. I&rsquo;m not that far into my journey.</p>
+<p>If you&rsquo;d like to follow along I&rsquo;ll be posting my code on <a href="https://github.com/hacdan" target="_blank" rel="noopener">GitHub</a>
+
+ and will be blogging about the my journey.</p>
+<p>Until next time!</p>
+]]></content>
+        </item>
         
         <item>
             <title>Imposter Monster</title>
@@ -15,14 +51,15 @@
             
             <guid>https://hacdan.org/posts/impostermonster/</guid>
             <description>What&amp;rsquo;s the Imposter Monster? So&amp;hellip; what is the imposter monster? Oxford defines imposter syndrome as
-the persistent inability to believe that one&amp;rsquo;s success is deserved or has been legitimately achieved as a result of one&amp;rsquo;s own efforts or skills. ~Oxford Google Search&amp;hellip;
-In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&amp;rsquo;re not good enough. Reminds you you&amp;rsquo;re not doing the right job.</description>
+the persistent inability to believe that one&amp;rsquo;s success is deserved or has been legitimately achieved as a result of one&amp;rsquo;s own efforts or skills. ~Oxford Google Search&amp;hellip; In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&amp;rsquo;re not good enough. Reminds you you&amp;rsquo;re not doing the right job.</description>
             <content type="html"><![CDATA[<p><img src="/imposter.webp" alt="sus imposter"></p>
 <h2 id="whats-the-imposter-monster">What&rsquo;s the Imposter Monster?</h2>
 <p>So&hellip; what is the imposter monster? Oxford defines imposter syndrome as</p>
 <blockquote>
 <p>the persistent inability to believe that one&rsquo;s success is deserved or has been legitimately achieved as a result of one&rsquo;s own efforts or skills.
-~<a href="https://www.google.com/search?sxsrf=ALiCzsYxSRaF070N5o_WMnsujglUfUuK-A:1654730027752&amp;q=impostor+syndrome+define&amp;sa=X&amp;ved=2ahUKEwjbkoPc_Z74AhWRlIkEHac0DucQ7xYoAHoECAEQMw&amp;biw=1680&amp;bih=914&amp;dpr=2">Oxford Google Search&hellip;</a></p>
+~<a href="https://www.google.com/search?sxsrf=ALiCzsYxSRaF070N5o_WMnsujglUfUuK-A:1654730027752&amp;q=impostor&#43;syndrome&#43;define&amp;sa=X&amp;ved=2ahUKEwjbkoPc_Z74AhWRlIkEHac0DucQ7xYoAHoECAEQMw&amp;biw=1680&amp;bih=914&amp;dpr=2" target="_blank" rel="noopener">Oxford Google Search&hellip;</a>
+
+</p>
 </blockquote>
 <p>In this case, I&rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&rsquo;re not good enough. Reminds you you&rsquo;re not doing the right job. Drags your confidence through the mud and doesn&rsquo;t let you wash it off. This monster has to be biggest jerk on the planet earth. He&rsquo;s born from a lack of confidence, and feeds on self doubt. Which I&rsquo;d dare say is a viscious cycle.</p>
 <h2 id="me-personally-theres-no-imposter-monster-in-my-head">Me personally? There&rsquo;s no Imposter Monster in my head&hellip;</h2>
@@ -30,7 +67,9 @@ In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head 
 <strong>SUS!</strong></p>
 <p>Example time. I&rsquo;ve been working in IT for almost 10 years now. I&rsquo;ve been a computer nerd for even longer. I went to school for Computer Science for goodness sake. I know IT quite well. I&rsquo;ve been at my current gig for almost 3 years. To this day. I still don&rsquo;t feel like I should have this job. I know how to do it. I know what I&rsquo;m doing. I rarely come across problems I can&rsquo;t solve within a day, or at least that I can work out a solution to. (Implementation hell, amirite?) Yet, to this day, while writing this blog post, I can tell you I doubted myself yesterday on an implementation to resolve a problem. I was nervous to implement, even though I knew exactly how it would go down? Now&hellip; why is that? We&rsquo;ll get to that, but I&rsquo;ll give you a clue. <em>I&rsquo;m not a confident person.</em></p>
 <h3 id="compsci-it-what-gives">CompSci? IT? What gives?</h3>
-<p>Now, I mentioned I went to school for Computer Science. I specialized in software engineering. I&rsquo;ve been writing code since I was 16. My friend Derrick <a href="http://thrawn01.org">thrawn01.org</a> convinced me to switch majors into software engineering. He was honestly one of the main reasons I swapped, and I&rsquo;m very thankful for that and for him. He has had a very positive influence on my life, so, thanks, Derrick! With all that said, I hesititate every time I&rsquo;ve tried to switch careers into software engineering. I always feel like I&rsquo;m not good enough. I don&rsquo;t know enough. I&rsquo;m not advanced enough into this craft to be able to take a job doing it. Yet, over the past ~8 years I&rsquo;ve completed multiple major projects, along with creating two completely new apps from scratch, for my employers. All while working in IT! Now mind you, this weren&rsquo;t large scale projects. I was the only dev, but still. I&rsquo;ve done the work, along with contributed to quite a few open-souce projects.</p>
+<p>Now, I mentioned I went to school for Computer Science. I specialized in software engineering. I&rsquo;ve been writing code since I was 16. My friend Derrick <a href="http://thrawn01.org" target="_blank" rel="noopener">thrawn01.org</a>
+
+ convinced me to switch majors into software engineering. He was honestly one of the main reasons I swapped, and I&rsquo;m very thankful for that and for him. He has had a very positive influence on my life, so, thanks, Derrick! With all that said, I hesititate every time I&rsquo;ve tried to switch careers into software engineering. I always feel like I&rsquo;m not good enough. I don&rsquo;t know enough. I&rsquo;m not advanced enough into this craft to be able to take a job doing it. Yet, over the past ~8 years I&rsquo;ve completed multiple major projects, along with creating two completely new apps from scratch, for my employers. All while working in IT! Now mind you, this weren&rsquo;t large scale projects. I was the only dev, but still. I&rsquo;ve done the work, along with contributed to quite a few open-souce projects.</p>
 <p>Yet here I stand not having worked professionally in the career I want to work in. All because of the Imposter Monster!</p>
 <h3 id="okay-thats-just-career-stuff-get-over-it">Okay, that&rsquo;s just career stuff. Get over it.</h3>
 <p><img src="/tough.jpeg" alt="Hey Kid&amp;hellip; Toughen Up!"></p>
@@ -60,7 +99,9 @@ I really wanted to use the Ryan Reynolds one here, but my man Chan just seemed t
 </li>
 <li>Socialize
 <ul>
-<li>I found this one to be another big help. I didn&rsquo;t end up socializing in person, but I would hop on <a href="https://www.ventrilo.com/">Vent</a> with some friends and we&rsquo;d just chat. Sometimes we&rsquo;d play video games while chatting, but honestly the most helpful time was just hopping on a &ldquo;call&rdquo; and talking about our day. I believe this one helped me the most as I&rsquo;m quite the introvert. If you&rsquo;re energized by hanging out with people in person, do so! I know, pandemic, COVID, MonkeyPox, etc. Whatever may still be going on, be safe about it, but get out and talk with other people.</li>
+<li>I found this one to be another big help. I didn&rsquo;t end up socializing in person, but I would hop on <a href="https://www.ventrilo.com/" target="_blank" rel="noopener">Vent</a>
+
+ with some friends and we&rsquo;d just chat. Sometimes we&rsquo;d play video games while chatting, but honestly the most helpful time was just hopping on a &ldquo;call&rdquo; and talking about our day. I believe this one helped me the most as I&rsquo;m quite the introvert. If you&rsquo;re energized by hanging out with people in person, do so! I know, pandemic, COVID, MonkeyPox, etc. Whatever may still be going on, be safe about it, but get out and talk with other people.</li>
 </ul>
 </li>
 <li>Therapy
@@ -145,10 +186,18 @@ Now before you go thinking this is a woe is me, I failed, feel sorry for me, tha
 <p>Stay Tuned!</p>
 <h3 id="read-more-in-this-series">Read more in this series</h3>
 <ul>
-<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
-<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
-<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
-<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+<li><a href="http://hacdan.org/post/christmas_in_july/" target="_blank" rel="noopener">Overview</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/" target="_blank" rel="noopener">Hardware Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/" target="_blank" rel="noopener">Software Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/" target="_blank" rel="noopener">Conclution</a>
+
+</li>
 </ul>
 ]]></content>
         </item>
@@ -187,10 +236,18 @@ Now before you go thinking this is a woe is me, I failed, feel sorry for me, tha
 <p>Until next time, stay tuned!</p>
 <h3 id="read-more-in-this-series">Read more in this series</h3>
 <ul>
-<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
-<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
-<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
-<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+<li><a href="http://hacdan.org/post/christmas_in_july/" target="_blank" rel="noopener">Overview</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/" target="_blank" rel="noopener">Hardware Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/" target="_blank" rel="noopener">Software Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/" target="_blank" rel="noopener">Conclution</a>
+
+</li>
 </ul>
 ]]></content>
         </item>
@@ -217,10 +274,18 @@ Let’s start with the actual tablet. The device is solid, screen resolution and
 <p>Well, is it worth the high price tag that Google is charging for it? I think so, without any doubt. The hardware alone is quite close to perfect, feels great in the hand, and is well engineered. The software, while it is Android, I think is well suited for this tablet, but I’ll get into that more next week. Hardware wise though, I’m keeping it, despite my few issues with it.</p>
 <h3 id="read-more-in-this-series">Read more in this series</h3>
 <ul>
-<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
-<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
-<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
-<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+<li><a href="http://hacdan.org/post/christmas_in_july/" target="_blank" rel="noopener">Overview</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/" target="_blank" rel="noopener">Hardware Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/" target="_blank" rel="noopener">Software Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/" target="_blank" rel="noopener">Conclution</a>
+
+</li>
 </ul>
 ]]></content>
         </item>
@@ -245,10 +310,18 @@ Driving home from work on Tuesday my phone went off.</description>
 <p>Stay tuned!</p>
 <h3 id="read-more-in-this-series">Read more in this series</h3>
 <ul>
-<li><a href="http://hacdan.org/post/christmas_in_july/">Overview</a></li>
-<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/">Hardware Review</a></li>
-<li><a href="http://hacdan.org/post/sweet_sweet_nougats/">Software Review</a></li>
-<li><a href="http://hacdan.org/post/pixel_conclusion/">Conclution</a></li>
+<li><a href="http://hacdan.org/post/christmas_in_july/" target="_blank" rel="noopener">Overview</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixels_everywhere_%28review%29/" target="_blank" rel="noopener">Hardware Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/sweet_sweet_nougats/" target="_blank" rel="noopener">Software Review</a>
+
+</li>
+<li><a href="http://hacdan.org/post/pixel_conclusion/" target="_blank" rel="noopener">Conclution</a>
+
+</li>
 </ul>
 ]]></content>
         </item>
@@ -280,12 +353,18 @@ Stay tuned!</description>
 <p>So, this week I’ve been struggling on what I should write about. I honestly took it easy this week, and was having trouble even picking a topic I could write a few words on. I have a couple of projects I wanted to complete this week that I honestly didn’t even start. With the holiday just a few days ago, I’ve been a bit lazy.</p>
 <p>Yesterday I had a day to myself that I was going to sit down and knock out a project and then sit down tonight and was going to write a nice detailed post on my thoughts. Well, yesterday came and went and no projects were finished. (Watched a few good movies though!) I did get a few things off the tech todo list though that I wanted to write about; here we go!</p>
 <h2 id="just-one-more-space">Just One More Space</h2>
-<p>I manage a <a href="http://hacdan.org/post/odroid_plus_minecraft/">Minecraft server</a> for a few friends and myself. It mainly runs itself, but I’m always looking into ways to make things better. Recently I’d stumbled across a way to change up the icon displayed for the server, along with the message displayed beneath the server name. While these seem like very trivial changes, I believe it will make a bigger difference if we ever take the server public. And hey, I learned something!</p>
+<p>I manage a <a href="http://hacdan.org/post/odroid_plus_minecraft/" target="_blank" rel="noopener">Minecraft server</a>
+
+ for a few friends and myself. It mainly runs itself, but I’m always looking into ways to make things better. Recently I’d stumbled across a way to change up the icon displayed for the server, along with the message displayed beneath the server name. While these seem like very trivial changes, I believe it will make a bigger difference if we ever take the server public. And hey, I learned something!</p>
 <p>To the how to!</p>
 <h2 id="how-did-i-do-that">How did I do that?</h2>
 <p>I’ll start with the easy one, the server icon. This just needs to be a 64 pixel by 64 pixel PNG sitting in the root of your server folder. The root is considered where your server JAR file lives. The name of this file should be <em>server-icon.png</em>. Just as long as it is a valid image that is of said dimensions, the server will pick this image up and serve it over the network to the Multiplayer List within the game. I have not tried using larger images, but even if they do work, I’m sure they would be scaled down to 64x64, so might as well stick with that.</p>
 <p>The not so easy part really wasn’t that hard, but can turn into quite the mess if you’re not using something to generate, and that’s setting the (M)essage (O)f (T)he (D)ay. Before going about all of this, I did have this set, but to a much simpler version, that honestly no one had read. Now that I’ve gone ahead changed things up, I’ve noticed a lot more people have commented on it. Anyway, to set the MOTD, go ahead and open up your server.properties file in your favorite plain text editor. This file is located in the root of your server folder(Position explained above). Once you have this open, you’re looking for the line that says <em>motd=</em>. If you cannot find this line, go ahead and add it anywhere in the file.</p>
-<p>Anything that is placed after the equals sign will be shown as your server MOTD on the multiplayer screen. As with most things on a Minecraft server, this can be customized beyond just standard text with colos and font weights. To do this you can either use the <a href="http://minecraft.gamepedia.com/Formatting_codes">Minecraft Wiki</a> or use a text generator that understands these codes. I decided to use a generator that gave me near instant feedback on what I was doing to the text. I find this to be the better option, but you can choose either, as they both will end in the same way. The generator I used was on <a href="http://minecraft.tools/en/motd.php">minecraft.tools</a>. This gives you a decent preview along with a render to aid in creation. I didn’t have any issues with this one, but I’m sure others exist that do the same thing.</p>
+<p>Anything that is placed after the equals sign will be shown as your server MOTD on the multiplayer screen. As with most things on a Minecraft server, this can be customized beyond just standard text with colos and font weights. To do this you can either use the <a href="http://minecraft.gamepedia.com/Formatting_codes" target="_blank" rel="noopener">Minecraft Wiki</a>
+
+ or use a text generator that understands these codes. I decided to use a generator that gave me near instant feedback on what I was doing to the text. I find this to be the better option, but you can choose either, as they both will end in the same way. The generator I used was on <a href="http://minecraft.tools/en/motd.php" target="_blank" rel="noopener">minecraft.tools</a>
+
+. This gives you a decent preview along with a render to aid in creation. I didn’t have any issues with this one, but I’m sure others exist that do the same thing.</p>
 <p>Once you’ve generated your MOTD, go ahead and paste it after the equals sign in your <em>server.properties</em> and reboot your Minecraft server, and that’s all there is to it!</p>
 <h2 id="one-more-thing">One More Thing!</h2>
 <p>I know, I know, this isn’t an Apple KeyNote, but I needed some… <del>clickbait</del> …thing to catch your eye, ya, that’s it. Anywho, this is about garbage. Well, more specifically about garbage collection. I was experimenting with the G1 Garbage Collector on the odroid to try to reduce some tick lag I was receiving when RedStone was active. Now I’m not talking a huge complex RedStone mechanism here, lets just say one comparator clock was dropping my tickrate right around 15. This is bad, really bad. So I had assumed it was either a limitation of the ODroid, or a problem with the game version I was running. It turns out that my specific combiniation of the G1 Garbage Collector and the ODroid caused MAJOR tick lag on the machine, along with HUGE spike in CPU usage, which of course is what actually reduced my tickrate. After switching back to the normal Garbage Collector, things smoothed out quite considerably, and while I’m still limited on the size of RedStone projects that can be created, It is far from what it was.</p>
@@ -312,8 +391,14 @@ Dot files. A power user’s bread and butter. We have our special tweaks and cus
 <p>I’m not sure how many times I just typed out the word <em>dotfiles</em> but I’m sure it was way more than I needed to. Anyway… The word dotfiles while rooted in files that start with a period, to hide them from most file systems, has really expanded to cover any specific configuration file a user would use on their system that customizes their experience with daily used applications.</p>
 <p>The most common would be your terminal profile, something like a bashrc or profile, but any configuration file that you use to customize your experience within an appication could be considered a <em>dotfile</em>.</p>
 <h1 id="how-to-version-your-dotfiles">How to Version your Dotfiles</h1>
-<p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href="https://github.com/HacDan/DotFiles">here</a> they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p>
-<p>To setup a quick repo and version my dot files I followed this blog post <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/">here</a> This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797">post</a> on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p>
+<p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href="https://github.com/HacDan/DotFiles" target="_blank" rel="noopener">here</a>
+
+ they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p>
+<p>To setup a quick repo and version my dot files I followed this blog post <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" target="_blank" rel="noopener">here</a>
+
+ This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797" target="_blank" rel="noopener">post</a>
+
+ on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p>
 <h1 id="quick-run-down-of-mine">Quick Run Down of Mine</h1>
 <p>To wrap things up, I just wanted to give a quick run down of my dotfiles. I have more I need to add into the repo, but for now I’m sticking to what I have in there.</p>
 <h2 id="bashrc">.bashrc</h2>
@@ -322,7 +407,9 @@ Dot files. A power user’s bread and butter. We have our special tweaks and cus
 <p>This one is a bit more in depth, and I may have to come back and revist this in another post, but I’ll go over some hightlights that I think are noteworthy. Now I don’t have some 3000lc vimrc, there are, what I consider, a good amount of plugins in there, which would take a bit to go over, along with some remappings to keep my fingers from reaching all over the board. Here we go…</p>
 <h3 id="vundle">Vundle</h3>
 <p>My go to plugin manager of choice. I know there are many, and at times I’m not very happy with Vundle, but it gets the job done and that’s what counts. I’ve learned it’s qwirks and tamed it to my liking.</p>
-<p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href="https://github.com/garbas/vim-snipmate">snipmate</a>. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p>
+<p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href="https://github.com/garbas/vim-snipmate" target="_blank" rel="noopener">snipmate</a>
+
+. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p>
 <h3 id="remappings">Remappings</h3>
 <p>Now, the one remaping that I recommend you do take away from this is the leader binding right at the top of the file. I’ve remapped the leader to the very common comma. While I tend to be a bit hipsterish when coming up with keybindings, I’ve found there’s a reason everyone remaps to the comman. It’s awesome. End of story. Give it a shot, and even if you don’t like there, there are other options that may be worth looking into over the default.</p>
 <h3 id="settings">Settings</h3>
@@ -335,8 +422,12 @@ Dot files. A power user’s bread and butter. We have our special tweaks and cus
 <p>To wrap things up, as I mentioned my dot files aren’t extensive, but they are my own. They get me through the day to day grind of my side projects and now a couple of things at work. While I’m sure there’s a thousand more tweaks I could do, I’m okay for now(if you don’t count my bashrc). If you’re into that sort of thing, keep an eye on the repo, I’m sure I’ll be updating it more often now that I have to rebuild my .bashrc from scratch.</p>
 <h2 id="inspriational-repos">Inspriational Repos</h2>
 <ul>
-<li><a href="https://bitbucket.org/sjl/dotfiles/src">Steve Losh’s DotFiles</a></li>
-<li><a href="http://pastebin.com/4ZCTcf7m">JLACROIX’s Tmux Configuration</a></li>
+<li><a href="https://bitbucket.org/sjl/dotfiles/src" target="_blank" rel="noopener">Steve Losh’s DotFiles</a>
+
+</li>
+<li><a href="http://pastebin.com/4ZCTcf7m" target="_blank" rel="noopener">JLACROIX’s Tmux Configuration</a>
+
+</li>
 </ul>
 ]]></content>
         </item>
@@ -425,7 +516,11 @@ well, in 6 days.</p>
 <h2 id="introduction">Introduction</h2>
 <p>ARM based CPU’s have always interested me. Long before they had gained the reputation that they have today, I was hacking away on them. Finding out everything that I could do with them. Over the past few years, there has been a huge interest in optimizations for the architexture along with many operating systems being specificially(at least originally) developed for them. While I’m still working my way to replacing all of the hardware in my house with an ARM CPU, I feel at least in the server department, it should be an easy venture.</p>
 <p>This has proven, however to be a bit more work than a few apt-get installs and we’re off to the races. No, it’s been a bit more than that, but, not much! Which I think is awesome!</p>
-<p>The first major migration for me was to move a <a href="https://minecraft.net/">Minecraft</a> server over to an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825">ODROID - XU4</a>.</p>
+<p>The first major migration for me was to move a <a href="https://minecraft.net/" target="_blank" rel="noopener">Minecraft</a>
+
+ server over to an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143452239825" target="_blank" rel="noopener">ODROID - XU4</a>
+
+.</p>
 <p>This little beast of a machine has proven to be quite the workhorse, and I may even try to expand on it even more with a webserver running and possibly file storage down the road. It is hosted at a friends house, as it’s his, but I did the majority of the software work to migrate everything over.</p>
 <h3 id="a-few-specs-on-the-xu4">A few specs on the XU4:</h3>
 <ul>
@@ -458,9 +553,15 @@ well, in 6 days.</p>
 <p>While most plugins should be fine for using with the XU4, I’ve found there are a few quintessential ones that are really needed for optimal performance.</p>
 <h3 id="plugin-list">Plugin List:</h3>
 <ul>
-<li><a href="http://dev.bukkit.org/bukkit-plugins/nospawnchunks/">NoSpawnChunks</a></li>
-<li><a href="https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/">Essentials</a></li>
-<li><a href="https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/">Essentials Spawn</a></li>
+<li><a href="http://dev.bukkit.org/bukkit-plugins/nospawnchunks/" target="_blank" rel="noopener">NoSpawnChunks</a>
+
+</li>
+<li><a href="https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/" target="_blank" rel="noopener">Essentials</a>
+
+</li>
+<li><a href="https://hub.spigotmc.org/jenkins/job/Spigot-Essentials/" target="_blank" rel="noopener">Essentials Spawn</a>
+
+</li>
 </ul>
 <p>These are the only plugins currently in use on the server, and I feel they are all really needed for a clean Spigot setup and also an optimal one. The key plugin in that list though is NoSpawnChunks. This plugin unloads the spawn chunks as if they were any other chunk in the gaame. This reduces the memory usage of the server by around 10% when people are online and in the spawn chunks because not all of them are loaded. Around 15% when they are online and not in the spawn chunks.</p>
 <p>The downsides to this plugin, however, is that no processing is done in the spawn chunks when no one is online. What this boils down to is that farms that need to be built in the spawn chunks will not work, including Iron farms. Now, some versions of these farms will work if they do not require the farm to be loaded all the time, but anything that depends on the farm being loaded all the time will not.</p>
@@ -470,14 +571,22 @@ well, in 6 days.</p>
 <h2 id="to-pre-generate-or-not-to-pre-generate">To pre-generate or not to pre-generate</h2>
 <p>In some initial testing, terrain generation was proven to be the bottleneck of the XU4. While it was more than capable of generating terrain, it could not keep up with more than one person generating chunks at the same time. To resolve this issue, the decision was made to pre-generate the world. The map files were moved to a more powerful machineto speed up the process, but this was far from necessary. The generation was completed in about an hour with a modified server that moves the spawn point around and uses normal generation.</p>
 <p>The downsides to being pre-generated means if there is an update that chagnes generation, players will need to move out quite a ways in the world to find this new generation, but again, this was a tradoff that was decided on deemed worth it by the player base.</p>
-<p>The program used to pregenerate was <a href="https://github.com/Morlok8k/MinecraftLandGenerator">MinecraftLandGenerator</a>. While it eneded a bit of modification to work with our chosen seed and teh current version of minecraft, generation was completed in about an hour for a 10,000 by 10,000 area. This only generated the overworld, and not the nether or the end.</p>
+<p>The program used to pregenerate was <a href="https://github.com/Morlok8k/MinecraftLandGenerator" target="_blank" rel="noopener">MinecraftLandGenerator</a>
+
+. While it eneded a bit of modification to work with our chosen seed and teh current version of minecraft, generation was completed in about an hour for a 10,000 by 10,000 area. This only generated the overworld, and not the nether or the end.</p>
 <p>Research is being conducted on how to generate those regions, as they are now much more important in the current patch. The server hasn’t progressed to the point of being in need of those regions yet though, so I have some time.</p>
 <h2 id="optimization---what-you-need-to-know">Optimization - What you need to know</h2>
-<p>In regards to optimization, there wasn’t a whole lot that was done. The server OS in use is Ubuntu 14.04 LTS Minimal, which is available from the ODROID downloads page <a href="http://odroid.in/ubuntu_14.04lts/">here</a>. Basic scripts were put in place to start the server up in a tmux session. Currently there is 1.5GB of RAM dedicated to the Java VM and this is proving to be a bit overkill for the current playerbase, but being as there is no use for the rest of the resources on the server at the moment, the settings have stayed.</p>
-<p>One thing that is currently being worked on is underclocking the GPU to save a bit on power, as this is a headless server. In the process a custom kernel may be compiled to help with performance as well, but it is far from needed. If you have any questions, please feel free to comment below or at the <a href="http://forum.odroid.com/viewtopic.php?f=93&amp;t-20337">forum post</a> started by the hoster on the ODroid forums.</p>
+<p>In regards to optimization, there wasn’t a whole lot that was done. The server OS in use is Ubuntu 14.04 LTS Minimal, which is available from the ODROID downloads page <a href="http://odroid.in/ubuntu_14.04lts/" target="_blank" rel="noopener">here</a>
+
+. Basic scripts were put in place to start the server up in a tmux session. Currently there is 1.5GB of RAM dedicated to the Java VM and this is proving to be a bit overkill for the current playerbase, but being as there is no use for the rest of the resources on the server at the moment, the settings have stayed.</p>
+<p>One thing that is currently being worked on is underclocking the GPU to save a bit on power, as this is a headless server. In the process a custom kernel may be compiled to help with performance as well, but it is far from needed. If you have any questions, please feel free to comment below or at the <a href="http://forum.odroid.com/viewtopic.php?f=93&amp;t-20337" target="_blank" rel="noopener">forum post</a>
+
+ started by the hoster on the ODroid forums.</p>
 <h3 id="links">Links</h3>
 <ul>
-<li><a href="http://forum.odroid.com/viewtopic.php?f=93&amp;t=20337">Odroid forum link</a></li>
+<li><a href="http://forum.odroid.com/viewtopic.php?f=93&amp;t=20337" target="_blank" rel="noopener">Odroid forum link</a>
+
+</li>
 </ul>
 ]]></content>
         </item>
@@ -502,14 +611,20 @@ well, in 6 days.</p>
 <h3 id="where-to-from-here">Where to from here?</h3>
 <p>Well, Phase Three does address part of the concern about reducing distractions, but I want to take it a few steps further. I’m in the process of selling my beloved desktop computer that I built, and moving onto something a bit less powerful, but free of many of the distractions that I had before.</p>
 <p><img src="/img/pixelc.png" alt="Pixel C">
-That will be a tablet with attached keyboard. Now, this is a huge jump from the three monitors I’m sitting in front of at the moment and multiple cores of x86 power backing them, but I think it’s the right move for me. A move I should have made a long time ago in my life. A move that I hope will bring about more learning and fewer distractions. I’m looking into a couple of tablets at the moment, but I’m mainly focusing on the <a href="https://pixel.google.com/pixel-c">Pixel C</a> by Google along with it’s available keyboard accessory. My only worry is that when I want to take it mobile, the keyboard is lacking some keys that I would normally use on I’d say a semi-regular basis.</p>
+That will be a tablet with attached keyboard. Now, this is a huge jump from the three monitors I’m sitting in front of at the moment and multiple cores of x86 power backing them, but I think it’s the right move for me. A move I should have made a long time ago in my life. A move that I hope will bring about more learning and fewer distractions. I’m looking into a couple of tablets at the moment, but I’m mainly focusing on the <a href="https://pixel.google.com/pixel-c" target="_blank" rel="noopener">Pixel C</a>
+
+ by Google along with it’s available keyboard accessory. My only worry is that when I want to take it mobile, the keyboard is lacking some keys that I would normally use on I’d say a semi-regular basis.</p>
 <p>I don’t know if that will be the tablet that I end up going with, but I do know, that if I want to keep learning and remove distractions from my workflow I have to change something. This desktop will not do. I hope to, a few months from now, come back and revisit this topic. As it’s something I’ve become very passionate about. I do not think this is for every, or for every developers style. What I do believe, however, is that if you’re having trouble with distractions, this would be a great direction to at least experiment with.</p>
 <p>I have a few more posts in the works that have more detail about what tools I’m using, how I’m using them, and what I’m working on developing to help improve my workflow.</p>
 <h2 id="inspirations">Inspirations</h2>
 <p>I thought I should mention what inspired me to make the move to a cloud based development approach, along with ideas on what to change my hardware out for. Links below.</p>
 <ul>
-<li><a href="http://yieldthought.com/post.12239282034/swawpped-my-macbook-for-an-ipad">Yield Thought: I swapped my MacBook for an iPad + Linode</a></li>
-<li><a href="http://bergie.iki.fi/blog/working-on-android/">Henri Berigus: Working on an Android Tablet</a></li>
+<li><a href="http://yieldthought.com/post.12239282034/swawpped-my-macbook-for-an-ipad" target="_blank" rel="noopener">Yield Thought: I swapped my MacBook for an iPad + Linode</a>
+
+</li>
+<li><a href="http://bergie.iki.fi/blog/working-on-android/" target="_blank" rel="noopener">Henri Berigus: Working on an Android Tablet</a>
+
+</li>
 </ul>
 <p>There are more, but I seem to have lost the links to them. Irregardless, these posts might be a few years old, but things have only gotten better, not worse. Tablets have improved, cloud computing instances have gotten cheaper, it’s just all around better. I will say that taking this route, you will most likely need to write a bit of custom toolery to get started, as not much exists for development based around the CLI anymore, at least not for the typical Joe Computer Programmer.</p>
 <p><em>More to come, stay tuned!</em></p>
