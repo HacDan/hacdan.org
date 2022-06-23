@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hacdan.org/tags/decisions/</loc>
-    <lastmod>2022-06-13T20:27:53-04:00</lastmod>
+    <loc>https://hacdan.org/posts/100-days-of-code/</loc>
+    <lastmod>2022-06-22T21:24:45-04:00</lastmod>
+  </url><url>
+    <loc>https://hacdan.org/tags/100daysofcode/</loc>
+    <lastmod>2022-06-22T21:24:45-04:00</lastmod>
   </url><url>
     <loc>https://hacdan.org/tags/dev/</loc>
+    <lastmod>2022-06-22T21:24:45-04:00</lastmod>
+  </url><url>
+    <loc>https://hacdan.org/</loc>
+    <lastmod>2022-06-22T21:24:45-04:00</lastmod>
+  </url><url>
+    <loc>https://hacdan.org/posts/</loc>
+    <lastmod>2022-06-22T21:24:45-04:00</lastmod>
+  </url><url>
+    <loc>https://hacdan.org/tags/</loc>
+    <lastmod>2022-06-22T21:24:45-04:00</lastmod>
+  </url><url>
+    <loc>https://hacdan.org/tags/decisions/</loc>
     <lastmod>2022-06-13T20:27:53-04:00</lastmod>
   </url><url>
     <loc>https://hacdan.org/posts/front-back-side-to-side/</loc>
     <lastmod>2022-06-13T20:27:53-04:00</lastmod>
   </url><url>
-    <loc>https://hacdan.org/</loc>
-    <lastmod>2022-06-13T20:27:53-04:00</lastmod>
-  </url><url>
     <loc>https://hacdan.org/tags/life-choices/</loc>
-    <lastmod>2022-06-13T20:27:53-04:00</lastmod>
-  </url><url>
-    <loc>https://hacdan.org/posts/</loc>
-    <lastmod>2022-06-13T20:27:53-04:00</lastmod>
-  </url><url>
-    <loc>https://hacdan.org/tags/</loc>
     <lastmod>2022-06-13T20:27:53-04:00</lastmod>
   </url><url>
     <loc>https://hacdan.org/posts/impostermonster/</loc>

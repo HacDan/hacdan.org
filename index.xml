@@ -6,7 +6,17 @@
     <description>Recent content on hacdan.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jun 2022 20:27:53 -0400</lastBuildDate><atom:link href="https://hacdan.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jun 2022 21:24:45 -0400</lastBuildDate><atom:link href="https://hacdan.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#100 Days of Code</title>
+      <link>https://hacdan.org/posts/100-days-of-code/</link>
+      <pubDate>Wed, 22 Jun 2022 21:24:45 -0400</pubDate>
+      
+      <guid>https://hacdan.org/posts/100-days-of-code/</guid>
+      <description>I have a problem with staying motivated. As with most people I like the idea of starting new projects, but the newness tends to ween after a little while and well&amp;hellip; the project gets boring. While I&amp;rsquo;m not there yet with any of my current projects, I know I will get there sooner rather than later. Because of this, I&amp;rsquo;m deciding to commit to #100daysofcode .
+I don&amp;rsquo;t think I&amp;rsquo;ll blog about every day that I complete of this challenge, but I do plan on posting updates from time-to-time regarding this challenge.</description>
+    </item>
+    
     <item>
       <title>Front(end) Back(end) Side to Side</title>
       <link>https://hacdan.org/posts/front-back-side-to-side/</link>

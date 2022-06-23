@@ -6,22 +6,31 @@
     <description>Recent content in Tags on hacdan.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jun 2022 20:27:53 -0400</lastBuildDate><atom:link href="https://hacdan.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jun 2022 21:24:45 -0400</lastBuildDate><atom:link href="https://hacdan.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>decisions</title>
-      <link>https://hacdan.org/tags/decisions/</link>
-      <pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate>
+      <title>100daysofcode</title>
+      <link>https://hacdan.org/tags/100daysofcode/</link>
+      <pubDate>Wed, 22 Jun 2022 21:24:45 -0400</pubDate>
       
-      <guid>https://hacdan.org/tags/decisions/</guid>
+      <guid>https://hacdan.org/tags/100daysofcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dev</title>
       <link>https://hacdan.org/tags/dev/</link>
-      <pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate>
+      <pubDate>Wed, 22 Jun 2022 21:24:45 -0400</pubDate>
       
       <guid>https://hacdan.org/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decisions</title>
+      <link>https://hacdan.org/tags/decisions/</link>
+      <pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate>
+      
+      <guid>https://hacdan.org/tags/decisions/</guid>
       <description></description>
     </item>
     
