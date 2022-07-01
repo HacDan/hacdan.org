@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>life on hacdan.org</title>
-    <link>https://hacdan.org/tags/life/</link>
-    <description>Recent content in life on hacdan.org</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 19:06:42 -0400</lastBuildDate><atom:link href="https://hacdan.org/tags/life/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Imposter Monster</title>
-      <link>https://hacdan.org/posts/impostermonster/</link>
-      <pubDate>Wed, 08 Jun 2022 19:06:42 -0400</pubDate>
-      
-      <guid>https://hacdan.org/posts/impostermonster/</guid>
-      <description>What&amp;rsquo;s the Imposter Monster? So&amp;hellip; what is the imposter monster? Oxford defines imposter syndrome as
-the persistent inability to believe that one&amp;rsquo;s success is deserved or has been legitimately achieved as a result of one&amp;rsquo;s own efforts or skills. ~Oxford Google Search&amp;hellip; In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&amp;rsquo;re not good enough. Reminds you you&amp;rsquo;re not doing the right job.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>life on hacdan.org</title><link>https://hacdan.org/tags/life/</link><description>Recent content in life on hacdan.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 08 Jun 2022 19:06:42 -0400</lastBuildDate><atom:link href="https://hacdan.org/tags/life/index.xml" rel="self" type="application/rss+xml"/><item><title>Imposter Monster</title><link>https://hacdan.org/posts/impostermonster/</link><pubDate>Wed, 08 Jun 2022 19:06:42 -0400</pubDate><guid>https://hacdan.org/posts/impostermonster/</guid><description>What&amp;rsquo;s the Imposter Monster? So&amp;hellip; what is the imposter monster? Oxford defines imposter syndrome as
+the persistent inability to believe that one&amp;rsquo;s success is deserved or has been legitimately achieved as a result of one&amp;rsquo;s own efforts or skills. ~Oxford Google Search&amp;hellip; In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&amp;rsquo;re not good enough. Reminds you you&amp;rsquo;re not doing the right job.</description></item></channel></rss>

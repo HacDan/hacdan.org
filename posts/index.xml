@@ -1,22 +1,5 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on hacdan.org</title>
-        <link>https://hacdan.org/posts/</link>
-        <description>Recent content in Posts on hacdan.org</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Wed, 22 Jun 2022 21:24:45 -0400</lastBuildDate>
-        <atom:link href="https://hacdan.org/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>#100 Days of Code</title>
-            <link>https://hacdan.org/posts/100-days-of-code/</link>
-            <pubDate>Wed, 22 Jun 2022 21:24:45 -0400</pubDate>
-            
-            <guid>https://hacdan.org/posts/100-days-of-code/</guid>
-            <description>I have a problem with staying motivated. As with most people I like the idea of starting new projects, but the newness tends to ween after a little while and well&amp;hellip; the project gets boring. While I&amp;rsquo;m not there yet with any of my current projects, I know I will get there sooner rather than later. Because of this, I&amp;rsquo;m deciding to commit to #100daysofcode .
-I don&amp;rsquo;t think I&amp;rsquo;ll blog about every day that I complete of this challenge, but I do plan on posting updates from time-to-time regarding this challenge.</description>
-            <content type="html"><![CDATA[<p>I have a problem with staying motivated. As with most people I like the idea of starting new projects, but the <em>newness</em> tends to ween after a little while and well&hellip; the project gets boring. While I&rsquo;m not there yet with any of my current projects, I know I will get there sooner rather than later. Because of this, I&rsquo;m deciding to commit to <a href="https://www.100daysofcode.com/" target="_blank" rel="noopener">#100daysofcode</a>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on hacdan.org</title><link>https://hacdan.org/posts/</link><description>Recent content in Posts on hacdan.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Jun 2022 21:24:45 -0400</lastBuildDate><atom:link href="https://hacdan.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>#100 Days of Code</title><link>https://hacdan.org/posts/100-days-of-code/</link><pubDate>Wed, 22 Jun 2022 21:24:45 -0400</pubDate><guid>https://hacdan.org/posts/100-days-of-code/</guid><description>I have a problem with staying motivated. As with most people I like the idea of starting new projects, but the newness tends to ween after a little while and well&amp;hellip; the project gets boring. While I&amp;rsquo;m not there yet with any of my current projects, I know I will get there sooner rather than later. Because of this, I&amp;rsquo;m deciding to commit to #100daysofcode .
+I don&amp;rsquo;t think I&amp;rsquo;ll blog about every day that I complete of this challenge, but I do plan on posting updates from time-to-time regarding this challenge.</description><content type="html"><![CDATA[<p>I have a problem with staying motivated. As with most people I like the idea of starting new projects, but the <em>newness</em> tends to ween after a little while and well&hellip; the project gets boring. While I&rsquo;m not there yet with any of my current projects, I know I will get there sooner rather than later. Because of this, I&rsquo;m deciding to commit to <a href="https://www.100daysofcode.com/" target="_blank" rel="noopener">#100daysofcode</a>
 
 .</p>
 <p>I don&rsquo;t think I&rsquo;ll blog about every day that I complete of this challenge, but I do plan on posting updates from time-to-time regarding this challenge. This is probably the worst time of year for me to commit to something like this, but ya know what? Who cares. I need to commit to something and stick with it, and when it comes to barrier of entry, I&rsquo;d say this is more than doable and quite easy to boot!</p>
@@ -26,18 +9,8 @@ I don&amp;rsquo;t think I&amp;rsquo;ll blog about every day that I complete of t
 <p>I plan to blog every 10 days about this, but I&rsquo;m not committing to that, as my focus will be entirely on coding for 1 hour a day on Android. If, for whatever reason, Android development just isn&rsquo;t working out for me, I do plan to continue the challenge working on a Go project that I&rsquo;ve been working on off and on for over a year and it could use some love, haha!</p>
 <p>Anyway, check out 100 days of code. It&rsquo;s an interesting challenge for anyone. And I do mean anyone. From the senior dev to someone who&rsquo;s never worked with code before. I&rsquo;m a firm believer that everyone can benefit from being able to program. I&rsquo;m also a firm believer that not everyone should be a full time software developer, but being able to automate certain aspects of your job is always a good thing!</p>
 <p>Until next time!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Front(end) Back(end) Side to Side</title>
-            <link>https://hacdan.org/posts/front-back-side-to-side/</link>
-            <pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate>
-            
-            <guid>https://hacdan.org/posts/front-back-side-to-side/</guid>
-            <description>Hear me out. I know, cheesy title to say the least, but it&amp;rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.
-Front(end) Back(end), or Side to Side? That quandry is this (if you haven&amp;rsquo;t figured it out from the title by now): What stack to work with? Honestly? I don&amp;rsquo;t know. I really enjoy backend development where I&amp;rsquo;m working on API&amp;rsquo;s, database integrations, and the like.</description>
-            <content type="html"><![CDATA[<p>
+]]></content></item><item><title>Front(end) Back(end) Side to Side</title><link>https://hacdan.org/posts/front-back-side-to-side/</link><pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate><guid>https://hacdan.org/posts/front-back-side-to-side/</guid><description>Hear me out. I know, cheesy title to say the least, but it&amp;rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.
+Front(end) Back(end), or Side to Side? That quandry is this (if you haven&amp;rsquo;t figured it out from the title by now): What stack to work with? Honestly? I don&amp;rsquo;t know. I really enjoy backend development where I&amp;rsquo;m working on API&amp;rsquo;s, database integrations, and the like.</description><content type="html"><![CDATA[<p>
     <img src="/uksupertight-new.jpg"  alt="Underground Kingz - Super Tight Album Cover"  class="center"  />
 
 
@@ -63,18 +36,8 @@ Yes, I&rsquo;ve done some mobile dev work in the past. I created an Android app 
 
  and will be blogging about it here.</p>
 <p>Until next time!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Imposter Monster</title>
-            <link>https://hacdan.org/posts/impostermonster/</link>
-            <pubDate>Wed, 08 Jun 2022 19:06:42 -0400</pubDate>
-            
-            <guid>https://hacdan.org/posts/impostermonster/</guid>
-            <description>What&amp;rsquo;s the Imposter Monster? So&amp;hellip; what is the imposter monster? Oxford defines imposter syndrome as
-the persistent inability to believe that one&amp;rsquo;s success is deserved or has been legitimately achieved as a result of one&amp;rsquo;s own efforts or skills. ~Oxford Google Search&amp;hellip; In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&amp;rsquo;re not good enough. Reminds you you&amp;rsquo;re not doing the right job.</description>
-            <content type="html"><![CDATA[<p><img src="/imposter.webp" alt="sus imposter"></p>
+]]></content></item><item><title>Imposter Monster</title><link>https://hacdan.org/posts/impostermonster/</link><pubDate>Wed, 08 Jun 2022 19:06:42 -0400</pubDate><guid>https://hacdan.org/posts/impostermonster/</guid><description>What&amp;rsquo;s the Imposter Monster? So&amp;hellip; what is the imposter monster? Oxford defines imposter syndrome as
+the persistent inability to believe that one&amp;rsquo;s success is deserved or has been legitimately achieved as a result of one&amp;rsquo;s own efforts or skills. ~Oxford Google Search&amp;hellip; In this case, I&amp;rsquo;d say the Imposter Monster is that voice in your head that continues to tell you you&amp;rsquo;re not good enough. Reminds you you&amp;rsquo;re not doing the right job.</description><content type="html"><![CDATA[<p><img src="/imposter.webp" alt="sus imposter"></p>
 <h2 id="whats-the-imposter-monster">What&rsquo;s the Imposter Monster?</h2>
 <p>So&hellip; what is the imposter monster? Oxford defines imposter syndrome as</p>
 <blockquote>
@@ -134,18 +97,8 @@ I really wanted to use the Ryan Reynolds one here, but my man Chan just seemed t
 </ul>
 <h3 id="the-end">The end?</h3>
 <p>I know I haven&rsquo;t blogged in a while, it&rsquo;s been almost, if not over, two years now. I have a lot of drafts built up that I need to finish editing and publish, but alas, Mr. Imposter Monster is stopping me. I&rsquo;m working on it, but more content will follow. At some point. Hopefully more regularly. Maybe, just maybe, it&rsquo;ll help me to build more self cofidence? Until next time, or some cheesy nonsense.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Just Do It</title>
-            <link>https://hacdan.org/posts/just_do_it/</link>
-            <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/just_do_it/</guid>
-            <description>Just Do It So, I failed. There’s no other way to put it, I haven’t posted in a few months now, so, that’s a fail. No way around it, so I’ll just lay it out there. I could go on and on about why I haven’t posted, but that doesn’t matter. This was a no excuse, just do it kind of situation, and I didn’t.
-Now before you go thinking this is a woe is me, I failed, feel sorry for me, that’s not the vibe I’m going for.</description>
-            <content type="html"><![CDATA[<h1 id="just-do-it">Just Do It</h1>
+]]></content></item><item><title>Just Do It</title><link>https://hacdan.org/posts/just_do_it/</link><pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/just_do_it/</guid><description>Just Do It So, I failed. There’s no other way to put it, I haven’t posted in a few months now, so, that’s a fail. No way around it, so I’ll just lay it out there. I could go on and on about why I haven’t posted, but that doesn’t matter. This was a no excuse, just do it kind of situation, and I didn’t.
+Now before you go thinking this is a woe is me, I failed, feel sorry for me, that’s not the vibe I’m going for.</description><content type="html"><![CDATA[<h1 id="just-do-it">Just Do It</h1>
 <p>So, I failed. There’s no other way to put it, I haven’t posted in a few months now, so, that’s a fail. No way around it, so I’ll just lay it out there. I could go on and on about why I haven’t posted, but that doesn’t matter. This was a no excuse, just do it kind of situation, and I didn’t.</p>
 <p>Now before you go thinking this is a woe is me, I failed, feel sorry for me, that’s not the vibe I’m going for. In fact, this is more of the opposite that anything else. Keep reading, I don’t think you’ll be disappointed.</p>
 <p>For a while now, I’ve had many projects running. This could be programming projects, hardware hacking projects, home improvement projects, you name it, I had something along those lines going. I know, I know, everyone does, and that’s normal, but for me, I never liked finishing them. The excitement of starting a new project was all I was ever looking for, and once that excitement faded, I would stop and move onto something new. We probably all do this at some point in our life, and as I said, I don’t see anyhing wrong with it.</p>
@@ -159,17 +112,7 @@ Now before you go thinking this is a woe is me, I failed, feel sorry for me, tha
 <p>Finally, just do it. I know this term has become quite cliche at this point, but it is sound advice. Just write that blog post, or code that not so technical portion of the project. You’ll be glad you did. Even if you need to go back and change something later (HINT: You Will), at least you’ll have your idea worked out to the point where it’s now refining instead of creating, and that, of course, is easier on the mind.</p>
 <p>I’m hoping to become a bit more regular with these posts now that I’m knocking out projects. I’m in the middle of writing a pretty basic CRUD REST API that has a web and mobile front end that I should have a few things to say about. This will be my first dive into reactjs and all of it’s fun components that go along with it, so expect that soonish.</p>
 <p>Until next time…</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Joys of (Soy)lent</title>
-            <link>https://hacdan.org/posts/joys_of_soy_lent/</link>
-            <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/joys_of_soy_lent/</guid>
-            <description>Joys of (Soy)lent This week I went through a life change, one most will probably call me a bit nuts for. I decided to go full time with Soylent. Just to be clear, by full time I mean I’m eating it daily, but it’s not all I’m eating during the day. I eat Soylent for breakfast and lunch, but I still sit down and have dinner with my family. I do this for a number of reasons that I won’t go into, but lets just say full time Soylent isn’t an option for me at this time.</description>
-            <content type="html"><![CDATA[<h1 id="joys-of-soylent">Joys of (Soy)lent</h1>
+]]></content></item><item><title>Joys of (Soy)lent</title><link>https://hacdan.org/posts/joys_of_soy_lent/</link><pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/joys_of_soy_lent/</guid><description>Joys of (Soy)lent This week I went through a life change, one most will probably call me a bit nuts for. I decided to go full time with Soylent. Just to be clear, by full time I mean I’m eating it daily, but it’s not all I’m eating during the day. I eat Soylent for breakfast and lunch, but I still sit down and have dinner with my family. I do this for a number of reasons that I won’t go into, but lets just say full time Soylent isn’t an option for me at this time.</description><content type="html"><![CDATA[<h1 id="joys-of-soylent">Joys of (Soy)lent</h1>
 <p>This week I went through a life change, one most will probably call me a bit nuts for. I decided to go full time with Soylent. Just to be clear, by full time I mean I’m eating it daily, but it’s not all I’m eating during the day. I eat Soylent for breakfast and lunch, but I still sit down and have dinner with my family. I do this for a number of reasons that I won’t go into, but lets just say full time Soylent isn’t an option for me at this time.</p>
 <p>My first day was on Wednesday, and it was quite the shift from my normal day. I’m not one to normally eat during the day, especially at work, so having <em>food</em> during the day was different. Different in a good way though. I felt like I had more energy to complete tasks. I’m not sure it was a measurable difference in my productivity, but this is something I should have done a long time ago. I didn’t receive any strange looks like I expected to, and things were fine, surprisingly.</p>
 <p>I finished up about 32 ounces of the pitcher, which I had mixed the night before, which I highly recommend. This works out to be about 1000 kcal or so. I’m a pretty big guy and going with about a 500 kcal deficit and planning on about 1000 calories from dinner alone, which probably isn’t that far from accurate considering what I usually have for dinner.</p>
@@ -187,17 +130,7 @@ Now before you go thinking this is a woe is me, I failed, feel sorry for me, tha
 <p>I did not receive any money or discount or anything else for that matter for writing this.</p>
 <p>Also, I am taking a fish oil suppliment, but I may stop, as I don’t think I need it anymore, but only time will tell.</p>
 <p>Stay Tuned!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Pixel (C)onclusion (4 of 4)</title>
-            <link>https://hacdan.org/posts/pixel_conclusion/</link>
-            <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/pixel_conclusion/</guid>
-            <description>Worth It? Was it? Worth the ridiculous amout of cash to drop on a machine that really has less power than a 4 year old laptop? I’m not sure. There may have been a different tablet I could have purchased, along with a different keyboard accessory that would have accomplished the same thing. I could have used the money elsewhere or spent it on other gadgets. What it really boils down to though is I wanted something that would last.</description>
-            <content type="html"><![CDATA[<h2 id="worth-it">Worth It?</h2>
+]]></content></item><item><title>Pixel (C)onclusion (4 of 4)</title><link>https://hacdan.org/posts/pixel_conclusion/</link><pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/pixel_conclusion/</guid><description>Worth It? Was it? Worth the ridiculous amout of cash to drop on a machine that really has less power than a 4 year old laptop? I’m not sure. There may have been a different tablet I could have purchased, along with a different keyboard accessory that would have accomplished the same thing. I could have used the money elsewhere or spent it on other gadgets. What it really boils down to though is I wanted something that would last.</description><content type="html"><![CDATA[<h2 id="worth-it">Worth It?</h2>
 <p>Was it? Worth the ridiculous amout of cash to drop on a machine that really has less power than a 4 year old laptop? I’m not sure. There may have been a different tablet I could have purchased, along with a different keyboard accessory that would have accomplished the same thing. I could have used the money elsewhere or spent it on other gadgets. What it really boils down to though is I wanted something that would last. This is a quality piece of hardware that I hope to get 3-4 years out of at least, and I believe this was the piece of hardware to do that.</p>
 <p>For someone else just looking to jump into this without spending too much cash, I would not recommend this tablet. I’d go with something cheaper and a different keyboard accessory just to try out the workflow, because if you can’t adapt, then you’re stuck with something you probably won’t be able to sell and won’t be able to live with.</p>
 <p>All that being said, if I had a chance to do this again, I would. Hands down, no questions asked. The hardware is top notch, the software will be there with the release of Nougat(the beta for now is awesome, though), so ya, worth it for me.</p>
@@ -221,17 +154,7 @@ Now before you go thinking this is a woe is me, I failed, feel sorry for me, tha
 
 </li>
 </ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Sweet Sweet Nougats (3 of 4)</title>
-            <link>https://hacdan.org/posts/sweet_sweet_nougats/</link>
-            <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/sweet_sweet_nougats/</guid>
-            <description>Sweet Sweet Nougats (3 of 4) Stable? As much as my 8 month old So, the big question on everyones mind when it comes to the beta preview of Android Nougat is stability. I see it everywhere posted on forums, articles, and blog posts. For the most part, on Developer Preview 5, it is very stable. I’ve had pretty good luck with it so far, with no crashes as of writing.</description>
-            <content type="html"><![CDATA[<h1 id="sweet-sweet-nougats-3-of-4">Sweet Sweet Nougats (3 of 4)</h1>
+]]></content></item><item><title>Sweet Sweet Nougats (3 of 4)</title><link>https://hacdan.org/posts/sweet_sweet_nougats/</link><pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/sweet_sweet_nougats/</guid><description>Sweet Sweet Nougats (3 of 4) Stable? As much as my 8 month old So, the big question on everyones mind when it comes to the beta preview of Android Nougat is stability. I see it everywhere posted on forums, articles, and blog posts. For the most part, on Developer Preview 5, it is very stable. I’ve had pretty good luck with it so far, with no crashes as of writing.</description><content type="html"><![CDATA[<h1 id="sweet-sweet-nougats-3-of-4">Sweet Sweet Nougats (3 of 4)</h1>
 <h1 id="stable-as-much-as-my-8-month-old">Stable? As much as my 8 month old</h1>
 <p>So, the big question on everyones mind when it comes to the beta preview of Android Nougat is stability. I see it everywhere posted on forums, articles, and blog posts. For the most part, on Developer Preview 5, it is very stable. I’ve had pretty good luck with it so far, with no crashes as of writing. Now that doesn’t mean I wwon’t have crashes, but for now, it’s all good in the hood.</p>
 <p>Now that is only speaking for the operating system. In regards to apps running on the system, the story isn’t so rosey. Mainly I’ve had issues with social networking sites that use the camera, such as Google Plus or Fenix for Twitter. These have crashed a few times in use, but not to the point I was worried. In regards to other apps I’m using, it’s not a long list.</p>
@@ -271,18 +194,8 @@ Now before you go thinking this is a woe is me, I failed, feel sorry for me, tha
 
 </li>
 </ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Pixels Everywhere! Hardware Review(2 of 4)</title>
-            <link>https://hacdan.org/posts/pixels_everywhere_review/</link>
-            <pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/pixels_everywhere_review/</guid>
-            <description>Pixels Everywhere! Hardware Review(2 of 4) Perfect! (Well, almost) So, as stated, everything arrived on time on Tuesday. I unboxed this beast and went to work installing the set of apps that I figured I would need. We’ll get to the software side of things in the next post, for now, let’s talk about hardware.
-Let’s start with the actual tablet. The device is solid, screen resolution and aspect ratio is perfect for what I wanted to use it for, which is mainly editing text files and doing research.</description>
-            <content type="html"><![CDATA[<h1 id="pixels-everywhere-hardware-review2-of-4">Pixels Everywhere! Hardware Review(2 of 4)</h1>
+]]></content></item><item><title>Pixels Everywhere! Hardware Review(2 of 4)</title><link>https://hacdan.org/posts/pixels_everywhere_review/</link><pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/pixels_everywhere_review/</guid><description>Pixels Everywhere! Hardware Review(2 of 4) Perfect! (Well, almost) So, as stated, everything arrived on time on Tuesday. I unboxed this beast and went to work installing the set of apps that I figured I would need. We’ll get to the software side of things in the next post, for now, let’s talk about hardware.
+Let’s start with the actual tablet. The device is solid, screen resolution and aspect ratio is perfect for what I wanted to use it for, which is mainly editing text files and doing research.</description><content type="html"><![CDATA[<h1 id="pixels-everywhere-hardware-review2-of-4">Pixels Everywhere! Hardware Review(2 of 4)</h1>
 <h1 id="perfect-well-almost">Perfect! (Well, almost)</h1>
 <p>So, as stated, everything arrived on time on Tuesday. I unboxed this beast and went to work installing the set of apps that I figured I would need. We’ll get to the software side of things in the next post, for now, let’s talk about hardware.</p>
 <p>Let’s start with the actual tablet. The device is solid, screen resolution and aspect ratio is perfect for what I wanted to use it for, which is mainly editing text files and doing research. For that, it’s perfect. The screen is a bit of a fingerprint magnet, but a wipe down once a day seems to eliminate that.</p>
@@ -309,18 +222,8 @@ Let’s start with the actual tablet. The device is solid, screen resolution and
 
 </li>
 </ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Christmas in July (1 of 4)</title>
-            <link>https://hacdan.org/posts/christmas_in_july/</link>
-            <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/christmas_in_july/</guid>
-            <description>Patience Is Virtual July 15th. That’s the day my coupon code for a Google Pixel C expired. Counting down the days to when the dream of moving to said tablet would be shattered. Shattered on principal anyway. There was no way I could justify paying full price for the Pixel C. It’s great hardware, sure, but it’s not $500 worth of hardware.
-Driving home from work on Tuesday my phone went off.</description>
-            <content type="html"><![CDATA[<h2 id="patience-is-virtual">Patience Is Virtual</h2>
+]]></content></item><item><title>Christmas in July (1 of 4)</title><link>https://hacdan.org/posts/christmas_in_july/</link><pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/christmas_in_july/</guid><description>Patience Is Virtual July 15th. That’s the day my coupon code for a Google Pixel C expired. Counting down the days to when the dream of moving to said tablet would be shattered. Shattered on principal anyway. There was no way I could justify paying full price for the Pixel C. It’s great hardware, sure, but it’s not $500 worth of hardware.
+Driving home from work on Tuesday my phone went off.</description><content type="html"><![CDATA[<h2 id="patience-is-virtual">Patience Is Virtual</h2>
 <p>July 15th. That’s the day my coupon code for a Google Pixel C expired. Counting down the days to when the dream of moving to said tablet would be shattered. Shattered on principal anyway. There was no way I could justify paying full price for the Pixel C. It’s great hardware, sure, but it’s not $500 worth of hardware.</p>
 <p>Driving home from work on Tuesday my phone went off. A text message, probably another scammer. I checked the area code and noticed it was local. It was someone inquiring about my computer post on Craigslist. I was shocked to say the least. There hadn’t been any bites on my machine for a few months now and I had honestly given up hope. I answered the few questions that the buyer had and we worked out a price. Sure, it was less than what I was hoping for, but it would be enough. Enough to fulfill the dream of decoupling from distraction.</p>
 <p>The buyer really wanted to meet that night, but I wasn’t home! We finally agreed to meet the next night at my house so he could check out the machine. The next night came and I honestly paced for a good hour in the office, wondering if this guy was going to come to pick it up. Time was running out and if this buyer didn’t work out, well I was going to pull the machine and work on my self-control.</p>
@@ -345,32 +248,12 @@ Driving home from work on Tuesday my phone went off.</description>
 
 </li>
 </ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>New Post...pwned</title>
-            <link>https://hacdan.org/posts/new_post_pwned/</link>
-            <pubDate>Fri, 15 Jul 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/new_post_pwned/</guid>
-            <description>New Post&amp;hellip;pwned Soon…! Today’s post will be postponed until Tuesday 7/19/16. I haven’t forgotten about my weekly commitment, I just have a pretty big post series coming up that I want to spend the weekend on. More to come on Tuesday.
-Stay tuned!</description>
-            <content type="html"><![CDATA[<h1 id="new-postpwned">New Post&hellip;pwned</h1>
+]]></content></item><item><title>New Post...pwned</title><link>https://hacdan.org/posts/new_post_pwned/</link><pubDate>Fri, 15 Jul 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/new_post_pwned/</guid><description>New Post&amp;hellip;pwned Soon…! Today’s post will be postponed until Tuesday 7/19/16. I haven’t forgotten about my weekly commitment, I just have a pretty big post series coming up that I want to spend the weekend on. More to come on Tuesday.
+Stay tuned!</description><content type="html"><![CDATA[<h1 id="new-postpwned">New Post&hellip;pwned</h1>
 <h1 id="soon">Soon…!</h1>
 <p>Today’s post will be postponed until Tuesday 7/19/16. I haven’t forgotten about my weekly commitment, I just have a pretty big post series coming up that I want to spend the weekend on. More to come on Tuesday.</p>
 <p>Stay tuned!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>MC Madness</title>
-            <link>https://hacdan.org/posts/mc_madness/</link>
-            <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/mc_madness/</guid>
-            <description>MC Madness Heading On Down To Crazy Town So, this week I’ve been struggling on what I should write about. I honestly took it easy this week, and was having trouble even picking a topic I could write a few words on. I have a couple of projects I wanted to complete this week that I honestly didn’t even start. With the holiday just a few days ago, I’ve been a bit lazy.</description>
-            <content type="html"><![CDATA[<h1 id="mc-madness">MC Madness</h1>
+]]></content></item><item><title>MC Madness</title><link>https://hacdan.org/posts/mc_madness/</link><pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/mc_madness/</guid><description>MC Madness Heading On Down To Crazy Town So, this week I’ve been struggling on what I should write about. I honestly took it easy this week, and was having trouble even picking a topic I could write a few words on. I have a couple of projects I wanted to complete this week that I honestly didn’t even start. With the holiday just a few days ago, I’ve been a bit lazy.</description><content type="html"><![CDATA[<h1 id="mc-madness">MC Madness</h1>
 <h2 id="heading-on-down-to-crazy-town">Heading On Down To Crazy Town</h2>
 <p>So, this week I’ve been struggling on what I should write about. I honestly took it easy this week, and was having trouble even picking a topic I could write a few words on. I have a couple of projects I wanted to complete this week that I honestly didn’t even start. With the holiday just a few days ago, I’ve been a bit lazy.</p>
 <p>Yesterday I had a day to myself that I was going to sit down and knock out a project and then sit down tonight and was going to write a nice detailed post on my thoughts. Well, yesterday came and went and no projects were finished. (Watched a few good movies though!) I did get a few things off the tech todo list though that I wanted to write about; here we go!</p>
@@ -392,18 +275,8 @@ Stay tuned!</description>
 <p>I know, I know, this isn’t an Apple KeyNote, but I needed some… <del>clickbait</del> …thing to catch your eye, ya, that’s it. Anywho, this is about garbage. Well, more specifically about garbage collection. I was experimenting with the G1 Garbage Collector on the odroid to try to reduce some tick lag I was receiving when RedStone was active. Now I’m not talking a huge complex RedStone mechanism here, lets just say one comparator clock was dropping my tickrate right around 15. This is bad, really bad. So I had assumed it was either a limitation of the ODroid, or a problem with the game version I was running. It turns out that my specific combiniation of the G1 Garbage Collector and the ODroid caused MAJOR tick lag on the machine, along with HUGE spike in CPU usage, which of course is what actually reduced my tickrate. After switching back to the normal Garbage Collector, things smoothed out quite considerably, and while I’m still limited on the size of RedStone projects that can be created, It is far from what it was.</p>
 <p>I guess the lesson learned here is while some <em>optimizations</em> are worthwhile crossplatform, some are tuned for specific setups, that while most would consider generic, in the case of running a sever on a single board ARM computer, not all optimizations are created equal!</p>
 <h4 id="ze-end">Ze End</h4>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Dot Dot Dot Files</title>
-            <link>https://hacdan.org/posts/dot_dot_dot_files/</link>
-            <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/dot_dot_dot_files/</guid>
-            <description>Dot Dot Dot Files 2016.07.01
-Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</description>
-            <content type="html"><![CDATA[<h1 id="dot-dot-dot-files">Dot Dot Dot Files</h1>
+]]></content></item><item><title>Dot Dot Dot Files</title><link>https://hacdan.org/posts/dot_dot_dot_files/</link><pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/dot_dot_dot_files/</guid><description>Dot Dot Dot Files 2016.07.01
+Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</description><content type="html"><![CDATA[<h1 id="dot-dot-dot-files">Dot Dot Dot Files</h1>
 <p>2016.07.01</p>
 <p>Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</p>
 <p>This set of configurations has grown a bit over the years, but not by much. While this is more a reflection of my lazyness to update my dotfiles as opposed to a growing need for more… ya I’m getting off track. The point is, you don’t need a lot in your dot files, but you should probably at least take a look into them. They can be a huge time saver. I know I’ve saved many keystrokes just by adding simple things to my dotfiles, and I suggest you do the same.</p>
@@ -451,17 +324,7 @@ Dot files. A power user’s bread and butter. We have our special tweaks and cus
 
 </li>
 </ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Weekly Blog Post Challenge</title>
-            <link>https://hacdan.org/posts/weekly_blog_post_challenge/</link>
-            <pubDate>Sat, 25 Jun 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/weekly_blog_post_challenge/</guid>
-            <description>Weekly Blog Post Challenge Getting Started - Weekly Blogging The Challenge You probably should know that I almost didn’t write this post. Besides, who really wants to spend a few hours of their precious time every week writing a blog post? I mean, really, don’t you have better things to do with your time than write a blog post? I certainly do, but here we are anyway. Because reasons. I’ll get into those later.</description>
-            <content type="html"><![CDATA[<h1 id="weekly-blog-post-challenge">Weekly Blog Post Challenge</h1>
+]]></content></item><item><title>Weekly Blog Post Challenge</title><link>https://hacdan.org/posts/weekly_blog_post_challenge/</link><pubDate>Sat, 25 Jun 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/weekly_blog_post_challenge/</guid><description>Weekly Blog Post Challenge Getting Started - Weekly Blogging The Challenge You probably should know that I almost didn’t write this post. Besides, who really wants to spend a few hours of their precious time every week writing a blog post? I mean, really, don’t you have better things to do with your time than write a blog post? I certainly do, but here we are anyway. Because reasons. I’ll get into those later.</description><content type="html"><![CDATA[<h1 id="weekly-blog-post-challenge">Weekly Blog Post Challenge</h1>
 <h1 id="getting-started---weekly-blogging">Getting Started - Weekly Blogging</h1>
 <h2 id="the-challenge">The Challenge</h2>
 <p>You probably should know that I almost didn’t write this post. Besides, who <em>really</em> wants to spend a few hours of their precious time every week writing a blog post? I mean, really, don’t you have better things to do with your time than write a blog post? I certainly do, but here we are anyway. Because reasons. I’ll get into those later.</p>
@@ -524,17 +387,7 @@ to check that out.</p>
 <p>Well I guess that’s it for now. You’ll see a post from me, assuming all goes
 well, in 6 days.</p>
 <p><em>See you all then, and happy scrolling!</em></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Odroid &#43; Minecraft = Possible</title>
-            <link>https://hacdan.org/posts/odroid_plus_minecraft/</link>
-            <pubDate>Sat, 23 Apr 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/odroid_plus_minecraft/</guid>
-            <description>Odroid + Minecraft = Possible Introduction ARM based CPU’s have always interested me. Long before they had gained the reputation that they have today, I was hacking away on them. Finding out everything that I could do with them. Over the past few years, there has been a huge interest in optimizations for the architexture along with many operating systems being specificially(at least originally) developed for them. While I’m still working my way to replacing all of the hardware in my house with an ARM CPU, I feel at least in the server department, it should be an easy venture.</description>
-            <content type="html"><![CDATA[<h1 id="odroid--minecraft--possible">Odroid + Minecraft = Possible</h1>
+]]></content></item><item><title>Odroid + Minecraft = Possible</title><link>https://hacdan.org/posts/odroid_plus_minecraft/</link><pubDate>Sat, 23 Apr 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/odroid_plus_minecraft/</guid><description>Odroid + Minecraft = Possible Introduction ARM based CPU’s have always interested me. Long before they had gained the reputation that they have today, I was hacking away on them. Finding out everything that I could do with them. Over the past few years, there has been a huge interest in optimizations for the architexture along with many operating systems being specificially(at least originally) developed for them. While I’m still working my way to replacing all of the hardware in my house with an ARM CPU, I feel at least in the server department, it should be an easy venture.</description><content type="html"><![CDATA[<h1 id="odroid--minecraft--possible">Odroid + Minecraft = Possible</h1>
 <h2 id="introduction">Introduction</h2>
 <p>ARM based CPU’s have always interested me. Long before they had gained the reputation that they have today, I was hacking away on them. Finding out everything that I could do with them. Over the past few years, there has been a huge interest in optimizations for the architexture along with many operating systems being specificially(at least originally) developed for them. While I’m still working my way to replacing all of the hardware in my house with an ARM CPU, I feel at least in the server department, it should be an easy venture.</p>
 <p>This has proven, however to be a bit more work than a few apt-get installs and we’re off to the races. No, it’s been a bit more than that, but, not much! Which I think is awesome!</p>
@@ -610,17 +463,7 @@ well, in 6 days.</p>
 
 </li>
 </ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Moving To The Cloud</title>
-            <link>https://hacdan.org/posts/moving_to_the_cloud/</link>
-            <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://hacdan.org/posts/moving_to_the_cloud/</guid>
-            <description>The Cloud My Story An adventure. That’s the best way that I can describe this process. My development work, at least in this part of my life, has always been a side project, but I’d taken it somewhat seriously. I found myself, though, wandering off to do other things instead of concentrating on my true passion. Writing software. I hadn’t really thought about solving the concentration problem because, who cares right?</description>
-            <content type="html"><![CDATA[<h2 id="the-cloud">The Cloud</h2>
+]]></content></item><item><title>Moving To The Cloud</title><link>https://hacdan.org/posts/moving_to_the_cloud/</link><pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate><guid>https://hacdan.org/posts/moving_to_the_cloud/</guid><description>The Cloud My Story An adventure. That’s the best way that I can describe this process. My development work, at least in this part of my life, has always been a side project, but I’d taken it somewhat seriously. I found myself, though, wandering off to do other things instead of concentrating on my true passion. Writing software. I hadn’t really thought about solving the concentration problem because, who cares right?</description><content type="html"><![CDATA[<h2 id="the-cloud">The Cloud</h2>
 <h2 id="my-story">My Story</h2>
 <p>An adventure. That’s the best way that I can describe this process. My development work, at least in this part of my life, has always been a side project, but I’d taken it somewhat seriously. I found myself, though, wandering off to do other things instead of concentrating on my true passion. <em>Writing software</em>. I hadn’t really thought about solving the concentration problem because, who cares right? It’s just a hobby, no need to get serious about it. I do have a degree in software engineering, but I’m not using it in my current position, so why bother?</p>
 <p>The <em>why bother?</em> question is what really got me thinking though. That’s not the self that I knew. That is someone totally different. I have never been the one to just settle. Be happy with what I know and move on. I have to keep learning, it’s in fact always been one of my life goals. I don’t want to stop learning. So, I started thinking of ways to solve the concentration problem.</p>
@@ -650,8 +493,4 @@ That will be a tablet with attached keyboard. Now, this is a huge jump from the 
 </ul>
 <p>There are more, but I seem to have lost the links to them. Irregardless, these posts might be a few years old, but things have only gotten better, not worse. Tablets have improved, cloud computing instances have gotten cheaper, it’s just all around better. I will say that taking this route, you will most likely need to write a bit of custom toolery to get started, as not much exists for development based around the CLI anymore, at least not for the typical Joe Computer Programmer.</p>
 <p><em>More to come, stay tuned!</em></p>
-]]></content>
-        </item>
-        
-    </channel>
-</rss>
+]]></content></item></channel></rss>
