@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>life choices on hacdan.org</title><link>https://hacdan.org/tags/life-choices/</link><description>Recent content in life choices on hacdan.org</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 13 Jun 2022 20:27:53 -0400</lastBuildDate><atom:link href="https://hacdan.org/tags/life-choices/index.xml" rel="self" type="application/rss+xml"/><item><title>Front(end) Back(end) Side to Side</title><link>https://hacdan.org/posts/front-back-side-to-side/</link><pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate><guid>https://hacdan.org/posts/front-back-side-to-side/</guid><description>Hear me out. I know, cheesy title to say the least, but it&amp;rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.
-Front(end) Back(end), or Side to Side? That quandry is this (if you haven&amp;rsquo;t figured it out from the title by now): What stack to work with? Honestly? I don&amp;rsquo;t know. I really enjoy backend development where I&amp;rsquo;m working on API&amp;rsquo;s, database integrations, and the like.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life choices on hacdan.org</title>
+    <link>https://hacdan.org/tags/life-choices/</link>
+    <description>Recent content in life choices on hacdan.org</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jun 2022 20:27:53 -0400</lastBuildDate><atom:link href="https://hacdan.org/tags/life-choices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Front(end) Back(end) Side to Side</title>
+      <link>https://hacdan.org/posts/front-back-side-to-side/</link>
+      <pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate>
+      
+      <guid>https://hacdan.org/posts/front-back-side-to-side/</guid>
+      <description>Hear me out. I know, cheesy title to say the least, but it&amp;rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.
+Front(end) Back(end), or Side to Side? That quandry is this (if you haven&amp;rsquo;t figured it out from the title by now): What stack to work with? Honestly? I don&amp;rsquo;t know. I really enjoy backend development where I&amp;rsquo;m working on API&amp;rsquo;s, database integrations, and the like.</description>
+    </item>
+    
+  </channel>
+</rss>

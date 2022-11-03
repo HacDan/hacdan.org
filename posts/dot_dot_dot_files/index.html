@@ -1,15 +1,321 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content="David McClellan "><meta name=description content="Dot Dot Dot Files 2016.07.01
-Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be."><meta name=keywords content=",untagged"><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://hacdan.org/posts/dot_dot_dot_files/><title>Dot Dot Dot Files :: hacdan.org</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/main.29c2c8c3fc9cf748254138351f142ac2833b208a68e83aec126edc98b59efef2.css><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#ffffff><link rel="shortcut icon" href=/favicon.ico><meta name=msapplication-TileColor content><meta name=theme-color content="ffffff"><meta itemprop=name content="Dot Dot Dot Files"><meta itemprop=description content="Dot Dot Dot Files 2016.07.01
-Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be."><meta itemprop=datePublished content="2016-07-01T00:00:00+00:00"><meta itemprop=dateModified content="2016-07-01T00:00:00+00:00"><meta itemprop=wordCount content="1354"><meta itemprop=keywords content="untagged,"><meta name=twitter:card content="summary"><meta name=twitter:title content="Dot Dot Dot Files"><meta name=twitter:description content="Dot Dot Dot Files 2016.07.01
-Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be."><meta property="article:published_time" content="2016-07-01 00:00:00 +0000 UTC"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-78885046-1","auto"),ga("send","pageview"))</script></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo><span class=logo__mark>></span>
-<span class=logo__text>$ cd /Users/hacdan/</span>
-<span class=logo__cursor style=background-color:#67a2c9></span></div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/posts>Blog</a></li><li><a href=/resume/readme/>Resume</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 minutes</p></div><article><h1 class=post-title><a href=https://hacdan.org/posts/dot_dot_dot_files/>Dot Dot Dot Files</a></h1><div class=post-content><h1 id=dot-dot-dot-files>Dot Dot Dot Files</h1><p>2016.07.01</p><p>Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</p><p>This set of configurations has grown a bit over the years, but not by much. While this is more a reflection of my lazyness to update my dotfiles as opposed to a growing need for more… ya I’m getting off track. The point is, you don’t need a lot in your dot files, but you should probably at least take a look into them. They can be a huge time saver. I know I’ve saved many keystrokes just by adding simple things to my dotfiles, and I suggest you do the same.</p><p>Now for me, I work mainly from a terminal session over ssh, so having a completely configured system underneath my fingertips really improves my workflow. While I’m sure I could do what I do without these customizations, they just make things that much easier.</p><p>Now, you don’t need to only work from the command line to benefit from these tweaks; it just happens to be how I work.</p><h1 id=what-the-dotfiles>What The Dot?(files)</h1><p>I’m not sure how many times I just typed out the word <em>dotfiles</em> but I’m sure it was way more than I needed to. Anyway… The word dotfiles while rooted in files that start with a period, to hide them from most file systems, has really expanded to cover any specific configuration file a user would use on their system that customizes their experience with daily used applications.</p><p>The most common would be your terminal profile, something like a bashrc or profile, but any configuration file that you use to customize your experience within an appication could be considered a <em>dotfile</em>.</p><h1 id=how-to-version-your-dotfiles>How to Version your Dotfiles</h1><p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href=https://github.com/HacDan/DotFiles target=_blank rel=noopener>here</a>
-they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p><p>To setup a quick repo and version my dot files I followed this blog post <a href=https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/ target=_blank rel=noopener>here</a>
-This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797" target=_blank rel=noopener>post</a>
-on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p><h1 id=quick-run-down-of-mine>Quick Run Down of Mine</h1><p>To wrap things up, I just wanted to give a quick run down of my dotfiles. I have more I need to add into the repo, but for now I’m sticking to what I have in there.</p><h2 id=bashrc>.bashrc</h2><p>As mentioned previously, my bashrc is being rebuilt from the ground up and I’m adding things in as I notice them missing. I lost my old bashrc, hence the rebuild. For now it really just contains a mess of exports for working with GOLANG and a simple mkcd function which I use all the time that does what it says on the tin. Makes a directory then changes you into that directory. It’s simple things like this that save me just a few keystrokes per operation, but add up to a lot at the end of the day.</p><h2 id=vimrc>.vimrc</h2><p>This one is a bit more in depth, and I may have to come back and revist this in another post, but I’ll go over some hightlights that I think are noteworthy. Now I don’t have some 3000lc vimrc, there are, what I consider, a good amount of plugins in there, which would take a bit to go over, along with some remappings to keep my fingers from reaching all over the board. Here we go…</p><h3 id=vundle>Vundle</h3><p>My go to plugin manager of choice. I know there are many, and at times I’m not very happy with Vundle, but it gets the job done and that’s what counts. I’ve learned it’s qwirks and tamed it to my liking.</p><p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href=https://github.com/garbas/vim-snipmate target=_blank rel=noopener>snipmate</a>
-. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p><h3 id=remappings>Remappings</h3><p>Now, the one remaping that I recommend you do take away from this is the leader binding right at the top of the file. I’ve remapped the leader to the very common comma. While I tend to be a bit hipsterish when coming up with keybindings, I’ve found there’s a reason everyone remaps to the comman. It’s awesome. End of story. Give it a shot, and even if you don’t like there, there are other options that may be worth looking into over the default.</p><h3 id=settings>Settings</h3><p>Now for settings, I have wordwrap turned off, and my tabs inserted as spaces like any sane person would do, but one thing I do use that I’ve found isn’t as populat, but is gaining popularity, is relativenumber. This allows you to quickly spot how many lines down a file you want to operate on with a vim movement and off to the races you go. Besides, who wants to figure out in their head the difference between line 156 and line 194. Not I said the pig.</p><h2 id=tmuxconf>.tmux.conf</h2><p>Alright, final file for this post.</p><p>The main thing to take away from my tmux config is that I even use tmux! I jest, while I do really enjoy using tmux, I’m not here to start a screen war or anything. In regards to the configuration file, I’ve mainly rebound the leader, or as tmux calls it, prefix key to CTRL-J. I find this to be much easier to reach/remember than the default which I’ve honestly already forgotten. I’ve also rebound the pane movement to represent VIM style movements, which helps when bouncing between the two, as it is one less thing for me to remember.</p><p>I’ve also rebound the split window bindings because I couldn’t keep the defaults straight. I tried, I really did, but I didn’t have much luck. There are some other settings in there for the status bar, but I’m honestly still not quite happy with it, so that will be modified over the next couple of days(hopefully).</p><h1 id=wrapper-it-up>Wrapper it up</h1><p>To wrap things up, as I mentioned my dot files aren’t extensive, but they are my own. They get me through the day to day grind of my side projects and now a couple of things at work. While I’m sure there’s a thousand more tweaks I could do, I’m okay for now(if you don’t count my bashrc). If you’re into that sort of thing, keep an eye on the repo, I’m sure I’ll be updating it more often now that I have to rebuild my .bashrc from scratch.</p><h2 id=inspriational-repos>Inspriational Repos</h2><ul><li><a href=https://bitbucket.org/sjl/dotfiles/src target=_blank rel=noopener>Steve Losh’s DotFiles</a></li><li><a href=http://pastebin.com/4ZCTcf7m target=_blank rel=noopener>JLACROIX’s Tmux Configuration</a></li></ul></div></article><hr><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://hacdan.org/tags/untagged/>untagged</a></span></p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>1354 Words</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2016-06-30 20:00</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h></span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://hacdan.org/posts/mc_madness/><span class=button__icon>←</span>
-<span class=button__text>MC Madness</span></a></span>
-<span class="button next"><a href=https://hacdan.org/posts/weekly_blog_post_challenge/><span class=button__text>Weekly Blog Post Challenge</span>
-<span class=button__icon>→</span></a></span></div></div></main></div><footer class=footer><div class=footer__inner><div class=footer__content><span><a href=https://hacdan.org/>David McClellan</a></span>
-<span></span>
-<span><a href=https://hacdan.org/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></span></div></div><div class=footer__inner><div class=footer__content><span>Powered by <a href=http://gohugo.io>Hugo</a></span></div></div></footer></div><script type=text/javascript src=/bundle.min.feebdc8d801e3fb1791305e362b6d11557f029604dd5b3c27e2686bc88787ee90ae1ccf0afe81bd7d959d7617cfe1fc73062aa82b4e1fa830d6941193d2cbddf.js integrity="sha512-/uvcjYAeP7F5EwXjYrbRFVfwKWBN1bPCfiaGvIh4fukK4czwr+gb19lZ12F8/h/HMGKqgrTh+oMNaUEZPSy93w=="></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="David McClellan ">
+<meta name="description" content="Dot Dot Dot Files 2016.07.01
+Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be." />
+<meta name="keywords" content=", untagged" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hacdan.org/posts/dot_dot_dot_files/" />
+
+
+    <title>
+        
+            Dot Dot Dot Files :: hacdan.org 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.29c2c8c3fc9cf748254138351f142ac2833b208a68e83aec126edc98b59efef2.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+    <meta name="theme-color" content="ffffff">
+
+
+
+<meta itemprop="name" content="Dot Dot Dot Files">
+<meta itemprop="description" content="Dot Dot Dot Files 2016.07.01
+Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be."><meta itemprop="datePublished" content="2016-07-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-07-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1354">
+<meta itemprop="keywords" content="untagged," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dot Dot Dot Files"/>
+<meta name="twitter:description" content="Dot Dot Dot Files 2016.07.01
+Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2016-07-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-78885046-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /Users/hacdan/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#67A2C9;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Blog</a></li><li><a href="/resume/readme/">Resume</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        7 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hacdan.org/posts/dot_dot_dot_files/">Dot Dot Dot Files</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <h1 id="dot-dot-dot-files">Dot Dot Dot Files</h1>
+<p>2016.07.01</p>
+<p>Dot files. A power user’s bread and butter. We have our special tweaks and custom commands built into our files that tweak our systems just a bit from the next guy. Personally mine are still growing, but I wanted to share them with you for my first blog post of this year long journey. While they’re nothing special, I would like to point out that they do not need to be.</p>
+<p>This set of configurations has grown a bit over the years, but not by much. While this is more a reflection of my lazyness to update my dotfiles as opposed to a growing need for more… ya I’m getting off track. The point is, you don’t need a lot in your dot files, but you should probably at least take a look into them. They can be a huge time saver. I know I’ve saved many keystrokes just by adding simple things to my dotfiles, and I suggest you do the same.</p>
+<p>Now for me, I work mainly from a terminal session over ssh, so having a completely configured system underneath my fingertips really improves my workflow. While I’m sure I could do what I do without these customizations, they just make things that much easier.</p>
+<p>Now, you don’t need to only work from the command line to benefit from these tweaks; it just happens to be how I work.</p>
+<h1 id="what-the-dotfiles">What The Dot?(files)</h1>
+<p>I’m not sure how many times I just typed out the word <em>dotfiles</em> but I’m sure it was way more than I needed to. Anyway… The word dotfiles while rooted in files that start with a period, to hide them from most file systems, has really expanded to cover any specific configuration file a user would use on their system that customizes their experience with daily used applications.</p>
+<p>The most common would be your terminal profile, something like a bashrc or profile, but any configuration file that you use to customize your experience within an appication could be considered a <em>dotfile</em>.</p>
+<h1 id="how-to-version-your-dotfiles">How to Version your Dotfiles</h1>
+<p>Now, because these files give users customization and time shortcuts, they do require some time to be put into them. Because of this, it is best to keep your dotfiles backed up, or better yet versioned. For myself, I’ve recently finally made the leap and started versioning them. While they still need to be cleaned up, <a href="https://github.com/HacDan/DotFiles" target="_blank" rel="noopener">here</a>
+
+ they are. Right now this contains my tmux.conf, vimrc, and bashrc. I’ll be cleaning these up over the next couple of days, as they’re a bit of a mess, and I recently started rebuilding my bashrc, so that one is still a bit bare and needs some organization. For the most part this is what I use on a daily basis to help improve my workflow.</p>
+<p>To setup a quick repo and version my dot files I followed this blog post <a href="https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/" target="_blank" rel="noopener">here</a>
+
+ This post is a writeup of a <a href="https://news.ycombinator.com/item?id=11070797" target="_blank" rel="noopener">post</a>
+
+ on hacker news outlining how <em>polm23</em> keeps his dotfiles versioned. I thought it was a great idea when I found the thread recently and have since implemented it. I haven’t had to restore from the repo yet, but the post contains a pretty simple one liner to help you do so, along with a few more instructions if you’re cloning onto another machine.</p>
+<h1 id="quick-run-down-of-mine">Quick Run Down of Mine</h1>
+<p>To wrap things up, I just wanted to give a quick run down of my dotfiles. I have more I need to add into the repo, but for now I’m sticking to what I have in there.</p>
+<h2 id="bashrc">.bashrc</h2>
+<p>As mentioned previously, my bashrc is being rebuilt from the ground up and I’m adding things in as I notice them missing. I lost my old bashrc, hence the rebuild. For now it really just contains a mess of exports for working with GOLANG and a simple mkcd function which I use all the time that does what it says on the tin. Makes a directory then changes you into that directory. It’s simple things like this that save me just a few keystrokes per operation, but add up to a lot at the end of the day.</p>
+<h2 id="vimrc">.vimrc</h2>
+<p>This one is a bit more in depth, and I may have to come back and revist this in another post, but I’ll go over some hightlights that I think are noteworthy. Now I don’t have some 3000lc vimrc, there are, what I consider, a good amount of plugins in there, which would take a bit to go over, along with some remappings to keep my fingers from reaching all over the board. Here we go…</p>
+<h3 id="vundle">Vundle</h3>
+<p>My go to plugin manager of choice. I know there are many, and at times I’m not very happy with Vundle, but it gets the job done and that’s what counts. I’ve learned it’s qwirks and tamed it to my liking.</p>
+<p>The one plugin I will hightlight, as a lot of them have been covered in numerous blog posts, like Command-T and NerdTree, is <a href="https://github.com/garbas/vim-snipmate" target="_blank" rel="noopener">snipmate</a>
+
+. This is a very feature complete version of TextMates snippets. While I never really got into TextMate or it’s snippets, I find that having something to insert boilerplate into code is <em>very</em> helpful, and definetely saves a lot of keystrokes. I have many different snippets configured that I will put into the repo soon to show off what I do with it, but anything you find yourself typing a lot, is usually worth putting into snipmate.</p>
+<h3 id="remappings">Remappings</h3>
+<p>Now, the one remaping that I recommend you do take away from this is the leader binding right at the top of the file. I’ve remapped the leader to the very common comma. While I tend to be a bit hipsterish when coming up with keybindings, I’ve found there’s a reason everyone remaps to the comman. It’s awesome. End of story. Give it a shot, and even if you don’t like there, there are other options that may be worth looking into over the default.</p>
+<h3 id="settings">Settings</h3>
+<p>Now for settings, I have wordwrap turned off, and my tabs inserted as spaces like any sane person would do, but one thing I do use that I’ve found isn’t as populat, but is gaining popularity, is relativenumber. This allows you to quickly spot how many lines down a file you want to operate on with a vim movement and off to the races you go. Besides, who wants to figure out in their head the difference between line 156 and line 194. Not I said the pig.</p>
+<h2 id="tmuxconf">.tmux.conf</h2>
+<p>Alright, final file for this post.</p>
+<p>The main thing to take away from my tmux config is that I even use tmux! I jest, while I do really enjoy using tmux, I’m not here to start a screen war or anything. In regards to the configuration file, I’ve mainly rebound the leader, or as tmux calls it, prefix key to CTRL-J. I find this to be much easier to reach/remember than the default which I’ve honestly already forgotten. I’ve also rebound the pane movement to represent VIM style movements, which helps when bouncing between the two, as it is one less thing for me to remember.</p>
+<p>I’ve also rebound the split window bindings because I couldn’t keep the defaults straight. I tried, I really did, but I didn’t have much luck. There are some other settings in there for the status bar, but I’m honestly still not quite happy with it, so that will be modified over the next couple of days(hopefully).</p>
+<h1 id="wrapper-it-up">Wrapper it up</h1>
+<p>To wrap things up, as I mentioned my dot files aren’t extensive, but they are my own. They get me through the day to day grind of my side projects and now a couple of things at work. While I’m sure there’s a thousand more tweaks I could do, I’m okay for now(if you don’t count my bashrc). If you’re into that sort of thing, keep an eye on the repo, I’m sure I’ll be updating it more often now that I have to rebuild my .bashrc from scratch.</p>
+<h2 id="inspriational-repos">Inspriational Repos</h2>
+<ul>
+<li><a href="https://bitbucket.org/sjl/dotfiles/src" target="_blank" rel="noopener">Steve Losh’s DotFiles</a>
+
+</li>
+<li><a href="http://pastebin.com/4ZCTcf7m" target="_blank" rel="noopener">JLACROIX’s Tmux Configuration</a>
+
+</li>
+</ul>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hacdan.org/tags/untagged/">untagged</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1354 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2016-06-30 20:00
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://hacdan.org/posts/mc_madness/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">MC Madness</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://hacdan.org/posts/weekly_blog_post_challenge/">
+                    <span class="button__text">Weekly Blog Post Challenge</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            
+            <span><a href="https://hacdan.org/">David McClellan</a></span>
+            <span></span>
+            <span><a href="https://hacdan.org/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.bb2c6bc3ed452ca4759660e4020811f248bc2320081559e8a32d8b0092773852941133639d35e8370d03d3ddaa750b1edd6b343c5bd22a55d5bdeae8f648f49b.js" integrity="sha512-uyxrw&#43;1FLKR1lmDkAggR8ki8IyAIFVnooy2LAJJ3OFKUETNjnTXoNw0D092qdQse3Ws0PFvSKlXVvero9kj0mw=="></script>
+
+
+
+    </body>
+</html>
