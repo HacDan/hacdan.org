@@ -33,23 +33,6 @@ So, why am I bringing it up when talking about monitors and window management? B
 <p>Sure, there&rsquo;s the cool factor of being able to slide your windows wherever you want them with just your keyboard, but in reality, it has real world benefits as well.</p>
 <p>If you don&rsquo;t want to use Hammerspoon, there are other apps that greatly improve macOS window management, but I&rsquo;d say that Hammerspoon does it best, because it can do so much more. App switching with a shortcut? Sure, no problem. Sequence of tasks you do daily on your computer? Automate it with Hammerspoon! I&rsquo;d rather not have 3-5 apps running in the background when one can do just fine.</p>
 <p>I will say, the other huge side-benefit for me is every time I write a new function in my Hammerspoon <code>init.lua</code> it puts a smile on my face. Why? I dunno, but it&rsquo;s worth it. Give it a shot!</p>
-]]></content></item><item><title>Automation Station</title><link>https://hacdan.org/posts/automation-station/</link><pubDate>Sun, 20 Nov 2022 20:56:31 -0500</pubDate><guid>https://hacdan.org/posts/automation-station/</guid><description>Why? Improved workflow Looks cool (obviously should have been #1) Saved on typing How Share .dotfiles Make joke about dot dotfiles Share 2 specific functions/aliases/automations The who? Heading writes it&amp;rsquo;s own joke Everyone needs to do this. Regardless of skill set</description><content type="html"><![CDATA[<h2 id="why">Why?</h2>
-<ul>
-<li>Improved workflow</li>
-<li>Looks cool (obviously should have been #1)</li>
-<li>Saved on typing</li>
-</ul>
-<h2 id="how">How</h2>
-<ul>
-<li>Share .dotfiles</li>
-<li>Make joke about dot dotfiles</li>
-<li>Share 2 specific functions/aliases/automations</li>
-</ul>
-<h2 id="the-who">The who?</h2>
-<ul>
-<li>Heading writes it&rsquo;s own joke</li>
-<li>Everyone needs to do this. Regardless of skill set</li>
-</ul>
 ]]></content></item><item><title>Front(end) Back(end) Side to Side</title><link>https://hacdan.org/posts/front-back-side-to-side/</link><pubDate>Mon, 13 Jun 2022 20:27:53 -0400</pubDate><guid>https://hacdan.org/posts/front-back-side-to-side/</guid><description>Hear me out. I know, cheesy title to say the least, but it&amp;rsquo;s what came to mind when I decided I wanted to write about this quandry of mine.
 Front(end) Back(end), or Side to Side? That quandry is this (if you haven&amp;rsquo;t figured it out from the title by now): What stack to work with? Honestly? I don&amp;rsquo;t know. I really enjoy backend development where I&amp;rsquo;m working on API&amp;rsquo;s, database integrations, and the like.</description><content type="html"><![CDATA[<p>
     <img src="/uksupertight-new.jpg"  alt="Underground Kingz - Super Tight Album Cover"  class="center"  />
