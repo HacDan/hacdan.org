@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="At work, I often have to SSH into multipe machines, but I hate having to remember the host names I&rsquo;ve set in in my ~/.ssh/confg file. I decided I would wrie a quick script to solve this problem for me.
+The Code #!/bin/sh ssh $(cat ~/.ssh/config | grep &#34;Host &#34; | awk &#39;{print $2}&#39; | fzf) This of course requires that you have FZF installed and have a properly configured SSH config, but I find it saves me a lot of time with remembering host names and initiating the SSH connection. I have improvements I&rsquo;d like to make, like a few tweaks to have fzf is displaying the list, but for the most part, this is how this has lived in my ~/.local/bin/ folder since I wrote it. Eventually I&rsquo;ll integrate it with tmux to launch either a new window or a new session, I haven&rsquo;t decided, but that&rsquo;s for future me!
+" />
+<meta name="keywords" content=", Development, Workflow, TMUX" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hacdan.org/posts/fuzzy-ssh/" />
+
+
+    <title>
+        
+            Fuzzy SSH :: David McClellan 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.244183cde1a38e0b08f82c11791181288f9aac1cc9618cd6f4e9e7710c5768ba.css" integrity="sha256-JEGDzeGjjgsI&#43;CwReRGBKI&#43;arBzJYYzW9OnncQxXaLo=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Fuzzy SSH">
+  <meta itemprop="description" content="At work, I often have to SSH into multipe machines, but I hate having to remember the host names I’ve set in in my ~/.ssh/confg file. I decided I would wrie a quick script to solve this problem for me.
+The Code #!/bin/sh ssh $(cat ~/.ssh/config | grep &#34;Host &#34; | awk &#39;{print $2}&#39; | fzf) This of course requires that you have FZF installed and have a properly configured SSH config, but I find it saves me a lot of time with remembering host names and initiating the SSH connection. I have improvements I’d like to make, like a few tweaks to have fzf is displaying the list, but for the most part, this is how this has lived in my ~/.local/bin/ folder since I wrote it. Eventually I’ll integrate it with tmux to launch either a new window or a new session, I haven’t decided, but that’s for future me!">
+  <meta itemprop="datePublished" content="2025-03-07T13:31:50-05:00">
+  <meta itemprop="dateModified" content="2025-03-07T13:31:50-05:00">
+  <meta itemprop="wordCount" content="193">
+  <meta itemprop="keywords" content="Development,Workflow,TMUX">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Fuzzy SSH">
+  <meta name="twitter:description" content="At work, I often have to SSH into multipe machines, but I hate having to remember the host names I’ve set in in my ~/.ssh/confg file. I decided I would wrie a quick script to solve this problem for me.
+The Code #!/bin/sh ssh $(cat ~/.ssh/config | grep &#34;Host &#34; | awk &#39;{print $2}&#39; | fzf) This of course requires that you have FZF installed and have a properly configured SSH config, but I find it saves me a lot of time with remembering host names and initiating the SSH connection. I have improvements I’d like to make, like a few tweaks to have fzf is displaying the list, but for the most part, this is how this has lived in my ~/.local/bin/ folder since I wrote it. Eventually I’ll integrate it with tmux to launch either a new window or a new session, I haven’t decided, but that’s for future me!">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-03-07 13:31:50 -0500 EST" />
+
+
+
+
+
+
+
+
+
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXCZ6FG1CL"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YXCZ6FG1CL');
+        }
+      </script>
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                $ cd /Users/hacdan/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#67A2C9;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Blog</a></li><li><a href="/resume/readme/">Resume</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        One minute
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hacdan.org/posts/fuzzy-ssh/">Fuzzy SSH</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>At work, I often have to SSH into multipe machines, but I hate having to remember the host names I&rsquo;ve set in in my <code>~/.ssh/confg</code> file. I decided I would wrie a quick script to solve this problem for me.</p>
+<h3 id="the-code">The Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>ssh <span style="color:#cba6f7">$(</span>cat ~/.ssh/config | grep <span style="color:#a6e3a1">&#34;Host &#34;</span> | awk <span style="color:#a6e3a1">&#39;{print $2}&#39;</span> | fzf<span style="color:#cba6f7">)</span>
+</span></span></code></pre></div><p>This of course requires that you have <code>FZF</code> installed and have a properly configured SSH config, but I find it saves me a lot of time with remembering host names and initiating the SSH connection.
+I have improvements I&rsquo;d like to make, like a few tweaks to have <code>fzf</code> is displaying the list, but for the most part, this is how this has lived in my <code>~/.local/bin/</code> folder since I wrote it. Eventually I&rsquo;ll integrate it with tmux to launch either a new window or a new session, I haven&rsquo;t decided, but that&rsquo;s for future me!</p>
+<p>Sure, it&rsquo;s stupid simple and I doubt I&rsquo;m the first one to come up with it, but it sure has saved me the headache of having to remember the full hostname in my config, even with tab completion.</p>
+<p>Until next time!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hacdan.org/tags/development/">Development</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/workflow/">Workflow</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/tmux/">TMUX</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        193 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2025-03-07 13:31
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+
+            
+            <span class="button next">
+                <a href="https://hacdan.org/posts/ultrawide-spoon/">
+                    <span class="button__text">Ultra-wide Spoon</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            
+            <span><a href="https://hacdan.org/"></a></span>
+            <span></span>
+            <span><a href="https://hacdan.org/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>automation, workflow, cli, on David McClellan</title><link>https://hacdan.org/tags/automation-workflow-cli/</link><description>Recent content in automation, workflow, cli, on David McClellan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 20 Nov 2022 20:56:31 -0500</lastBuildDate><atom:link href="https://hacdan.org/tags/automation-workflow-cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Automation Station</title><link>https://hacdan.org/posts/automation-station/</link><pubDate>Sun, 20 Nov 2022 20:56:31 -0500</pubDate><guid>https://hacdan.org/posts/automation-station/</guid><description>Why? Improved workflow Looks cool (obviously should have been #1) Saved on typing How Share .dotfiles Make joke about dot dotfiles Share 2 specific functions/aliases/automations The who? Heading writes it&amp;rsquo;s own joke Everyone needs to do this. Regardless of skill set</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation, Workflow, Cli, on David McClellan</title>
+    <link>https://hacdan.org/tags/automation-workflow-cli/</link>
+    <description>Recent content in Automation, Workflow, Cli, on David McClellan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Nov 2022 20:56:31 -0500</lastBuildDate>
+    <atom:link href="https://hacdan.org/tags/automation-workflow-cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation Station</title>
+      <link>https://hacdan.org/posts/automation-station/</link>
+      <pubDate>Sun, 20 Nov 2022 20:56:31 -0500</pubDate>
+      <guid>https://hacdan.org/posts/automation-station/</guid>
+      <description>&lt;h2 id=&#34;why&#34;&gt;Why?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Improved workflow&lt;/li&gt;&#xA;&lt;li&gt;Looks cool (obviously should have been #1)&lt;/li&gt;&#xA;&lt;li&gt;Saved on typing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how&#34;&gt;How&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Share .dotfiles&lt;/li&gt;&#xA;&lt;li&gt;Make joke about dot dotfiles&lt;/li&gt;&#xA;&lt;li&gt;Share 2 specific functions/aliases/automations&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-who&#34;&gt;The who?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Heading writes it&amp;rsquo;s own joke&lt;/li&gt;&#xA;&lt;li&gt;Everyone needs to do this. Regardless of skill set&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

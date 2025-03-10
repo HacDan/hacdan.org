@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on David McClellan</title>
+    <link>https://hacdan.org/tags/development/</link>
+    <description>Recent content in Development on David McClellan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Mar 2025 13:31:50 -0500</lastBuildDate>
+    <atom:link href="https://hacdan.org/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fuzzy SSH</title>
+      <link>https://hacdan.org/posts/fuzzy-ssh/</link>
+      <pubDate>Fri, 07 Mar 2025 13:31:50 -0500</pubDate>
+      <guid>https://hacdan.org/posts/fuzzy-ssh/</guid>
+      <description>&lt;p&gt;At work, I often have to SSH into multipe machines, but I hate having to remember the host names I&amp;rsquo;ve set in in my &lt;code&gt;~/.ssh/confg&lt;/code&gt; file. I decided I would wrie a quick script to solve this problem for me.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-code&#34;&gt;The Code&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6c7086;font-style:italic&#34;&gt;#!/bin/sh&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6c7086;font-style:italic&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh &lt;span style=&#34;color:#cba6f7&#34;&gt;$(&lt;/span&gt;cat ~/.ssh/config | grep &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#34;Host &amp;#34;&lt;/span&gt; | awk &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; | fzf&lt;span style=&#34;color:#cba6f7&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This of course requires that you have &lt;code&gt;FZF&lt;/code&gt; installed and have a properly configured SSH config, but I find it saves me a lot of time with remembering host names and initiating the SSH connection.&#xA;I have improvements I&amp;rsquo;d like to make, like a few tweaks to have &lt;code&gt;fzf&lt;/code&gt; is displaying the list, but for the most part, this is how this has lived in my &lt;code&gt;~/.local/bin/&lt;/code&gt; folder since I wrote it. Eventually I&amp;rsquo;ll integrate it with tmux to launch either a new window or a new session, I haven&amp;rsquo;t decided, but that&amp;rsquo;s for future me!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
