@@ -6,13 +6,76 @@
     <description>Recent content in Tags on David McClellan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Mar 2025 13:31:50 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 03 Apr 2025 16:37:24 -0400</lastBuildDate>
     <atom:link href="https://hacdan.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation</title>
+      <link>https://hacdan.org/tags/automation/</link>
+      <pubDate>Thu, 03 Apr 2025 16:37:24 -0400</pubDate>
+      <guid>https://hacdan.org/tags/automation/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Development</title>
       <link>https://hacdan.org/tags/development/</link>
-      <pubDate>Fri, 07 Mar 2025 13:31:50 -0500</pubDate>
+      <pubDate>Thu, 03 Apr 2025 16:37:24 -0400</pubDate>
       <guid>https://hacdan.org/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minecraft</title>
+      <link>https://hacdan.org/tags/minecraft/</link>
+      <pubDate>Thu, 03 Apr 2025 16:37:24 -0400</pubDate>
+      <guid>https://hacdan.org/tags/minecraft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell</title>
+      <link>https://hacdan.org/tags/powershell/</link>
+      <pubDate>Fri, 28 Mar 2025 15:45:11 -0400</pubDate>
+      <guid>https://hacdan.org/tags/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sysadmin</title>
+      <link>https://hacdan.org/tags/sysadmin/</link>
+      <pubDate>Fri, 28 Mar 2025 15:45:11 -0400</pubDate>
+      <guid>https://hacdan.org/tags/sysadmin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://hacdan.org/tags/windows/</link>
+      <pubDate>Fri, 28 Mar 2025 15:45:11 -0400</pubDate>
+      <guid>https://hacdan.org/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HyperV</title>
+      <link>https://hacdan.org/tags/hyperv/</link>
+      <pubDate>Sun, 23 Mar 2025 18:05:24 -0400</pubDate>
+      <guid>https://hacdan.org/tags/hyperv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft</title>
+      <link>https://hacdan.org/tags/microsoft/</link>
+      <pubDate>Sun, 23 Mar 2025 18:05:24 -0400</pubDate>
+      <guid>https://hacdan.org/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxmox</title>
+      <link>https://hacdan.org/tags/proxmox/</link>
+      <pubDate>Sun, 23 Mar 2025 18:05:24 -0400</pubDate>
+      <guid>https://hacdan.org/tags/proxmox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scripting</title>
+      <link>https://hacdan.org/tags/scripting/</link>
+      <pubDate>Sat, 15 Mar 2025 17:28:44 -0400</pubDate>
+      <guid>https://hacdan.org/tags/scripting/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +90,6 @@
       <link>https://hacdan.org/tags/workflow/</link>
       <pubDate>Fri, 07 Mar 2025 13:31:50 -0500</pubDate>
       <guid>https://hacdan.org/tags/workflow/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>https://hacdan.org/tags/automation/</link>
-      <pubDate>Wed, 30 Nov 2022 20:53:03 -0500</pubDate>
-      <guid>https://hacdan.org/tags/automation/</guid>
       <description></description>
     </item>
     <item>

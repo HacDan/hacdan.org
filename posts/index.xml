@@ -5,8 +5,324 @@
         <description>Recent content in Posts on David McClellan</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 07 Mar 2025 13:31:50 -0500</lastBuildDate>
+        <lastBuildDate>Thu, 03 Apr 2025 16:37:24 -0400</lastBuildDate>
         <atom:link href="https://hacdan.org/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Iron Shulker Madness</title>
+            <link>https://hacdan.org/posts/iron-shulker-madness/</link>
+            <pubDate>Thu, 03 Apr 2025 16:37:24 -0400</pubDate>
+            
+            <guid>https://hacdan.org/posts/iron-shulker-madness/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Iron Shulker Madness&lt;/em&gt; - A solution to over-flowing double-chests of Iron Blocks.&lt;/p&gt;
+&lt;p&gt;This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn&amp;rsquo;t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.&lt;/p&gt;
+&lt;h2 id=&#34;but-why&#34;&gt;But Why?&lt;/h2&gt;
+&lt;p&gt;So&amp;hellip; my son and I have a local Minecraft server that we host at home. We&amp;rsquo;re using &lt;a href=&#34;https://papermc.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PaperMC&lt;/a&gt;
+
+ along with &lt;a href=&#34;https://geysermc.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GeyserMC&lt;/a&gt;
+
+ so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn&amp;rsquo;t think it would run when we&amp;rsquo;re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we&amp;rsquo;ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><em>Iron Shulker Madness</em> - A solution to over-flowing double-chests of Iron Blocks.</p>
+<p>This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn&rsquo;t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.</p>
+<h2 id="but-why">But Why?</h2>
+<p>So&hellip; my son and I have a local Minecraft server that we host at home. We&rsquo;re using <a href="https://papermc.io/" target="_blank" rel="noopener">PaperMC</a>
+
+ along with <a href="https://geysermc.org" target="_blank" rel="noopener">GeyserMC</a>
+
+ so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn&rsquo;t think it would run when we&rsquo;re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we&rsquo;ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.</p>
+<p>So, I started looking into creating custom recipes for Minecraft servers, and I came across <a href="https://github.com/briangershon/" target="_blank" rel="noopener">Brian Gershon&rsquo;s</a>
+
+ <a href="https://github.com/briangershon/minecraft-plugin" target="_blank" rel="noopener">Minecraft-Plugin</a>
+
+ template. From there, I cloned it and read a bit into the Spigot/Bukkit API to find out how to add Recipe&rsquo;s. My son and I decided that 8 Iron Blocks and 1 Popped Chorus Fruit was a reasonable trade for something we were really in need of - Shulker Shells.</p>
+<p><img src="/recipe.jpg" alt="recipe"></p>
+<p>Sure, we could have made a Shulker farm, but we don&rsquo;t play a lot, but really wanted to experience the end-game, so this was the solution that we came up with.</p>
+<h2 id="the-code">The Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#94e2d5">package</span> <span style="color:#fab387">com.hacdan.IronShulker</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.plugin.java.JavaPlugin</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.Material</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.inventory.ItemStack</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.inventory.ShapedRecipe</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.Bukkit</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.NamespacedKey</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">public</span> <span style="color:#f38ba8">class</span> <span style="color:#f9e2af">App</span> <span style="color:#f38ba8">extends</span> JavaPlugin {
+</span></span><span style="display:flex;"><span>    <span style="color:#89b4fa;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f38ba8">public</span> <span style="color:#f38ba8">void</span> <span style="color:#89b4fa">onEnable</span>() {
+</span></span><span style="display:flex;"><span>        getLogger().<span style="color:#89b4fa">info</span>(<span style="color:#a6e3a1">&#34;Loading the Iron Shulker Recipe&#34;</span>);
+</span></span><span style="display:flex;"><span>        ItemStack result <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> ItemStack(Material.<span style="color:#89b4fa">SHULKER_SHELL</span>);
+</span></span><span style="display:flex;"><span>        NamespacedKey key <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> NamespacedKey(<span style="color:#cba6f7">this</span>, <span style="color:#cba6f7">this</span>.<span style="color:#89b4fa">getDescription</span>().<span style="color:#89b4fa">getName</span>());
+</span></span><span style="display:flex;"><span>        ShapedRecipe recipe <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> ShapedRecipe(key, result);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        recipe.<span style="color:#89b4fa">shape</span>(<span style="color:#a6e3a1">&#34;III&#34;</span>, <span style="color:#a6e3a1">&#34;IPI&#34;</span>, <span style="color:#a6e3a1">&#34;III&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        recipe.<span style="color:#89b4fa">setIngredient</span>(<span style="color:#a6e3a1">&#39;I&#39;</span>, Material.<span style="color:#89b4fa">IRON_BLOCK</span>);
+</span></span><span style="display:flex;"><span>        recipe.<span style="color:#89b4fa">setIngredient</span>(<span style="color:#a6e3a1">&#39;P&#39;</span>, Material.<span style="color:#89b4fa">POPPED_CHORUS_FRUIT</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Bukkit.<span style="color:#89b4fa">addRecipe</span>(recipe);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#89b4fa;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f38ba8">public</span> <span style="color:#f38ba8">void</span> <span style="color:#89b4fa">onDisable</span>() {
+</span></span><span style="display:flex;"><span>        getLogger().<span style="color:#89b4fa">info</span>(<span style="color:#a6e3a1">&#34;See you again, SpigotMC!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="the-how">The How</h2>
+<p>First off, you&rsquo;re going to need <code>maven</code> installed on your system. I&rsquo;m on an M1 Macbook Air, so I used brew</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install maven
+</span></span></code></pre></div><p>If you&rsquo;re on Linux, I&rsquo;m sure it&rsquo;s just an <code>apt install</code> away.</p>
+<p>You&rsquo;re also going to need a copy of JDK &gt; 21  for your hardware from <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener">Oracle</a>
+
+&rsquo;s website.</p>
+<p>From there, you&rsquo;re going to need to clone down the <a href="https://github.com/briangershon/minecraft-plugin" target="_blank" rel="noopener">example plugin</a>
+
+ from Brian GerShon.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone git@github.com:briangershon/minecraft-plugin.git &lt;plugin name&gt;
+</span></span></code></pre></div><p>Be sure to change <code>&lt;plugin name&gt;</code> to what you want your plugin to be called. It will make life much easier.</p>
+<p>From the README, you&rsquo;ll also want to do the following:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Rename existing <code>demo</code> folder at <code>src/main/java/com/briangershon/demo</code> to be your own, then search-and-replace <code>com.briangershon.demo</code> with name of your package. <code>App.java</code> is where you&rsquo;ll start adding your plugin logic. You&rsquo;ll also want to update the log</li>
+<li><input disabled="" type="checkbox"> Rename <code>com/briangershon</code> folder to your personal package name. Usually something like <code>com/&lt;username&gt;</code></li>
+<li><input disabled="" type="checkbox"> Update <code>src/main/resources/plugin.yml</code> and populate with the meta data for your plugin.</li>
+<li><input disabled="" type="checkbox"> Update <code>pom.xml</code> top section to match your plugin, specifically <code>&lt;groupId&gt;</code>, <code>&lt;artifactId&gt;</code>, and <code>&lt;version&gt;</code>. Plus <code>&lt;dependency&gt;</code> section if you&rsquo;re using a different Spigot version. You can find list of spigot versions at <a href="https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/" target="_blank" rel="noopener">https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/</a>
+
+.</li>
+</ul>
+<p>After you&rsquo;ve made your changes in <code>App.java</code> you can run <code>mvn clean package</code> to compile the package into a <code>jar</code> file in the <code>./target</code> directory.</p>
+<p>To ease the development cycle, I recommend also setting up a Development Server so you don&rsquo;t have to transfer the jar to your server every time you want to test a change. To do this, you can download a copy of the <a href="https://spigotmc.org" target="_blank" rel="noopener">Spigot</a>
+
+ <code>BuildTools.jar</code> from <a href="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar" target="_blank" rel="noopener">here</a>
+
+. You&rsquo;ll need to build the Spigot jar file, due to ToS restrictions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>java -jar BuildTools.jar --rev 1.21.5
+</span></span></code></pre></div><p>Alternatively, you can download a copy of <a href="https://papermc.io" target="_blank" rel="noopener">PaperMC</a>
+
+ from <a href="https://papermc.io/downloads/paper" target="_blank" rel="noopener">here</a>
+
+. These are pre-built and usually a bit behind Spigot/Bukkit, but are pre-compiled.</p>
+<p>Once downloaded, you&rsquo;ll want to create a script for starting your server, so you don&rsquo;t have to type out the <code>java</code> args every time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#/usr/bin/env sh</span>
+</span></span><span style="display:flex;"><span>java -Xms2G -Xmx2G -jar &lt;Server.jar&gt; nogui
+</span></span></code></pre></div><p>Be sure to replace <code>&lt;Server.jar&gt;</code> with the name of the server you decided to go with. After starting the server, you&rsquo;ll be requested to agree to the <code>EULA.txt</code> which requires you to open the <code>EULA.txt</code> and change the <code>eula=falase</code> to <code>eula=true</code>.</p>
+<p>Go ahead and restart the server once you&rsquo;ve made that change and it should have created a <code>plugins</code> directory. You&rsquo;ll place the compiled plugin from the <code>/target</code> directory of your source code. I recommend creating a script to move this file, so you don&rsquo;t have to write the <code>cp</code> or <code>mv</code> command arguments every time, to speed up the feedback loop.</p>
+<h3 id="deploysh"><code>deploy.sh</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#!/usr/bin/env sh
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>cp ./target/&lt;PluginName&gt;.jar /path/to/mcserver/plugins/
+</span></span></code></pre></div><p>Don&rsquo;t forget to <code>chmod +x deploy.sh</code> after you create it.</p>
+<p>That should get you going. I was surprised how little setup there was, but <code>maven</code> is really doing the heavy lifting here. Downloading the requird packages so your can compile your plugin against them and what not. Being that I haven&rsquo;t worked with <code>java</code> in quite a while, it was refreshing, to say the least, to not have to write a lot of build logic.</p>
+<p>With all that said, my son and I can now enjoy having as many shulker boxes as we need and can still spend time doing other things in life!</p>
+<p>Until next time!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>PowerShell Uptime Shenanigans</title>
+            <link>https://hacdan.org/posts/powershell-uptime-shenanigans/</link>
+            <pubDate>Fri, 28 Mar 2025 15:45:11 -0400</pubDate>
+            
+            <guid>https://hacdan.org/posts/powershell-uptime-shenanigans/</guid>
+            <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;PowerShell for the longest time lacked a proper way to check uptime on the machine you were working on. This was something I was always going to the GUI for, up until recently when I discovered a simple function that I can use to gather the uptime on a Windows machine, regardless of it&amp;rsquo;s PowerShell version.&lt;/p&gt;
+&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;
+&lt;h4 id=&#34;pre-powershell-7&#34;&gt;Pre-PowerShell 7&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#89dceb&#34;&gt;Get-Date&lt;/span&gt;) - (gcim Win32_OperatingSystem).&lt;span style=&#34;color:#fab387&#34;&gt;LastBootUpTime&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Days              &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Hours             &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Minutes           &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Seconds           &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;41&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Milliseconds      &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;536&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Ticks             &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;41815368642&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalDays         &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;0.0483974174097222&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalHours        &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;1.16153801783333&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalMinutes      &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;69.69228107&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalSeconds      &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;4181.5368642&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalMilliseconds &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;4181536.8642&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;post-powershell-7&#34;&gt;Post-PowerShell 7&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#89dceb&#34;&gt;Get-Uptime&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Days              &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Hours             &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Minutes           &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Seconds           &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;19&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Milliseconds      &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Ticks             &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;40390000000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalDays         &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;0.0467476851851852&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalHours        &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;1.12194444444444&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalMinutes      &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;67.3166666666667&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalSeconds      &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;4039&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TotalMilliseconds &lt;span style=&#34;color:#f38ba8&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#fab387&#34;&gt;4039000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You see that Post-PowerShell 7 goodness? Where has that been? Anyway, it&amp;rsquo;s here now. For machines running Pre-PowerShell 7, I have a function in my &lt;code&gt;$PROFILE&lt;/code&gt; that I load in so that I have the convenient access to &lt;code&gt;Get-Uptime&lt;/code&gt; no matter where I am.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<h2 id="intro">Intro</h2>
+<p>PowerShell for the longest time lacked a proper way to check uptime on the machine you were working on. This was something I was always going to the GUI for, up until recently when I discovered a simple function that I can use to gather the uptime on a Windows machine, regardless of it&rsquo;s PowerShell version.</p>
+<h2 id="the-code">The Code</h2>
+<h4 id="pre-powershell-7">Pre-PowerShell 7</h4>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>(<span style="color:#89dceb">Get-Date</span>) - (gcim Win32_OperatingSystem).<span style="color:#fab387">LastBootUpTime</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Days              <span style="color:#f38ba8">:</span> <span style="color:#fab387">0</span>
+</span></span><span style="display:flex;"><span>Hours             <span style="color:#f38ba8">:</span> <span style="color:#fab387">1</span>
+</span></span><span style="display:flex;"><span>Minutes           <span style="color:#f38ba8">:</span> <span style="color:#fab387">9</span>
+</span></span><span style="display:flex;"><span>Seconds           <span style="color:#f38ba8">:</span> <span style="color:#fab387">41</span>
+</span></span><span style="display:flex;"><span>Milliseconds      <span style="color:#f38ba8">:</span> <span style="color:#fab387">536</span>
+</span></span><span style="display:flex;"><span>Ticks             <span style="color:#f38ba8">:</span> <span style="color:#fab387">41815368642</span>
+</span></span><span style="display:flex;"><span>TotalDays         <span style="color:#f38ba8">:</span> <span style="color:#fab387">0.0483974174097222</span>
+</span></span><span style="display:flex;"><span>TotalHours        <span style="color:#f38ba8">:</span> <span style="color:#fab387">1.16153801783333</span>
+</span></span><span style="display:flex;"><span>TotalMinutes      <span style="color:#f38ba8">:</span> <span style="color:#fab387">69.69228107</span>
+</span></span><span style="display:flex;"><span>TotalSeconds      <span style="color:#f38ba8">:</span> <span style="color:#fab387">4181.5368642</span>
+</span></span><span style="display:flex;"><span>TotalMilliseconds <span style="color:#f38ba8">:</span> <span style="color:#fab387">4181536.8642</span>
+</span></span></code></pre></div><h4 id="post-powershell-7">Post-PowerShell 7</h4>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#89dceb">Get-Uptime</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Days              <span style="color:#f38ba8">:</span> <span style="color:#fab387">0</span>
+</span></span><span style="display:flex;"><span>Hours             <span style="color:#f38ba8">:</span> <span style="color:#fab387">1</span>
+</span></span><span style="display:flex;"><span>Minutes           <span style="color:#f38ba8">:</span> <span style="color:#fab387">7</span>
+</span></span><span style="display:flex;"><span>Seconds           <span style="color:#f38ba8">:</span> <span style="color:#fab387">19</span>
+</span></span><span style="display:flex;"><span>Milliseconds      <span style="color:#f38ba8">:</span> <span style="color:#fab387">0</span>
+</span></span><span style="display:flex;"><span>Ticks             <span style="color:#f38ba8">:</span> <span style="color:#fab387">40390000000</span>
+</span></span><span style="display:flex;"><span>TotalDays         <span style="color:#f38ba8">:</span> <span style="color:#fab387">0.0467476851851852</span>
+</span></span><span style="display:flex;"><span>TotalHours        <span style="color:#f38ba8">:</span> <span style="color:#fab387">1.12194444444444</span>
+</span></span><span style="display:flex;"><span>TotalMinutes      <span style="color:#f38ba8">:</span> <span style="color:#fab387">67.3166666666667</span>
+</span></span><span style="display:flex;"><span>TotalSeconds      <span style="color:#f38ba8">:</span> <span style="color:#fab387">4039</span>
+</span></span><span style="display:flex;"><span>TotalMilliseconds <span style="color:#f38ba8">:</span> <span style="color:#fab387">4039000</span>
+</span></span></code></pre></div><p>You see that Post-PowerShell 7 goodness? Where has that been? Anyway, it&rsquo;s here now. For machines running Pre-PowerShell 7, I have a function in my <code>$PROFILE</code> that I load in so that I have the convenient access to <code>Get-Uptime</code> no matter where I am.</p>
+<h4 id="get-uptime-function">Get-Uptime Function</h4>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#f38ba8">function</span> <span style="color:#89dceb">Get-Uptime</span> {
+</span></span><span style="display:flex;"><span>  (<span style="color:#89dceb">Get-Date</span>) - (gcim Win32_OperatingSystem).<span style="color:#fab387">LastBootUpTime</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="for-the-purists">For the Purists</h3>
+<p>Admitedly I&rsquo;m far from a purist, but I do prefer Unix-like commands instead of PowerShell&rsquo;s verbose way of describing things, so I do have an alias set for this in my <code>$PROFILE</code> as well.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#89dceb">Set-Alias</span> -Name uptime -Value <span style="color:#89dceb">Get-Uptime</span>
+</span></span></code></pre></div><p>This saves me from remembering one more verbose command in PowerShell!</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>That&rsquo;s all for now. I hope this snippet helps you as much as it helped me! I remote into Windows machines all the time and we all know that a long uptime on a Windows machine can only mean one thing&hellip; problems.</p>
+<p>Until next time!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Lessons Learned - HyperV -&gt; Proxmox</title>
+            <link>https://hacdan.org/posts/vhdx-to-proxmox-qcow2/</link>
+            <pubDate>Sun, 23 Mar 2025 18:05:24 -0400</pubDate>
+            
+            <guid>https://hacdan.org/posts/vhdx-to-proxmox-qcow2/</guid>
+            <description>&lt;p&gt;Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Gain hands-on experience with Proxmox.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Deploy a modern, lightweight, bare-metal hypervisor.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Benefit from built-in features like encryption and backup capabilities.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Ensure high availability and reliability—aiming for five nines (99.999%) uptime.&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Avoid costly licensing fees for solutions like VMware ESXi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Gain hands-on experience with Proxmox.</li>
+<li><input checked="" disabled="" type="checkbox"> Deploy a modern, lightweight, bare-metal hypervisor.</li>
+<li><input checked="" disabled="" type="checkbox"> Benefit from built-in features like encryption and backup capabilities.</li>
+<li><input checked="" disabled="" type="checkbox"> Ensure high availability and reliability—aiming for five nines (99.999%) uptime.</li>
+<li><input checked="" disabled="" type="checkbox"> Avoid costly licensing fees for solutions like VMware ESXi.</li>
+</ul>
+<p>Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.</p>
+<p>Hyper-V uses <code>.vhdx</code> (Virtual Hard Disk) files, while Proxmox supports multiple disk formats, including:</p>
+<ul>
+<li><strong>RAW</strong> (ideal for performance but takes up more space)</li>
+<li><strong>QCOW2</strong> (offers snapshots and compression benefits)</li>
+</ul>
+<p>Since I wanted efficient storage and snapshot support, I opted for the QCOW2 format. But how do you actually convert a <code>.vhdx</code> file to <code>.qcow2</code>?</p>
+<h2 id="the-code">The Code</h2>
+<h4 id="step-1-convert-the-vhdx-file-to-qcow2">Step 1: Convert the <code>.vhdx</code> file to <code>.qcow2</code></h4>
+<p>To convert the Hyper-V .vhdx image to a Proxmox-compatible .qcow2 image, I used the qemu-img tool:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-img convert -O qcow2 HyperVImageName.vhdx vm-&lt;vmid&gt;-disk-1.qcow2
+</span></span></code></pre></div><p>Let&rsquo;s break it down</p>
+<ul>
+<li><code>qemu-img convert</code> -&gt; Converts a virtual disk image to another format.</li>
+<li><code>-O qcow2</code> -&gt; Specifies the output format as QCOW2.</li>
+<li><code>HyperVImageName.vhdx</code> -&gt; The original .vhdx file from Hyper-V.</li>
+<li><code>vm-&lt;vmid&gt;-disk-1.qcow2</code> -&gt; The new file name following Proxmox’s VM disk naming convention.</li>
+</ul>
+<h4 id="step-2-shove-that-disk-into-proxmox">Step 2: Shove that disk into Proxmox</h4>
+<p>Once the conversion is complete, you can import the new <code>.qcow2</code> image into your respective virtual machine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm importdisk &lt;vmid&gt; vm-&lt;vmid&gt;-disk-1.qcow2 &lt;storage_id&gt;
+</span></span></code></pre></div><h5 id="parameters">Parameters</h5>
+<ul>
+<li><code>&lt;vmid&gt;</code>: Replace this with the ID of the virtual machine you want to associate the image with.</li>
+<li><code>&lt;HyperVImageName.vhdx&gt;</code>: Replace this with the name of the <code>.vhdx</code> image you transferred over.</li>
+<li><code>&lt;storage-id&gt;</code>: Replace this with the name of the storage you want the <code>.qcow2</code> image to l</li>
+</ul>
+<h4 id="step-3-attach-the-disk">Step 3: Attach the disk</h4>
+<p>Now that the disk is imported, we need to attach it to the VM:</p>
+<ol>
+<li>Open the Proxmox Web UI.</li>
+<li>Navigate to the VM → Hardware section.</li>
+<li>Click Add → Existing Disk and select the imported .qcow2 image.</li>
+<li>Set the appropriate bus type (e.g., VirtIO for best performance).</li>
+<li>Save changes and start up VM</li>
+</ol>
+<h2 id="but-how-long">But&hellip; how long?</h2>
+<p>Conversion time is completely dependant on disk size and disk speed. For me on 10k SAS drives and disk sizes ranging from 300GB -&gt; 400GB took about 30 minutes. I would say you&rsquo;re looking at 30 minutes -&gt; 120 minutes.</p>
+<p>Obviously with faster drives (NVMe, or even SSD&rsquo;s) you&rsquo;ll see a reduction in conversion time.</p>
+<h2 id="post-malmigration-checklist">Post-Mal&hellip;Migration Checklist</h2>
+<p>You&rsquo;ll want to confirm the following after you&rsquo;ve successfully booted up your VM. Also, if you haven&rsquo;t installed <a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso" target="_blank" rel="noopener">VirtIO drivers</a>
+
+ yet, now is the time do so.</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>Reconfigure Network Settings</strong> -&gt; Hyper-V and Proxmox use different network adapters, so Windows VMs may need driver updates (virtio-net).</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Install VirtIO Drivers</strong> -&gt; If using VirtIO for storage or network interfaces, install the appropriate drivers for optimal performance.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Enable QEMU Guest Agent</strong> -&gt; This helps with graceful shutdowns and monitoring inside Proxmox.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Re-check Disk Performance</strong> -&gt; If performance is lagging, consider converting disks to RAW format.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Multiple disks?</strong> -&gt; If there are multiple disks that need to be attached to a VM, be sure to increment the disk number in the new file name, such as <code>vm-&lt;vmid&gt;-disk-2.qcow2</code> and so on.</li>
+</ul>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Migrating from Hyper-V to Proxmox was a rewarding challenge. Not only did I gain experience with Proxmox, but I also ended up with a cost-effective, open-source, and enterprise-grade virtualization setup.</p>
+<p>Would I do it again? Absolutely. If you&rsquo;re considering moving to Proxmox, I highly recommend it!</p>
+<p>Until next time!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Which Which Is Which?</title>
+            <link>https://hacdan.org/posts/which-which-is-which/</link>
+            <pubDate>Sat, 15 Mar 2025 17:28:44 -0400</pubDate>
+            
+            <guid>https://hacdan.org/posts/which-which-is-which/</guid>
+            <description>&lt;h2 id=&#34;the-missing-command&#34;&gt;The Missing Command&lt;/h2&gt;
+&lt;p&gt;While I&amp;rsquo;m sure you could make the argument that PowerShell has many &amp;ldquo;missing&amp;rdquo; commands compared to your standard &lt;code&gt;POSIX&lt;/code&gt; compliant shell, I would say I miss &lt;code&gt;which&lt;/code&gt; the most.&lt;/p&gt;
+&lt;p&gt;Thankfully, &lt;a href=&#34;https://devas.life&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Takuya Matsuyama&lt;/a&gt;
+
+ or better known as &lt;a href=&#34;https://www.youtube.com/@devaslife&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@devaslife&lt;/a&gt;
+
+ on YouTube, wrote a quick function that I have carried with me across multiple &lt;code&gt;$PROFILE&lt;/code&gt;&amp;rsquo;s.&lt;/p&gt;
+&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f38ba8&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#89dceb&#34;&gt;which&lt;/span&gt; (&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#89dceb&#34;&gt;Get-Command&lt;/span&gt; -Name &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt; -ErrorAction SilentlyContinue |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#89dceb&#34;&gt;Select-Object&lt;/span&gt; -ExpandProperty Path -ErrorAction SilentlyContinue
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;re unfamiliar with the &lt;code&gt;which&lt;/code&gt; command, it shows the origin of the command you&amp;rsquo;re running. If you&amp;rsquo;re running an alias, it will show you what you have aliased.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<h2 id="the-missing-command">The Missing Command</h2>
+<p>While I&rsquo;m sure you could make the argument that PowerShell has many &ldquo;missing&rdquo; commands compared to your standard <code>POSIX</code> compliant shell, I would say I miss <code>which</code> the most.</p>
+<p>Thankfully, <a href="https://devas.life" target="_blank" rel="noopener">Takuya Matsuyama</a>
+
+ or better known as <a href="https://www.youtube.com/@devaslife" target="_blank" rel="noopener">@devaslife</a>
+
+ on YouTube, wrote a quick function that I have carried with me across multiple <code>$PROFILE</code>&rsquo;s.</p>
+<h2 id="the-code">The Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#f38ba8">function</span> <span style="color:#89dceb">which</span> (<span style="color:#f5e0dc">$command</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">Get-Command</span> -Name <span style="color:#f5e0dc">$command</span> -ErrorAction SilentlyContinue |
+</span></span><span style="display:flex;"><span>    <span style="color:#89dceb">Select-Object</span> -ExpandProperty Path -ErrorAction SilentlyContinue
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>If you&rsquo;re unfamiliar with the <code>which</code> command, it shows the origin of the command you&rsquo;re running. If you&rsquo;re running an alias, it will show you what you have aliased.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>which cat
+</span></span><span style="display:flex;"><span>cat: aliased to bat
+</span></span></code></pre></div><p>If you&rsquo;re running a command it will show you it&rsquo;s location on the filesystem.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>which fssh
+</span></span><span style="display:flex;"><span>/Users/hacdan/.local/bin/fssh
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>I&rsquo;m grateful that Takuya saved us all a bunch of time and wrote a quick PowerShell function to fill this missing hole in PowerShell. I always love these little snippets as they smooth over workflows that are otherwise interrupted my small nuances.</p>
+<p>Until next time!</p>
+]]></content>
+        </item>
         
         <item>
             <title>Fuzzy SSH</title>
@@ -29,6 +345,232 @@ I have improvements I&amp;rsquo;d like to make, like a few tweaks to have &lt;co
 </span></span></code></pre></div><p>This of course requires that you have <code>FZF</code> installed and have a properly configured SSH config, but I find it saves me a lot of time with remembering host names and initiating the SSH connection.
 I have improvements I&rsquo;d like to make, like a few tweaks to have <code>fzf</code> is displaying the list, but for the most part, this is how this has lived in my <code>~/.local/bin/</code> folder since I wrote it. Eventually I&rsquo;ll integrate it with tmux to launch either a new window or a new session, I haven&rsquo;t decided, but that&rsquo;s for future me!</p>
 <p>Sure, it&rsquo;s stupid simple and I doubt I&rsquo;m the first one to come up with it, but it sure has saved me the headache of having to remember the full hostname in my config, even with tab completion.</p>
+<p>Until next time!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Cheating - On PowerShell</title>
+            <link>https://hacdan.org/posts/powershell-cheatsheet/</link>
+            <pubDate>Wed, 26 Feb 2025 16:29:41 -0400</pubDate>
+            
+            <guid>https://hacdan.org/posts/powershell-cheatsheet/</guid>
+            <description>&lt;p&gt;I&amp;rsquo;ve grown accustomed to being able to run a quick command on my Mac or Linux machines to query &lt;a href=&#34;https://cht.sh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cht.sh&lt;/a&gt;
+
+. In fact, when I&amp;rsquo;m in a &lt;code&gt;tmux&lt;/code&gt; session, I have a keybind that launches a &lt;code&gt;tmux&lt;/code&gt; pop-up window allowing me to query &lt;a href=&#34;https://cht.sh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cht.sh&lt;/a&gt;
+
+ directly.&lt;/p&gt;
+&lt;p&gt;I have missed this on Windows, so I wrote a quick PowerShell function that utilizes &lt;code&gt;Invoke-RestMethod&lt;/code&gt; to access the &lt;a href=&#34;https://cheat.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cheat.sh&lt;/a&gt;
+
+ API.&lt;/p&gt;
+&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f38ba8&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#89dceb&#34;&gt;chtsh&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#cba6f7&#34;&gt;param&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        [&lt;span style=&#34;color:#89dceb&#34;&gt;Parameter&lt;/span&gt; (&lt;span style=&#34;color:#89b4fa&#34;&gt;Mandatory&lt;/span&gt; = &lt;span style=&#34;color:#f5e0dc&#34;&gt;$true&lt;/span&gt;)] [&lt;span style=&#34;color:#f9e2af&#34;&gt;String&lt;/span&gt;]&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#cba6f7&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#89dceb;font-weight:bold&#34;&gt;-not&lt;/span&gt; &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt; = &lt;span style=&#34;color:#89dceb&#34;&gt;Read-Host&lt;/span&gt; &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#34;Enter command to search&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt; = &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;.&lt;span style=&#34;color:#fab387&#34;&gt;replace&lt;/span&gt;(&lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#39;+&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#cba6f7&#34;&gt;try&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#89dceb&#34;&gt;Invoke-RestMethod&lt;/span&gt; -Uri &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#34;https://cht.sh/&lt;/span&gt;&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;&lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    } &lt;span style=&#34;color:#cba6f7&#34;&gt;catch&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#89dceb&#34;&gt;Write-Host&lt;/span&gt; &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#34;Error fetching cheat sheet. Check your internet connection.&amp;#34;&lt;/span&gt; -ForegroundColor Red
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f38ba8&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#89dceb&#34;&gt;chtsh&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#cba6f7&#34;&gt;param&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	[&lt;span style=&#34;color:#89dceb&#34;&gt;Parameter&lt;/span&gt; (&lt;span style=&#34;color:#89b4fa&#34;&gt;Mandatory&lt;/span&gt; = &lt;span style=&#34;color:#f5e0dc&#34;&gt;$true&lt;/span&gt;)] [&lt;span style=&#34;color:#f9e2af&#34;&gt;String&lt;/span&gt;]&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt; = &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;.&lt;span style=&#34;color:#fab387&#34;&gt;replace&lt;/span&gt;(&lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#39;+&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#89dceb&#34;&gt;curl &lt;/span&gt;cht.sh/&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;how-it-works&#34;&gt;How It works&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accepts a mandatory parameter &lt;code&gt;command&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Ex: &lt;code&gt;chtsh ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;If the parameter is not supplied, it will prompt for it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Replaces all instances of spaces with &lt;code&gt;+&lt;/code&gt; characters, for proper url form.&lt;/li&gt;
+&lt;li&gt;Finally, we call &lt;code&gt;Invoke-RestMethold&lt;/code&gt; on the URL formed from the query and the &lt;code&gt;cht.sh&lt;/code&gt; URL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We could also call &lt;code&gt;curl&lt;/code&gt; here as it has been available on all standard builds of Windows for a while, but this is more the &amp;ldquo;PowerShell&amp;rdquo; way.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>I&rsquo;ve grown accustomed to being able to run a quick command on my Mac or Linux machines to query <a href="https://cht.sh" target="_blank" rel="noopener">cht.sh</a>
+
+. In fact, when I&rsquo;m in a <code>tmux</code> session, I have a keybind that launches a <code>tmux</code> pop-up window allowing me to query <a href="https://cht.sh" target="_blank" rel="noopener">cht.sh</a>
+
+ directly.</p>
+<p>I have missed this on Windows, so I wrote a quick PowerShell function that utilizes <code>Invoke-RestMethod</code> to access the <a href="https://cheat.sh/" target="_blank" rel="noopener">cheat.sh</a>
+
+ API.</p>
+<h2 id="the-code">The Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#f38ba8">function</span> <span style="color:#89dceb">chtsh</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">param</span>(
+</span></span><span style="display:flex;"><span>        [<span style="color:#89dceb">Parameter</span> (<span style="color:#89b4fa">Mandatory</span> = <span style="color:#f5e0dc">$true</span>)] [<span style="color:#f9e2af">String</span>]<span style="color:#f5e0dc">$command</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">if</span> (<span style="color:#89dceb;font-weight:bold">-not</span> <span style="color:#f5e0dc">$command</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#f5e0dc">$command</span> = <span style="color:#89dceb">Read-Host</span> <span style="color:#a6e3a1">&#34;Enter command to search&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f5e0dc">$command</span> = <span style="color:#f5e0dc">$command</span>.<span style="color:#fab387">replace</span>(<span style="color:#a6e3a1">&#39; &#39;</span>, <span style="color:#a6e3a1">&#39;+&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">Invoke-RestMethod</span> -Uri <span style="color:#a6e3a1">&#34;https://cht.sh/</span><span style="color:#f5e0dc">$command</span><span style="color:#a6e3a1">&#34;</span>
+</span></span><span style="display:flex;"><span>    } <span style="color:#cba6f7">catch</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">Write-Host</span> <span style="color:#a6e3a1">&#34;Error fetching cheat sheet. Check your internet connection.&#34;</span> -ForegroundColor Red
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">function</span> <span style="color:#89dceb">chtsh</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#cba6f7">param</span>(
+</span></span><span style="display:flex;"><span>	[<span style="color:#89dceb">Parameter</span> (<span style="color:#89b4fa">Mandatory</span> = <span style="color:#f5e0dc">$true</span>)] [<span style="color:#f9e2af">String</span>]<span style="color:#f5e0dc">$command</span>
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>	<span style="color:#f5e0dc">$command</span> = <span style="color:#f5e0dc">$command</span>.<span style="color:#fab387">replace</span>(<span style="color:#a6e3a1">&#39; &#39;</span>, <span style="color:#a6e3a1">&#39;+&#39;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#89dceb">curl </span>cht.sh/<span style="color:#f5e0dc">$command</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="how-it-works">How It works</h2>
+<ul>
+<li>Accepts a mandatory parameter <code>command</code>
+<ul>
+<li>Ex: <code>chtsh ssh</code></li>
+<li>If the parameter is not supplied, it will prompt for it</li>
+</ul>
+</li>
+<li>Replaces all instances of spaces with <code>+</code> characters, for proper url form.</li>
+<li>Finally, we call <code>Invoke-RestMethold</code> on the URL formed from the query and the <code>cht.sh</code> URL.</li>
+</ul>
+<p>We could also call <code>curl</code> here as it has been available on all standard builds of Windows for a while, but this is more the &ldquo;PowerShell&rdquo; way.</p>
+<h2 id="but-why">But why?</h2>
+<p>I can never remember how to specifiy a port with <code>ssh</code> and with <code>scp</code> as for whatever reason, they&rsquo;re two different flags, so I use this for looking that up all the time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>chtsh ssh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># ssh</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># OpenSSH SSH client (remote login program)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># SSH in via PEM file, which normally needs 0600 permissions.</span>
+</span></span><span style="display:flex;"><span>ssh -i /path/to/file.<span style="color:#fab387">pem</span> user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Connect through a non-standard port. It&#39;s recommended not to use the default</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># port of 22, as it is so often targeted, due to it being so commonplace.</span>
+</span></span><span style="display:flex;"><span>ssh -p <span style="color:#fab387">2222</span> user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Connect and forward the authentication agent.</span>
+</span></span><span style="display:flex;"><span>ssh -A user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Execute a command on a remote server.</span>
+</span></span><span style="display:flex;"><span>ssh -t user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span> <span style="color:#a6e3a1">&#39;the-remote-command&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Tunnel an X session over SSH, via X11 Forwarding.</span>
+</span></span><span style="display:flex;"><span>ssh -X user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Redirect traffic with a tunnel between local host (port 8080) and a remote</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># host (remote.example.com:5000) through a proxy (personal.server.com).</span>
+</span></span><span style="display:flex;"><span>ssh <span style="color:#89dceb;font-weight:bold">-f</span> -L <span style="color:#fab387">8080</span><span style="color:#f38ba8">:</span>remote.<span style="color:#fab387">example</span>.com<span style="color:#f38ba8">:</span><span style="color:#fab387">5000</span> user<span style="color:#f5e0dc">@personal</span>.<span style="color:#fab387">server</span>.<span style="color:#fab387">com</span> -N
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Launch a specific X application over SSH.</span>
+</span></span><span style="display:flex;"><span>ssh -X -t user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span> <span style="color:#a6e3a1">&#39;chromium-browser&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Create a SOCKS proxy on localhost and port 9999.</span>
+</span></span><span style="display:flex;"><span>ssh -D <span style="color:#fab387">9999</span> user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Connect to server, but allow for X11 forwarding, while also using Gzip</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># compression (can be much faster; YMMV), and using the `blowfish` encryption.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># For more information, see: http://unix.stackexchange.com/q/12755/44856</span>
+</span></span><span style="display:flex;"><span>ssh -XCc blowfish user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy files and directories, via SSH, from remote host to the current working</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># directory, with Gzip compression. An option for when `rsync` isn&#39;t available.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># This works by creating (not temporary!) a remote Tar archive, then piping its</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># output to a local Tar process, which then extracts it to STDOUT.</span>
+</span></span><span style="display:flex;"><span>ssh user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span> <span style="color:#a6e3a1">&#39;tar -C /var/www/Shared/ zcf - asset1 asset2&#39;</span> | tar zxf -
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Explicitly specify a key for connection. Useful if you have too many</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># authentication failures for a given username.</span>
+</span></span><span style="display:flex;"><span>ssh -i some_id_rsa -o IdentitiesOnly=yes them<span style="color:#f5e0dc">@there</span><span style="color:#f38ba8">:</span>/path/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Temporarily disable `pubkey` authentication for this instance.</span>
+</span></span><span style="display:flex;"><span>ssh -o PubkeyAuthentication=no username<span style="color:#f5e0dc">@hostname</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Mount a remote directory or filesystem, through SSH, to a local mount point.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Install SSHFS from: https://github.com/libfuse/sshfs</span>
+</span></span><span style="display:flex;"><span>sshfs name<span style="color:#f5e0dc">@server</span><span style="color:#f38ba8">:</span>/path/to/folder /path/to/mount/point
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># EMACS can read files through SSH. Below, is a link to related documentation.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#   http://www.gnu.org/software/emacs/manual/html_node/emacs/Remote-Files.html</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>emacs /ssh<span style="color:#f38ba8">:</span>name<span style="color:#f5e0dc">@server</span><span style="color:#f38ba8">:</span>/path/to/file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Get help for SSH escape sequences. Useful for terminating unresponsive</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># sessions. The default escape character is ~ (tilde), escapes are only</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># recognized immediately after a newline.</span>
+</span></span></code></pre></div><p>Or for <code>scp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>chtsh scp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># scp</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Secure copy (remote file copy program)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Securely copies files from remote ADDR&#39;s PATH to the current-working-directory.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># By default here, port 22 is used, or whichever port is otherwise configured.</span>
+</span></span><span style="display:flex;"><span>scp ADDR<span style="color:#f38ba8">:</span>PATH ./
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Using aliases (not Bash aliases) work with scp(1) as well. In this example, -</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># the PATH1 of the first remote source defined as ALIAS1 is sent to PATH2 of</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># the remote destination defined as ALIAS2.</span>
+</span></span><span style="display:flex;"><span>scp ALIAS1<span style="color:#f38ba8">:</span>PATH1 ALIAS2<span style="color:#f38ba8">:</span>PATH2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># You can use the `-P` flag -- uppercase, unlike ssh(1) -- to determine the</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># PORT, in-case it&#39;s non-standard (not 22) or not defined within an alias.</span>
+</span></span><span style="display:flex;"><span>scp -P PORT ADDR<span style="color:#f38ba8">:</span>PATH ./
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> cheat<span style="color:#f38ba8">:</span>scp 
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To copy a file from your local machine to a remote server:</span>
+</span></span><span style="display:flex;"><span>scp &lt;file&gt; &lt;user&gt;@&lt;host&gt;<span style="color:#f38ba8">:</span>&lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To copy a file from a remote server to your local machine:</span>
+</span></span><span style="display:flex;"><span>scp &lt;user&gt;@&lt;host&gt;<span style="color:#f38ba8">:</span>&lt;src&gt; &lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To scp a file over a SOCKS proxy on localhost and port 9999 (see ssh for tunnel setup):</span>
+</span></span><span style="display:flex;"><span>scp -o <span style="color:#a6e3a1">&#34;ProxyCommand nc -x 127.0.0.1:9999 -X 4 %h %p&#34;</span> &lt;file&gt; &lt;user&gt;@&lt;host&gt;<span style="color:#f38ba8">:</span>&lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To scp between two remote servers from the third machine:</span>
+</span></span><span style="display:flex;"><span>scp <span style="color:#fab387">-3</span> &lt;user&gt;@&lt;host1&gt;<span style="color:#f38ba8">:</span>&lt;src&gt; &lt;user&gt;@&lt;host2&gt;<span style="color:#f38ba8">:</span>&lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> tldr<span style="color:#f38ba8">:</span>scp 
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># scp</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Secure copy.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy files between hosts using Secure Copy Protocol over SSH.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># More information: &lt;https://man.openbsd.org/scp&gt;.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy a local file to a remote host:</span>
+</span></span><span style="display:flex;"><span>scp path/to/local_file remote_host<span style="color:#f38ba8">:</span>path/to/remote_file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Use a specific port when connecting to the remote host:</span>
+</span></span><span style="display:flex;"><span>scp -P port path/to/local_file remote_host<span style="color:#f38ba8">:</span>path/to/remote_file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy a file from a remote host to a local directory:</span>
+</span></span><span style="display:flex;"><span>scp remote_host<span style="color:#f38ba8">:</span>path/to/remote_file path/to/local_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Recursively copy the contents of a directory from a remote host to a local directory:</span>
+</span></span><span style="display:flex;"><span>scp -r remote_host<span style="color:#f38ba8">:</span>path/to/remote_directory path/to/local_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy a file between two remote hosts transferring through the local host:</span>
+</span></span><span style="display:flex;"><span>scp <span style="color:#fab387">-3</span> host1<span style="color:#f38ba8">:</span>path/to/remote_file host2<span style="color:#f38ba8">:</span>path/to/remote_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Use a specific username when connecting to the remote host:</span>
+</span></span><span style="display:flex;"><span>scp path/to/local_file remote_username<span style="color:#f5e0dc">@remote_host</span><span style="color:#f38ba8">:</span>path/to/remote_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Use a specific ssh private key for authentication with the remote host:</span>
+</span></span><span style="display:flex;"><span>scp -i ~/.ssh/private_key local_file remote_host<span style="color:#f38ba8">:</span>/path/remote_file
+</span></span></code></pre></div><p>Of course, <strong>you</strong> can use this for whichever command you&rsquo;d like, these are just my most common queries, regardless of which system I&rsquo;m running on.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Admitedly I find this infintely more useful on MacOS/Linux than I do on Windows, but, never-the-less, it still holds its usefulness on Windows.</p>
 <p>Until next time!</p>
 ]]></content>
         </item>

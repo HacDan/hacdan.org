@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HyperV on David McClellan</title>
+    <link>https://hacdan.org/tags/hyperv/</link>
+    <description>Recent content in HyperV on David McClellan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Mar 2025 18:05:24 -0400</lastBuildDate>
+    <atom:link href="https://hacdan.org/tags/hyperv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lessons Learned - HyperV -&gt; Proxmox</title>
+      <link>https://hacdan.org/posts/vhdx-to-proxmox-qcow2/</link>
+      <pubDate>Sun, 23 Mar 2025 18:05:24 -0400</pubDate>
+      <guid>https://hacdan.org/posts/vhdx-to-proxmox-qcow2/</guid>
+      <description>&lt;p&gt;Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Gain hands-on experience with Proxmox.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Deploy a modern, lightweight, bare-metal hypervisor.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Benefit from built-in features like encryption and backup capabilities.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Ensure high availability and reliability—aiming for five nines (99.999%) uptime.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Avoid costly licensing fees for solutions like VMware ESXi.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

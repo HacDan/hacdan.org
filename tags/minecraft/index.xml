@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minecraft on David McClellan</title>
+    <link>https://hacdan.org/tags/minecraft/</link>
+    <description>Recent content in Minecraft on David McClellan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Apr 2025 16:37:24 -0400</lastBuildDate>
+    <atom:link href="https://hacdan.org/tags/minecraft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iron Shulker Madness</title>
+      <link>https://hacdan.org/posts/iron-shulker-madness/</link>
+      <pubDate>Thu, 03 Apr 2025 16:37:24 -0400</pubDate>
+      <guid>https://hacdan.org/posts/iron-shulker-madness/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Iron Shulker Madness&lt;/em&gt; - A solution to over-flowing double-chests of Iron Blocks.&lt;/p&gt;&#xA;&lt;p&gt;This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn&amp;rsquo;t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.&lt;/p&gt;&#xA;&lt;h2 id=&#34;but-why&#34;&gt;But Why?&lt;/h2&gt;&#xA;&lt;p&gt;So&amp;hellip; my son and I have a local Minecraft server that we host at home. We&amp;rsquo;re using &lt;a href=&#34;https://papermc.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PaperMC&lt;/a&gt;&#xA;&#xA; along with &lt;a href=&#34;https://geysermc.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GeyserMC&lt;/a&gt;&#xA;&#xA; so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn&amp;rsquo;t think it would run when we&amp;rsquo;re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we&amp;rsquo;ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

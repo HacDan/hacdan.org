@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?
+Gain hands-on experience with Proxmox. Deploy a modern, lightweight, bare-metal hypervisor. Benefit from built-in features like encryption and backup capabilities. Ensure high availability and reliability—aiming for five nines (99.999%) uptime. Avoid costly licensing fees for solutions like VMware ESXi. Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.
+" />
+<meta name="keywords" content=", proxmox, automation, Microsoft, sysadmin, HyperV" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hacdan.org/posts/vhdx-to-proxmox-qcow2/" />
+
+
+    <title>
+        
+            Lessons Learned - HyperV -&gt; Proxmox :: David McClellan 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.eafa4bcbbbb37e2f5542d3f4c06efefa7621990df202ddf6b9e1af07bc2b81de.css" integrity="sha256-6vpLy7uzfi9VQtP0wG7&#43;&#43;nYhmQ3yAt32ueGvB7wrgd4=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Lessons Learned - HyperV -&gt; Proxmox">
+  <meta itemprop="description" content="Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?
+Gain hands-on experience with Proxmox. Deploy a modern, lightweight, bare-metal hypervisor. Benefit from built-in features like encryption and backup capabilities. Ensure high availability and reliability—aiming for five nines (99.999%) uptime. Avoid costly licensing fees for solutions like VMware ESXi. Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.">
+  <meta itemprop="datePublished" content="2025-03-23T18:05:24-04:00">
+  <meta itemprop="dateModified" content="2025-03-23T18:05:24-04:00">
+  <meta itemprop="wordCount" content="607">
+  <meta itemprop="keywords" content="Proxmox,Automation,Microsoft,Sysadmin,HyperV">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lessons Learned - HyperV -&gt; Proxmox">
+  <meta name="twitter:description" content="Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?
+Gain hands-on experience with Proxmox. Deploy a modern, lightweight, bare-metal hypervisor. Benefit from built-in features like encryption and backup capabilities. Ensure high availability and reliability—aiming for five nines (99.999%) uptime. Avoid costly licensing fees for solutions like VMware ESXi. Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-03-23 18:05:24 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXCZ6FG1CL"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YXCZ6FG1CL');
+        }
+      </script>
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                $ cd /Users/hacdan/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#67A2C9;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Blog</a></li><li><a href="/resume/readme/">Resume</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hacdan.org/posts/vhdx-to-proxmox-qcow2/">Lessons Learned - HyperV -&gt; Proxmox</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>Recently, I undertook the challenge of migrating ~25 Hyper-V virtual machines (VMs) to Proxmox. You might ask, Why? My response? Why not?</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Gain hands-on experience with Proxmox.</li>
+<li><input checked="" disabled="" type="checkbox"> Deploy a modern, lightweight, bare-metal hypervisor.</li>
+<li><input checked="" disabled="" type="checkbox"> Benefit from built-in features like encryption and backup capabilities.</li>
+<li><input checked="" disabled="" type="checkbox"> Ensure high availability and reliability—aiming for five nines (99.999%) uptime.</li>
+<li><input checked="" disabled="" type="checkbox"> Avoid costly licensing fees for solutions like VMware ESXi.</li>
+</ul>
+<p>Looking back, I believe I made the right choice. If I had to do it all over again, I absolutely would. But as with any large migration, there were challenges—chief among them was converting Hyper-V’s .vhdx disk format into something Proxmox could use natively.</p>
+<p>Hyper-V uses <code>.vhdx</code> (Virtual Hard Disk) files, while Proxmox supports multiple disk formats, including:</p>
+<ul>
+<li><strong>RAW</strong> (ideal for performance but takes up more space)</li>
+<li><strong>QCOW2</strong> (offers snapshots and compression benefits)</li>
+</ul>
+<p>Since I wanted efficient storage and snapshot support, I opted for the QCOW2 format. But how do you actually convert a <code>.vhdx</code> file to <code>.qcow2</code>?</p>
+<h2 id="the-code">The Code</h2>
+<h4 id="step-1-convert-the-vhdx-file-to-qcow2">Step 1: Convert the <code>.vhdx</code> file to <code>.qcow2</code></h4>
+<p>To convert the Hyper-V .vhdx image to a Proxmox-compatible .qcow2 image, I used the qemu-img tool:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-img convert -O qcow2 HyperVImageName.vhdx vm-&lt;vmid&gt;-disk-1.qcow2
+</span></span></code></pre></div><p>Let&rsquo;s break it down</p>
+<ul>
+<li><code>qemu-img convert</code> -&gt; Converts a virtual disk image to another format.</li>
+<li><code>-O qcow2</code> -&gt; Specifies the output format as QCOW2.</li>
+<li><code>HyperVImageName.vhdx</code> -&gt; The original .vhdx file from Hyper-V.</li>
+<li><code>vm-&lt;vmid&gt;-disk-1.qcow2</code> -&gt; The new file name following Proxmox’s VM disk naming convention.</li>
+</ul>
+<h4 id="step-2-shove-that-disk-into-proxmox">Step 2: Shove that disk into Proxmox</h4>
+<p>Once the conversion is complete, you can import the new <code>.qcow2</code> image into your respective virtual machine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm importdisk &lt;vmid&gt; vm-&lt;vmid&gt;-disk-1.qcow2 &lt;storage_id&gt;
+</span></span></code></pre></div><h5 id="parameters">Parameters</h5>
+<ul>
+<li><code>&lt;vmid&gt;</code>: Replace this with the ID of the virtual machine you want to associate the image with.</li>
+<li><code>&lt;HyperVImageName.vhdx&gt;</code>: Replace this with the name of the <code>.vhdx</code> image you transferred over.</li>
+<li><code>&lt;storage-id&gt;</code>: Replace this with the name of the storage you want the <code>.qcow2</code> image to l</li>
+</ul>
+<h4 id="step-3-attach-the-disk">Step 3: Attach the disk</h4>
+<p>Now that the disk is imported, we need to attach it to the VM:</p>
+<ol>
+<li>Open the Proxmox Web UI.</li>
+<li>Navigate to the VM → Hardware section.</li>
+<li>Click Add → Existing Disk and select the imported .qcow2 image.</li>
+<li>Set the appropriate bus type (e.g., VirtIO for best performance).</li>
+<li>Save changes and start up VM</li>
+</ol>
+<h2 id="but-how-long">But&hellip; how long?</h2>
+<p>Conversion time is completely dependant on disk size and disk speed. For me on 10k SAS drives and disk sizes ranging from 300GB -&gt; 400GB took about 30 minutes. I would say you&rsquo;re looking at 30 minutes -&gt; 120 minutes.</p>
+<p>Obviously with faster drives (NVMe, or even SSD&rsquo;s) you&rsquo;ll see a reduction in conversion time.</p>
+<h2 id="post-malmigration-checklist">Post-Mal&hellip;Migration Checklist</h2>
+<p>You&rsquo;ll want to confirm the following after you&rsquo;ve successfully booted up your VM. Also, if you haven&rsquo;t installed <a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso" target="_blank" rel="noopener">VirtIO drivers</a>
+
+ yet, now is the time do so.</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>Reconfigure Network Settings</strong> -&gt; Hyper-V and Proxmox use different network adapters, so Windows VMs may need driver updates (virtio-net).</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Install VirtIO Drivers</strong> -&gt; If using VirtIO for storage or network interfaces, install the appropriate drivers for optimal performance.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Enable QEMU Guest Agent</strong> -&gt; This helps with graceful shutdowns and monitoring inside Proxmox.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Re-check Disk Performance</strong> -&gt; If performance is lagging, consider converting disks to RAW format.</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>Multiple disks?</strong> -&gt; If there are multiple disks that need to be attached to a VM, be sure to increment the disk number in the new file name, such as <code>vm-&lt;vmid&gt;-disk-2.qcow2</code> and so on.</li>
+</ul>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Migrating from Hyper-V to Proxmox was a rewarding challenge. Not only did I gain experience with Proxmox, but I also ended up with a cost-effective, open-source, and enterprise-grade virtualization setup.</p>
+<p>Would I do it again? Absolutely. If you&rsquo;re considering moving to Proxmox, I highly recommend it!</p>
+<p>Until next time!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hacdan.org/tags/proxmox/">proxmox</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/automation/">automation</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/microsoft/">Microsoft</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/sysadmin/">sysadmin</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/hyperv/">HyperV</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        607 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2025-03-23 18:05
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://hacdan.org/posts/powershell-uptime-shenanigans/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">PowerShell Uptime Shenanigans</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://hacdan.org/posts/which-which-is-which/">
+                    <span class="button__text">Which Which Is Which?</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            
+            <span><a href="https://hacdan.org/"></a></span>
+            <span></span>
+            <span><a href="https://hacdan.org/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>

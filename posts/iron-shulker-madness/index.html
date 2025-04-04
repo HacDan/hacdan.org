@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Iron Shulker Madness - A solution to over-flowing double-chests of Iron Blocks.
+This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn&rsquo;t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.
+But Why? So&hellip; my son and I have a local Minecraft server that we host at home. We&rsquo;re using PaperMC along with GeyserMC so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn&rsquo;t think it would run when we&rsquo;re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we&rsquo;ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.
+" />
+<meta name="keywords" content=", development, automation, minecraft" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hacdan.org/posts/iron-shulker-madness/" />
+
+
+    <title>
+        
+            Iron Shulker Madness :: David McClellan 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.eafa4bcbbbb37e2f5542d3f4c06efefa7621990df202ddf6b9e1af07bc2b81de.css" integrity="sha256-6vpLy7uzfi9VQtP0wG7&#43;&#43;nYhmQ3yAt32ueGvB7wrgd4=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Iron Shulker Madness">
+  <meta itemprop="description" content="Iron Shulker Madness - A solution to over-flowing double-chests of Iron Blocks.
+This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn’t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.
+But Why? So… my son and I have a local Minecraft server that we host at home. We’re using PaperMC along with GeyserMC so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn’t think it would run when we’re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we’ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.">
+  <meta itemprop="datePublished" content="2025-04-03T16:37:24-04:00">
+  <meta itemprop="dateModified" content="2025-04-03T16:37:24-04:00">
+  <meta itemprop="wordCount" content="909">
+  <meta itemprop="keywords" content="Development,Automation,Minecraft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Iron Shulker Madness">
+  <meta name="twitter:description" content="Iron Shulker Madness - A solution to over-flowing double-chests of Iron Blocks.
+This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn’t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.
+But Why? So… my son and I have a local Minecraft server that we host at home. We’re using PaperMC along with GeyserMC so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn’t think it would run when we’re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we’ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-04-03 16:37:24 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXCZ6FG1CL"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YXCZ6FG1CL');
+        }
+      </script>
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                $ cd /Users/hacdan/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#67A2C9;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Blog</a></li><li><a href="/resume/readme/">Resume</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        5 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hacdan.org/posts/iron-shulker-madness/">Iron Shulker Madness</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p><em>Iron Shulker Madness</em> - A solution to over-flowing double-chests of Iron Blocks.</p>
+<p>This plugin adds a recipe to our Minecraft server that uses Iron Blocks and Popped Chorus Fruit to create shulker shells. Sure, this isn&rsquo;t the most fare trade in the game, but really helped out our little family server so that we can still enjoy the game with limited play time.</p>
+<h2 id="but-why">But Why?</h2>
+<p>So&hellip; my son and I have a local Minecraft server that we host at home. We&rsquo;re using <a href="https://papermc.io/" target="_blank" rel="noopener">PaperMC</a>
+
+ along with <a href="https://geysermc.org" target="_blank" rel="noopener">GeyserMC</a>
+
+ so that he can play on the same server as my Java client with his Nintendo Switch. As with all good Minecraft servers, we have a simple Iron Farm that was built at spawn. I didn&rsquo;t think it would run when we&rsquo;re not logged into the server, but low and behold, it does. It produces around 2 Double Chests of Iron Blocks every 3 days, so, we have a lot of iron. More than we&rsquo;ll ever use, so I wanted to come up with a fair way to use up the iron and trade it for something more useful.</p>
+<p>So, I started looking into creating custom recipes for Minecraft servers, and I came across <a href="https://github.com/briangershon/" target="_blank" rel="noopener">Brian Gershon&rsquo;s</a>
+
+ <a href="https://github.com/briangershon/minecraft-plugin" target="_blank" rel="noopener">Minecraft-Plugin</a>
+
+ template. From there, I cloned it and read a bit into the Spigot/Bukkit API to find out how to add Recipe&rsquo;s. My son and I decided that 8 Iron Blocks and 1 Popped Chorus Fruit was a reasonable trade for something we were really in need of - Shulker Shells.</p>
+<p><img src="/recipe.jpg" alt="recipe"></p>
+<p>Sure, we could have made a Shulker farm, but we don&rsquo;t play a lot, but really wanted to experience the end-game, so this was the solution that we came up with.</p>
+<h2 id="the-code">The Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#94e2d5">package</span> <span style="color:#fab387">com.hacdan.IronShulker</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.plugin.java.JavaPlugin</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.Material</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.inventory.ItemStack</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.inventory.ShapedRecipe</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.Bukkit</span>;
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">org.bukkit.NamespacedKey</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">public</span> <span style="color:#f38ba8">class</span> <span style="color:#f9e2af">App</span> <span style="color:#f38ba8">extends</span> JavaPlugin {
+</span></span><span style="display:flex;"><span>    <span style="color:#89b4fa;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f38ba8">public</span> <span style="color:#f38ba8">void</span> <span style="color:#89b4fa">onEnable</span>() {
+</span></span><span style="display:flex;"><span>        getLogger().<span style="color:#89b4fa">info</span>(<span style="color:#a6e3a1">&#34;Loading the Iron Shulker Recipe&#34;</span>);
+</span></span><span style="display:flex;"><span>        ItemStack result <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> ItemStack(Material.<span style="color:#89b4fa">SHULKER_SHELL</span>);
+</span></span><span style="display:flex;"><span>        NamespacedKey key <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> NamespacedKey(<span style="color:#cba6f7">this</span>, <span style="color:#cba6f7">this</span>.<span style="color:#89b4fa">getDescription</span>().<span style="color:#89b4fa">getName</span>());
+</span></span><span style="display:flex;"><span>        ShapedRecipe recipe <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">new</span> ShapedRecipe(key, result);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        recipe.<span style="color:#89b4fa">shape</span>(<span style="color:#a6e3a1">&#34;III&#34;</span>, <span style="color:#a6e3a1">&#34;IPI&#34;</span>, <span style="color:#a6e3a1">&#34;III&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        recipe.<span style="color:#89b4fa">setIngredient</span>(<span style="color:#a6e3a1">&#39;I&#39;</span>, Material.<span style="color:#89b4fa">IRON_BLOCK</span>);
+</span></span><span style="display:flex;"><span>        recipe.<span style="color:#89b4fa">setIngredient</span>(<span style="color:#a6e3a1">&#39;P&#39;</span>, Material.<span style="color:#89b4fa">POPPED_CHORUS_FRUIT</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Bukkit.<span style="color:#89b4fa">addRecipe</span>(recipe);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#89b4fa;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f38ba8">public</span> <span style="color:#f38ba8">void</span> <span style="color:#89b4fa">onDisable</span>() {
+</span></span><span style="display:flex;"><span>        getLogger().<span style="color:#89b4fa">info</span>(<span style="color:#a6e3a1">&#34;See you again, SpigotMC!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="the-how">The How</h2>
+<p>First off, you&rsquo;re going to need <code>maven</code> installed on your system. I&rsquo;m on an M1 Macbook Air, so I used brew</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install maven
+</span></span></code></pre></div><p>If you&rsquo;re on Linux, I&rsquo;m sure it&rsquo;s just an <code>apt install</code> away.</p>
+<p>You&rsquo;re also going to need a copy of JDK &gt; 21  for your hardware from <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener">Oracle</a>
+
+&rsquo;s website.</p>
+<p>From there, you&rsquo;re going to need to clone down the <a href="https://github.com/briangershon/minecraft-plugin" target="_blank" rel="noopener">example plugin</a>
+
+ from Brian GerShon.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone git@github.com:briangershon/minecraft-plugin.git &lt;plugin name&gt;
+</span></span></code></pre></div><p>Be sure to change <code>&lt;plugin name&gt;</code> to what you want your plugin to be called. It will make life much easier.</p>
+<p>From the README, you&rsquo;ll also want to do the following:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Rename existing <code>demo</code> folder at <code>src/main/java/com/briangershon/demo</code> to be your own, then search-and-replace <code>com.briangershon.demo</code> with name of your package. <code>App.java</code> is where you&rsquo;ll start adding your plugin logic. You&rsquo;ll also want to update the log</li>
+<li><input disabled="" type="checkbox"> Rename <code>com/briangershon</code> folder to your personal package name. Usually something like <code>com/&lt;username&gt;</code></li>
+<li><input disabled="" type="checkbox"> Update <code>src/main/resources/plugin.yml</code> and populate with the meta data for your plugin.</li>
+<li><input disabled="" type="checkbox"> Update <code>pom.xml</code> top section to match your plugin, specifically <code>&lt;groupId&gt;</code>, <code>&lt;artifactId&gt;</code>, and <code>&lt;version&gt;</code>. Plus <code>&lt;dependency&gt;</code> section if you&rsquo;re using a different Spigot version. You can find list of spigot versions at <a href="https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/" target="_blank" rel="noopener">https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/</a>
+
+.</li>
+</ul>
+<p>After you&rsquo;ve made your changes in <code>App.java</code> you can run <code>mvn clean package</code> to compile the package into a <code>jar</code> file in the <code>./target</code> directory.</p>
+<p>To ease the development cycle, I recommend also setting up a Development Server so you don&rsquo;t have to transfer the jar to your server every time you want to test a change. To do this, you can download a copy of the <a href="https://spigotmc.org" target="_blank" rel="noopener">Spigot</a>
+
+ <code>BuildTools.jar</code> from <a href="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar" target="_blank" rel="noopener">here</a>
+
+. You&rsquo;ll need to build the Spigot jar file, due to ToS restrictions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>java -jar BuildTools.jar --rev 1.21.5
+</span></span></code></pre></div><p>Alternatively, you can download a copy of <a href="https://papermc.io" target="_blank" rel="noopener">PaperMC</a>
+
+ from <a href="https://papermc.io/downloads/paper" target="_blank" rel="noopener">here</a>
+
+. These are pre-built and usually a bit behind Spigot/Bukkit, but are pre-compiled.</p>
+<p>Once downloaded, you&rsquo;ll want to create a script for starting your server, so you don&rsquo;t have to type out the <code>java</code> args every time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#/usr/bin/env sh</span>
+</span></span><span style="display:flex;"><span>java -Xms2G -Xmx2G -jar &lt;Server.jar&gt; nogui
+</span></span></code></pre></div><p>Be sure to replace <code>&lt;Server.jar&gt;</code> with the name of the server you decided to go with. After starting the server, you&rsquo;ll be requested to agree to the <code>EULA.txt</code> which requires you to open the <code>EULA.txt</code> and change the <code>eula=falase</code> to <code>eula=true</code>.</p>
+<p>Go ahead and restart the server once you&rsquo;ve made that change and it should have created a <code>plugins</code> directory. You&rsquo;ll place the compiled plugin from the <code>/target</code> directory of your source code. I recommend creating a script to move this file, so you don&rsquo;t have to write the <code>cp</code> or <code>mv</code> command arguments every time, to speed up the feedback loop.</p>
+<h3 id="deploysh"><code>deploy.sh</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#!/usr/bin/env sh
+</span></span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>cp ./target/&lt;PluginName&gt;.jar /path/to/mcserver/plugins/
+</span></span></code></pre></div><p>Don&rsquo;t forget to <code>chmod +x deploy.sh</code> after you create it.</p>
+<p>That should get you going. I was surprised how little setup there was, but <code>maven</code> is really doing the heavy lifting here. Downloading the requird packages so your can compile your plugin against them and what not. Being that I haven&rsquo;t worked with <code>java</code> in quite a while, it was refreshing, to say the least, to not have to write a lot of build logic.</p>
+<p>With all that said, my son and I can now enjoy having as many shulker boxes as we need and can still spend time doing other things in life!</p>
+<p>Until next time!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hacdan.org/tags/development/">development</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/automation/">automation</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/minecraft/">minecraft</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        909 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2025-04-03 16:37
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+
+            
+            <span class="button next">
+                <a href="https://hacdan.org/posts/powershell-uptime-shenanigans/">
+                    <span class="button__text">PowerShell Uptime Shenanigans</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            
+            <span><a href="https://hacdan.org/"></a></span>
+            <span></span>
+            <span><a href="https://hacdan.org/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>

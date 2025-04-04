@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="I&rsquo;ve grown accustomed to being able to run a quick command on my Mac or Linux machines to query cht.sh . In fact, when I&rsquo;m in a tmux session, I have a keybind that launches a tmux pop-up window allowing me to query cht.sh directly.
+I have missed this on Windows, so I wrote a quick PowerShell function that utilizes Invoke-RestMethod to access the cheat.sh API.
+The Code function chtsh { param( [Parameter (Mandatory = $true)] [String]$command ) if (-not $command) { $command = Read-Host &#34;Enter command to search&#34; } $command = $command.replace(&#39; &#39;, &#39;&#43;&#39;) try { Invoke-RestMethod -Uri &#34;https://cht.sh/$command&#34; } catch { Write-Host &#34;Error fetching cheat sheet. Check your internet connection.&#34; -ForegroundColor Red } } function chtsh { param( [Parameter (Mandatory = $true)] [String]$command ) $command = $command.replace(&#39; &#39;, &#39;&#43;&#39;) curl cht.sh/$command } How It works Accepts a mandatory parameter command Ex: chtsh ssh If the parameter is not supplied, it will prompt for it Replaces all instances of spaces with &#43; characters, for proper url form. Finally, we call Invoke-RestMethold on the URL formed from the query and the cht.sh URL. We could also call curl here as it has been available on all standard builds of Windows for a while, but this is more the &ldquo;PowerShell&rdquo; way.
+" />
+<meta name="keywords" content=", powershell, automation, windows" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://hacdan.org/posts/powershell-cheatsheet/" />
+
+
+    <title>
+        
+            Cheating - On PowerShell :: David McClellan 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.eafa4bcbbbb37e2f5542d3f4c06efefa7621990df202ddf6b9e1af07bc2b81de.css" integrity="sha256-6vpLy7uzfi9VQtP0wG7&#43;&#43;nYhmQ3yAt32ueGvB7wrgd4=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Cheating - On PowerShell">
+  <meta itemprop="description" content="I’ve grown accustomed to being able to run a quick command on my Mac or Linux machines to query cht.sh . In fact, when I’m in a tmux session, I have a keybind that launches a tmux pop-up window allowing me to query cht.sh directly.
+I have missed this on Windows, so I wrote a quick PowerShell function that utilizes Invoke-RestMethod to access the cheat.sh API.
+The Code function chtsh { param( [Parameter (Mandatory = $true)] [String]$command ) if (-not $command) { $command = Read-Host &#34;Enter command to search&#34; } $command = $command.replace(&#39; &#39;, &#39;&#43;&#39;) try { Invoke-RestMethod -Uri &#34;https://cht.sh/$command&#34; } catch { Write-Host &#34;Error fetching cheat sheet. Check your internet connection.&#34; -ForegroundColor Red } } function chtsh { param( [Parameter (Mandatory = $true)] [String]$command ) $command = $command.replace(&#39; &#39;, &#39;&#43;&#39;) curl cht.sh/$command } How It works Accepts a mandatory parameter command Ex: chtsh ssh If the parameter is not supplied, it will prompt for it Replaces all instances of spaces with &#43; characters, for proper url form. Finally, we call Invoke-RestMethold on the URL formed from the query and the cht.sh URL. We could also call curl here as it has been available on all standard builds of Windows for a while, but this is more the “PowerShell” way.">
+  <meta itemprop="datePublished" content="2025-02-26T16:29:41-04:00">
+  <meta itemprop="dateModified" content="2025-02-26T16:29:41-04:00">
+  <meta itemprop="wordCount" content="984">
+  <meta itemprop="keywords" content="Powershell,Automation,Windows">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cheating - On PowerShell">
+  <meta name="twitter:description" content="I’ve grown accustomed to being able to run a quick command on my Mac or Linux machines to query cht.sh . In fact, when I’m in a tmux session, I have a keybind that launches a tmux pop-up window allowing me to query cht.sh directly.
+I have missed this on Windows, so I wrote a quick PowerShell function that utilizes Invoke-RestMethod to access the cheat.sh API.
+The Code function chtsh { param( [Parameter (Mandatory = $true)] [String]$command ) if (-not $command) { $command = Read-Host &#34;Enter command to search&#34; } $command = $command.replace(&#39; &#39;, &#39;&#43;&#39;) try { Invoke-RestMethod -Uri &#34;https://cht.sh/$command&#34; } catch { Write-Host &#34;Error fetching cheat sheet. Check your internet connection.&#34; -ForegroundColor Red } } function chtsh { param( [Parameter (Mandatory = $true)] [String]$command ) $command = $command.replace(&#39; &#39;, &#39;&#43;&#39;) curl cht.sh/$command } How It works Accepts a mandatory parameter command Ex: chtsh ssh If the parameter is not supplied, it will prompt for it Replaces all instances of spaces with &#43; characters, for proper url form. Finally, we call Invoke-RestMethold on the URL formed from the query and the cht.sh URL. We could also call curl here as it has been available on all standard builds of Windows for a while, but this is more the “PowerShell” way.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-02-26 16:29:41 -0400 -0400" />
+
+
+
+
+
+
+
+
+
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXCZ6FG1CL"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YXCZ6FG1CL');
+        }
+      </script>
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                $ cd /Users/hacdan/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#67A2C9;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Blog</a></li><li><a href="/resume/readme/">Resume</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        5 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://hacdan.org/posts/powershell-cheatsheet/">Cheating - On PowerShell</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>I&rsquo;ve grown accustomed to being able to run a quick command on my Mac or Linux machines to query <a href="https://cht.sh" target="_blank" rel="noopener">cht.sh</a>
+
+. In fact, when I&rsquo;m in a <code>tmux</code> session, I have a keybind that launches a <code>tmux</code> pop-up window allowing me to query <a href="https://cht.sh" target="_blank" rel="noopener">cht.sh</a>
+
+ directly.</p>
+<p>I have missed this on Windows, so I wrote a quick PowerShell function that utilizes <code>Invoke-RestMethod</code> to access the <a href="https://cheat.sh/" target="_blank" rel="noopener">cheat.sh</a>
+
+ API.</p>
+<h2 id="the-code">The Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#f38ba8">function</span> <span style="color:#89dceb">chtsh</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">param</span>(
+</span></span><span style="display:flex;"><span>        [<span style="color:#89dceb">Parameter</span> (<span style="color:#89b4fa">Mandatory</span> = <span style="color:#f5e0dc">$true</span>)] [<span style="color:#f9e2af">String</span>]<span style="color:#f5e0dc">$command</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">if</span> (<span style="color:#89dceb;font-weight:bold">-not</span> <span style="color:#f5e0dc">$command</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#f5e0dc">$command</span> = <span style="color:#89dceb">Read-Host</span> <span style="color:#a6e3a1">&#34;Enter command to search&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f5e0dc">$command</span> = <span style="color:#f5e0dc">$command</span>.<span style="color:#fab387">replace</span>(<span style="color:#a6e3a1">&#39; &#39;</span>, <span style="color:#a6e3a1">&#39;+&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">Invoke-RestMethod</span> -Uri <span style="color:#a6e3a1">&#34;https://cht.sh/</span><span style="color:#f5e0dc">$command</span><span style="color:#a6e3a1">&#34;</span>
+</span></span><span style="display:flex;"><span>    } <span style="color:#cba6f7">catch</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">Write-Host</span> <span style="color:#a6e3a1">&#34;Error fetching cheat sheet. Check your internet connection.&#34;</span> -ForegroundColor Red
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">function</span> <span style="color:#89dceb">chtsh</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#cba6f7">param</span>(
+</span></span><span style="display:flex;"><span>	[<span style="color:#89dceb">Parameter</span> (<span style="color:#89b4fa">Mandatory</span> = <span style="color:#f5e0dc">$true</span>)] [<span style="color:#f9e2af">String</span>]<span style="color:#f5e0dc">$command</span>
+</span></span><span style="display:flex;"><span>	)
+</span></span><span style="display:flex;"><span>	<span style="color:#f5e0dc">$command</span> = <span style="color:#f5e0dc">$command</span>.<span style="color:#fab387">replace</span>(<span style="color:#a6e3a1">&#39; &#39;</span>, <span style="color:#a6e3a1">&#39;+&#39;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#89dceb">curl </span>cht.sh/<span style="color:#f5e0dc">$command</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="how-it-works">How It works</h2>
+<ul>
+<li>Accepts a mandatory parameter <code>command</code>
+<ul>
+<li>Ex: <code>chtsh ssh</code></li>
+<li>If the parameter is not supplied, it will prompt for it</li>
+</ul>
+</li>
+<li>Replaces all instances of spaces with <code>+</code> characters, for proper url form.</li>
+<li>Finally, we call <code>Invoke-RestMethold</code> on the URL formed from the query and the <code>cht.sh</code> URL.</li>
+</ul>
+<p>We could also call <code>curl</code> here as it has been available on all standard builds of Windows for a while, but this is more the &ldquo;PowerShell&rdquo; way.</p>
+<h2 id="but-why">But why?</h2>
+<p>I can never remember how to specifiy a port with <code>ssh</code> and with <code>scp</code> as for whatever reason, they&rsquo;re two different flags, so I use this for looking that up all the time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>chtsh ssh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># ssh</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># OpenSSH SSH client (remote login program)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># SSH in via PEM file, which normally needs 0600 permissions.</span>
+</span></span><span style="display:flex;"><span>ssh -i /path/to/file.<span style="color:#fab387">pem</span> user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Connect through a non-standard port. It&#39;s recommended not to use the default</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># port of 22, as it is so often targeted, due to it being so commonplace.</span>
+</span></span><span style="display:flex;"><span>ssh -p <span style="color:#fab387">2222</span> user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Connect and forward the authentication agent.</span>
+</span></span><span style="display:flex;"><span>ssh -A user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Execute a command on a remote server.</span>
+</span></span><span style="display:flex;"><span>ssh -t user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span> <span style="color:#a6e3a1">&#39;the-remote-command&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Tunnel an X session over SSH, via X11 Forwarding.</span>
+</span></span><span style="display:flex;"><span>ssh -X user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Redirect traffic with a tunnel between local host (port 8080) and a remote</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># host (remote.example.com:5000) through a proxy (personal.server.com).</span>
+</span></span><span style="display:flex;"><span>ssh <span style="color:#89dceb;font-weight:bold">-f</span> -L <span style="color:#fab387">8080</span><span style="color:#f38ba8">:</span>remote.<span style="color:#fab387">example</span>.com<span style="color:#f38ba8">:</span><span style="color:#fab387">5000</span> user<span style="color:#f5e0dc">@personal</span>.<span style="color:#fab387">server</span>.<span style="color:#fab387">com</span> -N
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Launch a specific X application over SSH.</span>
+</span></span><span style="display:flex;"><span>ssh -X -t user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span> <span style="color:#a6e3a1">&#39;chromium-browser&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Create a SOCKS proxy on localhost and port 9999.</span>
+</span></span><span style="display:flex;"><span>ssh -D <span style="color:#fab387">9999</span> user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Connect to server, but allow for X11 forwarding, while also using Gzip</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># compression (can be much faster; YMMV), and using the `blowfish` encryption.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># For more information, see: http://unix.stackexchange.com/q/12755/44856</span>
+</span></span><span style="display:flex;"><span>ssh -XCc blowfish user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy files and directories, via SSH, from remote host to the current working</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># directory, with Gzip compression. An option for when `rsync` isn&#39;t available.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># This works by creating (not temporary!) a remote Tar archive, then piping its</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># output to a local Tar process, which then extracts it to STDOUT.</span>
+</span></span><span style="display:flex;"><span>ssh user<span style="color:#f5e0dc">@example</span>.<span style="color:#fab387">com</span> <span style="color:#a6e3a1">&#39;tar -C /var/www/Shared/ zcf - asset1 asset2&#39;</span> | tar zxf -
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Explicitly specify a key for connection. Useful if you have too many</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># authentication failures for a given username.</span>
+</span></span><span style="display:flex;"><span>ssh -i some_id_rsa -o IdentitiesOnly=yes them<span style="color:#f5e0dc">@there</span><span style="color:#f38ba8">:</span>/path/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Temporarily disable `pubkey` authentication for this instance.</span>
+</span></span><span style="display:flex;"><span>ssh -o PubkeyAuthentication=no username<span style="color:#f5e0dc">@hostname</span>.<span style="color:#fab387">com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Mount a remote directory or filesystem, through SSH, to a local mount point.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Install SSHFS from: https://github.com/libfuse/sshfs</span>
+</span></span><span style="display:flex;"><span>sshfs name<span style="color:#f5e0dc">@server</span><span style="color:#f38ba8">:</span>/path/to/folder /path/to/mount/point
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># EMACS can read files through SSH. Below, is a link to related documentation.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#   http://www.gnu.org/software/emacs/manual/html_node/emacs/Remote-Files.html</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic">#</span>
+</span></span><span style="display:flex;"><span>emacs /ssh<span style="color:#f38ba8">:</span>name<span style="color:#f5e0dc">@server</span><span style="color:#f38ba8">:</span>/path/to/file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Get help for SSH escape sequences. Useful for terminating unresponsive</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># sessions. The default escape character is ~ (tilde), escapes are only</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># recognized immediately after a newline.</span>
+</span></span></code></pre></div><p>Or for <code>scp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>chtsh scp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># scp</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Secure copy (remote file copy program)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Securely copies files from remote ADDR&#39;s PATH to the current-working-directory.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># By default here, port 22 is used, or whichever port is otherwise configured.</span>
+</span></span><span style="display:flex;"><span>scp ADDR<span style="color:#f38ba8">:</span>PATH ./
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Using aliases (not Bash aliases) work with scp(1) as well. In this example, -</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># the PATH1 of the first remote source defined as ALIAS1 is sent to PATH2 of</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># the remote destination defined as ALIAS2.</span>
+</span></span><span style="display:flex;"><span>scp ALIAS1<span style="color:#f38ba8">:</span>PATH1 ALIAS2<span style="color:#f38ba8">:</span>PATH2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># You can use the `-P` flag -- uppercase, unlike ssh(1) -- to determine the</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># PORT, in-case it&#39;s non-standard (not 22) or not defined within an alias.</span>
+</span></span><span style="display:flex;"><span>scp -P PORT ADDR<span style="color:#f38ba8">:</span>PATH ./
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> cheat<span style="color:#f38ba8">:</span>scp 
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To copy a file from your local machine to a remote server:</span>
+</span></span><span style="display:flex;"><span>scp &lt;file&gt; &lt;user&gt;@&lt;host&gt;<span style="color:#f38ba8">:</span>&lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To copy a file from a remote server to your local machine:</span>
+</span></span><span style="display:flex;"><span>scp &lt;user&gt;@&lt;host&gt;<span style="color:#f38ba8">:</span>&lt;src&gt; &lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To scp a file over a SOCKS proxy on localhost and port 9999 (see ssh for tunnel setup):</span>
+</span></span><span style="display:flex;"><span>scp -o <span style="color:#a6e3a1">&#34;ProxyCommand nc -x 127.0.0.1:9999 -X 4 %h %p&#34;</span> &lt;file&gt; &lt;user&gt;@&lt;host&gt;<span style="color:#f38ba8">:</span>&lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># To scp between two remote servers from the third machine:</span>
+</span></span><span style="display:flex;"><span>scp <span style="color:#fab387">-3</span> &lt;user&gt;@&lt;host1&gt;<span style="color:#f38ba8">:</span>&lt;src&gt; &lt;user&gt;@&lt;host2&gt;<span style="color:#f38ba8">:</span>&lt;dest&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> tldr<span style="color:#f38ba8">:</span>scp 
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># scp</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Secure copy.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy files between hosts using Secure Copy Protocol over SSH.</span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># More information: &lt;https://man.openbsd.org/scp&gt;.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy a local file to a remote host:</span>
+</span></span><span style="display:flex;"><span>scp path/to/local_file remote_host<span style="color:#f38ba8">:</span>path/to/remote_file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Use a specific port when connecting to the remote host:</span>
+</span></span><span style="display:flex;"><span>scp -P port path/to/local_file remote_host<span style="color:#f38ba8">:</span>path/to/remote_file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy a file from a remote host to a local directory:</span>
+</span></span><span style="display:flex;"><span>scp remote_host<span style="color:#f38ba8">:</span>path/to/remote_file path/to/local_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Recursively copy the contents of a directory from a remote host to a local directory:</span>
+</span></span><span style="display:flex;"><span>scp -r remote_host<span style="color:#f38ba8">:</span>path/to/remote_directory path/to/local_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Copy a file between two remote hosts transferring through the local host:</span>
+</span></span><span style="display:flex;"><span>scp <span style="color:#fab387">-3</span> host1<span style="color:#f38ba8">:</span>path/to/remote_file host2<span style="color:#f38ba8">:</span>path/to/remote_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Use a specific username when connecting to the remote host:</span>
+</span></span><span style="display:flex;"><span>scp path/to/local_file remote_username<span style="color:#f5e0dc">@remote_host</span><span style="color:#f38ba8">:</span>path/to/remote_directory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># Use a specific ssh private key for authentication with the remote host:</span>
+</span></span><span style="display:flex;"><span>scp -i ~/.ssh/private_key local_file remote_host<span style="color:#f38ba8">:</span>/path/remote_file
+</span></span></code></pre></div><p>Of course, <strong>you</strong> can use this for whichever command you&rsquo;d like, these are just my most common queries, regardless of which system I&rsquo;m running on.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Admitedly I find this infintely more useful on MacOS/Linux than I do on Windows, but, never-the-less, it still holds its usefulness on Windows.</p>
+<p>Until next time!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://hacdan.org/tags/powershell/">powershell</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/automation/">automation</a></span>
+        <span class="tag"><a href="https://hacdan.org/tags/windows/">windows</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        984 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2025-02-26 15:29
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://hacdan.org/posts/fuzzy-ssh/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Fuzzy SSH</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://hacdan.org/posts/ultrawide-spoon/">
+                    <span class="button__text">Ultra-wide Spoon</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            
+            <span><a href="https://hacdan.org/"></a></span>
+            <span></span>
+            <span><a href="https://hacdan.org/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>

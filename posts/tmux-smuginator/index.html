@@ -25,7 +25,7 @@ The Code #!/usr/bin/env bash if [[ $# -eq 1 ]]; then session_dir=$1 else session
 
 
 
-  <link rel="stylesheet" href="/main.min.244183cde1a38e0b08f82c11791181288f9aac1cc9618cd6f4e9e7710c5768ba.css" integrity="sha256-JEGDzeGjjgsI&#43;CwReRGBKI&#43;arBzJYYzW9OnncQxXaLo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/main.min.eafa4bcbbbb37e2f5542d3f4c06efefa7621990df202ddf6b9e1af07bc2b81de.css" integrity="sha256-6vpLy7uzfi9VQtP0wG7&#43;&#43;nYhmQ3yAt32ueGvB7wrgd4=" crossorigin="anonymous">
 
 
 
@@ -44,8 +44,8 @@ The Code #!/usr/bin/env bash if [[ $# -eq 1 ]]; then session_dir=$1 else session
   <meta itemprop="name" content="Tmux Smuginator">
   <meta itemprop="description" content="Feast your eyes upon my masterpiece! …Or something. Long have a looked for an up-to-date project that I could use for templating tmux sessions. This is pretty heavily based on @ThePrimeagen ’s tmux-sessionizer.sh script . I have modified it, however, to create a custom layout that I typically use for all of my tmux sessions with the awesome golang project, smug .
 The Code #!/usr/bin/env bash if [[ $# -eq 1 ]]; then session_dir=$1 else session_dir=$(find ~/Code -mindepth 1 -maxdepth 1 -type d | fzf) fi session_name=$(basename &#34;$session_dir&#34; | tr . _) tmux_running=$(pgrep tmux) if [[ -z $TMUX ]] &amp;&amp; [[ -z $tmux_running ]]; then smug start -f ~/.config/smug/go.yml session_name=$session_name session_dir=$session_dir exit 0 fi if ! tmux has-session -t=$session_name 2&gt; /dev/null; then smug start -f ~/.config/smug/go.yml session_name=$session_name session_dir=$session_dir fi tmux switch-client -t $session_name But Hac, aren’t there other projects for this? There sure are! A great example would be tmuxinator , but up until ~6 months ago, the project had gone dark. Honestly, until I started researching this blog post, I was under the impression the project was still dark. There’s also the ever popular and rock-stable Tmuxifier , but I was also under the impression that this project had gone dark. And let’s be honest, I’m a softie for anything written in Go, so, here we are. Smug, here we come!">
-  <meta itemprop="datePublished" content="2024-07-03T19:06:48-04:00">
-  <meta itemprop="dateModified" content="2024-07-03T19:06:48-04:00">
+  <meta itemprop="datePublished" content="2024-11-03T19:06:48-04:00">
+  <meta itemprop="dateModified" content="2024-11-03T19:06:48-04:00">
   <meta itemprop="wordCount" content="432">
   <meta itemprop="keywords" content="Development,Workflow,TMUX">
 
@@ -60,7 +60,7 @@ The Code #!/usr/bin/env bash if [[ $# -eq 1 ]]; then session_dir=$1 else session
 
 
 
-    <meta property="article:published_time" content="2024-07-03 19:06:48 -0400 EDT" />
+    <meta property="article:published_time" content="2024-11-03 19:06:48 -0400 -0400" />
 
 
 
@@ -244,7 +244,7 @@ The Code #!/usr/bin/env bash if [[ $# -eq 1 ]]; then session_dir=$1 else session
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2024-07-03 19:06
+          2024-11-03 18:06
         
 
          

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scripting on David McClellan</title>
+    <link>https://hacdan.org/tags/scripting/</link>
+    <description>Recent content in Scripting on David McClellan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Mar 2025 17:28:44 -0400</lastBuildDate>
+    <atom:link href="https://hacdan.org/tags/scripting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Which Which Is Which?</title>
+      <link>https://hacdan.org/posts/which-which-is-which/</link>
+      <pubDate>Sat, 15 Mar 2025 17:28:44 -0400</pubDate>
+      <guid>https://hacdan.org/posts/which-which-is-which/</guid>
+      <description>&lt;h2 id=&#34;the-missing-command&#34;&gt;The Missing Command&lt;/h2&gt;&#xA;&lt;p&gt;While I&amp;rsquo;m sure you could make the argument that PowerShell has many &amp;ldquo;missing&amp;rdquo; commands compared to your standard &lt;code&gt;POSIX&lt;/code&gt; compliant shell, I would say I miss &lt;code&gt;which&lt;/code&gt; the most.&lt;/p&gt;&#xA;&lt;p&gt;Thankfully, &lt;a href=&#34;https://devas.life&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Takuya Matsuyama&lt;/a&gt;&#xA;&#xA; or better known as &lt;a href=&#34;https://www.youtube.com/@devaslife&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@devaslife&lt;/a&gt;&#xA;&#xA; on YouTube, wrote a quick function that I have carried with me across multiple &lt;code&gt;$PROFILE&lt;/code&gt;&amp;rsquo;s.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f38ba8&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#89dceb&#34;&gt;which&lt;/span&gt; (&lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt;) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#89dceb&#34;&gt;Get-Command&lt;/span&gt; -Name &lt;span style=&#34;color:#f5e0dc&#34;&gt;$command&lt;/span&gt; -ErrorAction SilentlyContinue |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#89dceb&#34;&gt;Select-Object&lt;/span&gt; -ExpandProperty Path -ErrorAction SilentlyContinue&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;re unfamiliar with the &lt;code&gt;which&lt;/code&gt; command, it shows the origin of the command you&amp;rsquo;re running. If you&amp;rsquo;re running an alias, it will show you what you have aliased.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
